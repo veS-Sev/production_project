@@ -1,0 +1,7 @@
+{
+    "i18n-ally.localesPaths": [
+        "public/locales",
+        "src/shared/config/i18n"
+    ],
+    "i18next.i18nPaths": "d:/PROJECTS/production_project/public/locales,d:/PROJECTS/production_project/src/shared/config/i18n"
+}
