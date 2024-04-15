@@ -5,7 +5,8 @@ module.exports= {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:i18next/recommended"
     ],
     "overrides": [
         {
@@ -19,6 +20,7 @@ module.exports= {
       "files": [".eslintrc.{js,cjs}","*.ts", "*.mts", "*.cts", "*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off",
+
       },
             "parserOptions": {
                 "sourceType": "script"
@@ -30,7 +32,10 @@ module.exports= {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        //не факт, что нужно перечислять это здесь
+        "@typescript-eslint",
+        "i18next"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
@@ -40,6 +45,7 @@ module.exports= {
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "react/no-deprecated":"off",
         "@typescript-eslint/naming-convention": "off",
-        "@typescript-eslint/no-floating-promises": "warn"
+        "@typescript-eslint/no-floating-promises": "warn",
+        "i18next/no-literal-string":[1,{markupOnly:true}]
     }
 }
