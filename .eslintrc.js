@@ -1,7 +1,8 @@
 module.exports= {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest":true
     },
     "extends": [
         "standard-with-typescript",
@@ -11,7 +12,8 @@ module.exports= {
     "overrides": [
         {
             "env": {
-                "node": true
+                "node": true,
+                
             },
             // "files": [
             //     ".eslintrc.{js,cjs}"
