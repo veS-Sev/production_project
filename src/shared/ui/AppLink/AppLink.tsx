@@ -5,7 +5,7 @@ import { type FC } from 'react'
 
 export enum AppLinkTheme {
   PRIMARY = 'primary',
-  SECONDAARY = 'secondary',
+  SECONDARY = 'secondary',
   RED = 'red',
 }
 
