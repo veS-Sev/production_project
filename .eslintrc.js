@@ -48,6 +48,7 @@ module.exports= {
         "react/no-deprecated":"off",
         "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/no-floating-promises": "warn",
-        "i18next/no-literal-string":[1,{markupOnly:true}]
+        "i18next/no-literal-string":[1,{markupOnly:true}],
+        "n/handle-callback-err": "off"
     }
 }
