@@ -25,13 +25,15 @@ module.exports= {
 
       },
             "parserOptions": {
-                "sourceType": "script"
+                "sourceType": "script",
+                
             }
         }
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        'parser': '@typescript-eslint/parser'
     },
     "plugins": [
         "react",
@@ -48,7 +50,8 @@ module.exports= {
         "react/no-deprecated":"off",
         "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/no-floating-promises": "warn",
-        "i18next/no-literal-string":[1,{markupOnly:true}],
-        "n/handle-callback-err": "off"
+        "i18next/no-literal-string":[1,{markupOnly:true, ignoreAttribute: ["to"] }],
+        "n/handle-callback-err": "off",
+        "@typescript-eslint/consistent-type-imports": "warn"
     }
 }

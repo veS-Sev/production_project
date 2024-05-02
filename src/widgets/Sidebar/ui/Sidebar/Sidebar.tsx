@@ -16,12 +16,12 @@ export const Sidebar = ({ className }: SidebarProps) => {
     setCollased((prev) => !prev)
   }
   return (
-    <div
+    <div data-testid='sidebar'
       className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
         className
       ])}
     >
-      <button type="button" onClick={onToggle}>{t('Свернуть/развернуть')}</button>
+      <button type="button" onClick={onToggle} data-testid='sidebar-toggle'>{t('Свернуть/развернуть')}</button>
       <div className={cls.switchers}>
         <ThemeSwitcher />
         <LangSwitcher className={cls.lang}/>
