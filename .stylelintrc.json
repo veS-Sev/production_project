@@ -1,5 +1,12 @@
 {
     "extends": "stylelint-config-standard-scss",
-    "rules":{"selector-class-pattern":null}
+    "rules":{
+    "selector-class-pattern":null,
+    "rule-empty-line-before":["always",
+    {
+      "except": [ "inside-block-and-after-rule", "inside-block", "first-nested"]
+    }
+      
+      ]}
     
   }

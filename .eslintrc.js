@@ -1,4 +1,3 @@
-
 module.exports = {
   env: {
     browser: true,
@@ -27,6 +26,7 @@ module.exports = {
         "*.tsx",
         "**/src/**/*.test.{ts,tsx}",
         "**/src/**/*.stories.tsx",
+        "scripts/generate-visual-json-report.js"
       ],
       rules: {
         "@typescript-eslint/explicit-function-return-type": "off",
@@ -69,9 +69,12 @@ module.exports = {
     ],
     "react/display-name": "warn",
     "n/handle-callback-err": "off",
-    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/consistent-type-imports": "warn"
   },
   globals: {
     __IS_DEV__: true,
   },
+  ignorePatterns: [".eslintrc.js", "generate-visual-json-report.js"],
 };
+
+
