@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../../../config/storybook/ThemeDecorator/ThemeDecorator'
 
 export default {
-  title: 'Example/Loader',
+  title: 'shared/Loader',
   component: Loader,
   argTypes: {
     backgroundColor: { control: 'color' }

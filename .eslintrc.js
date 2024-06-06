@@ -50,9 +50,9 @@ module.exports = {
   },
   plugins: [
     "react",
-    //не факт, что нужно перечислять это здесь
     "@typescript-eslint",
     "i18next",
+    "react-hooks"
   ],
   rules: {
     "react/react-in-jsx-scope": "off",
@@ -69,7 +69,9 @@ module.exports = {
     ],
     "react/display-name": "warn",
     "n/handle-callback-err": "off",
-    "@typescript-eslint/consistent-type-imports": "warn"
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   globals: {
     __IS_DEV__: true,

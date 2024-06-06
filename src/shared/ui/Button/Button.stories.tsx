@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../../../config/storybook/ThemeDecorator/ThemeDecorator'
 
 export default {
-  title: 'Example/Button',
+  title: 'shared/Button',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' }
@@ -22,6 +22,12 @@ export const Clear = Template.bind({})
 Clear.args = {
   children: 'Text',
   theme: ButtonTheme.CLEAR
+}
+
+export const ClearInverted = Template.bind({})
+ClearInverted.args = {
+  children: 'Text',
+  theme: ButtonTheme.CLEAR_INVERTED
 }
 
 export const Outline = Template.bind({})
