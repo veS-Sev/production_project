@@ -76,7 +76,7 @@ module.exports = {
   globals: {
     __IS_DEV__: true,
   },
-  ignorePatterns: [".eslintrc.js", "generate-visual-json-report.js"],
+  ignorePatterns: [".eslintrc.js", "generate-visual-json-report.js","json-server/index.js"],
 };
 
 
