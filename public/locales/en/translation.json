@@ -13,5 +13,7 @@
   "/": "/",
   "Войти": "Sign In",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Введите логин": "Enter the login",
+  "Введите пароль": "Enter the password"
 }

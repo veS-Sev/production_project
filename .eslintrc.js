@@ -71,12 +71,10 @@ module.exports = {
     "n/handle-callback-err": "off",
     "@typescript-eslint/consistent-type-imports": "warn",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"
-  },
+    "react-hooks/exhaustive-deps": "error"},
   globals: {
     __IS_DEV__: true,
   },
   ignorePatterns: [".eslintrc.js", "generate-visual-json-report.js","json-server/index.js"],
-};
-
+}
 
