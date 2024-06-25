@@ -11,9 +11,13 @@
   "Язык коротко": "En",
   "Главная": "Main",
   "/": "/",
-  "Войти": "Sign In",
+  "Войти": "Log In",
   "increment": "increment",
   "decrement": "decrement",
   "Введите логин": "Enter the login",
-  "Введите пароль": "Enter the password"
+  "Введите пароль": "Enter the password",
+  "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+  "Выйти": "LogOut",
+  "ФОРМА АВТОРИЗАЦИИ": "LOGIN FORM",
+  "Неверно ввели логин или пароль": "Uncorrect password or login"
 }

@@ -3,6 +3,7 @@ import { StyleDecorator } from './StyleDecorator/StyleDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from './ThemeDecorator/ThemeDecorator'
 import { RouterDecorator } from './RouterDecorator/RouterDecorator'
+import { StoreDecorator } from './StoreDecorator'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -13,6 +14,7 @@ export const parameters = {
     }
   }
 }
+
 addDecorator(StyleDecorator)
 addDecorator(ThemeDecorator(Theme.LIGHT))
 addDecorator(RouterDecorator)

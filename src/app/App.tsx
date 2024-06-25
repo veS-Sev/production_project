@@ -3,11 +3,15 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { AppRouter } from './providers/router/ui/AppRouter'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar/ui'
-import { Suspense } from 'react'
-import { Theme } from './providers/ThemeProvider'
+import { Suspense, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { userActions } from 'entities/User'
 
 const App = () => {
-  console.log('Theme', Theme)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(userActions.initAuthData())
+  }, [dispatch])
   return (
     <div className={classNames('app', {}, [])}>
       <Suspense fallback="">

@@ -67,7 +67,7 @@ module.exports = {
       1,
       { markupOnly: true, ignoreAttribute: ["to"] },
     ],
-    "react/display-name": "warn",
+    "react/display-name": "off",
     "n/handle-callback-err": "off",
     "@typescript-eslint/consistent-type-imports": "warn",
     "react-hooks/rules-of-hooks": "error",
