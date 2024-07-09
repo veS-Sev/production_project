@@ -35,7 +35,9 @@ module.exports = {
         "@typescript-eslint/no-confusing-void-expression": "off",
         "@typescript-eslint/consistent-type-assertions": "off",
         "@typescript-eslint/no-unsafe-argument": "warn",
-        "@typescript-eslint/await-thenable": "off"
+        "@typescript-eslint/await-thenable": "off",
+        "@typescript-eslint/no-dynamic-delete": "warn",
+        "@typescript-eslint/array-type": "off"
         
       },
       parserOptions: {

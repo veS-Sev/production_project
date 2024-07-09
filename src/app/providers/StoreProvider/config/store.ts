@@ -1,19 +1,26 @@
 import { configureStore } from '@reduxjs/toolkit'
 import type { StateSchema } from './StateSchema'
+import type { ReducersMapObject } from '@reduxjs/toolkit'
 import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
-import { loginReducer } from 'features/authByUsername/model/slice/loginSlice/loginSlice'
+import { createReducerManager } from './reducerManager'
 
-export const createReduxStore = (initialState?: StateSchema) => {
-  const rootReducer = {
+export const createReduxStore = (initialState?: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) => {
+  const rootReducers: ReducersMapObject<StateSchema> = {
+    ...asyncReducers,
     counter: counterReducer,
-    user: userReducer,
-    loginForm: loginReducer
+    user: userReducer
   }
-  return configureStore<StateSchema>({
-    reducer: rootReducer,
+  const reducerManager = createReducerManager(rootReducers)
+
+  const store = configureStore<StateSchema>({
+    reducer: reducerManager.reduce,
     devTools: __IS_DEV__,
     preloadedState: initialState
   }
   )
+  // @ts-expect-error Correct leter
+  store.reducerManager = reducerManager
+  console.log('store', store)
+  return store
 }

@@ -1,6 +1,6 @@
 import { type DeepPartial } from '@reduxjs/toolkit'
 import { counterActions, counterReducer } from './counterSlice'
-import { type CounterShema } from '../types/CounterShema'
+import { type CounterSchema } from '../types/CounterSchema'
 
 describe('counter slice test ', () => {
   test('test with initial state ', () => {
@@ -8,16 +8,16 @@ describe('counter slice test ', () => {
   })
 
   test('test with incremeent', () => {
-    const state: DeepPartial<CounterShema> = {
+    const state: DeepPartial<CounterSchema> = {
       value: 10
     }
-    expect(counterReducer(state as CounterShema, counterActions.increment)).toEqual({ value: 11 })
+    expect(counterReducer(state as CounterSchema, counterActions.increment)).toEqual({ value: 11 })
   })
 
   test('test with decement ', () => {
-    const state: DeepPartial<CounterShema> = {
+    const state: DeepPartial<CounterSchema> = {
       value: 10
     }
-    expect(counterReducer(state as CounterShema, counterActions.decrement)).toEqual({ value: 9 })
+    expect(counterReducer(state as CounterSchema, counterActions.decrement)).toEqual({ value: 9 })
   })
 })

@@ -1,7 +1,7 @@
 import { Button } from 'shared/ui/Button'
 import { counterActions } from '../model/slice/counterSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import type { StateSchema } from 'app/providers/StoreProvider/config/StateSchema'
+import type { StateSchema } from 'app/providers/StoreProvider'
 import { useTranslation } from 'react-i18next'
 
 export const Counter = () => {

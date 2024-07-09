@@ -44,8 +44,8 @@ export const Navbar = ({ className }: NavbarProps) => {
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>{t('/')}
       <Button theme = {ButtonTheme.CLEAR_INVERTED} onClick={onSchowModal}>{t('Войти')}</Button>
-      <LoginModal isOpen={isAuthModal} onClose={onCloseModal}/>
-      </div>
+      {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal}/>
+}</div>
     </div>
   )
 }

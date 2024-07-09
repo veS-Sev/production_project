@@ -1,5 +1,5 @@
 import type { DeepPartial } from '@reduxjs/toolkit'
-import { type StateSchema } from 'app/providers/StoreProvider/config/StateSchema'
+import { type StateSchema } from 'app/providers/StoreProvider'
 import { getCounter } from './getCounter'
 describe('get сounter', () => {
   test('shoud return counter value field', () => {
