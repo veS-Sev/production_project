@@ -10,11 +10,11 @@ export type ReducersList = {
 
 export type ReducersStateEntry = [StateSchemaKeys, Reducer]
 
-interface DinamicModuleLoaderProps {
+interface DynamicModuleLoaderProps {
   reducers: ReducersList
   removeAfterUnmount?: boolean
 }
-export const DinamicModuleLoader: FC < DinamicModuleLoaderProps> = (props) => {
+export const DynamicModuleLoader: FC < DynamicModuleLoaderProps> = (props) => {
   const { children, reducers, removeAfterUnmount } = props
   const store = useStore() as ReduxStoreWithManager
   const dispatch = useDispatch()
@@ -22,16 +22,16 @@ export const DinamicModuleLoader: FC < DinamicModuleLoaderProps> = (props) => {
   useEffect(() => {
     Object.entries(reducers).forEach(([name, reducer]: ReducersStateEntry) => {
       store.reducerManager.add(name, reducer)
-      dispatch({ type: `@INIT ${name}` })
+      dispatch({ type: `@INIT ${name} reducer` })
     })
 
     return () => {
-      Object.entries(reducers).forEach(([name, reducer]: ReducersStateEntry) => {
-        if (removeAfterUnmount) {
+      if (removeAfterUnmount) {
+        Object.entries(reducers).forEach(([name, reducer]: ReducersStateEntry) => {
           store.reducerManager.remove(name)
-          dispatch({ type: `@DELETE ${name} loginForm 2` })
-        }
-      })
+          dispatch({ type: `@DESTROY ${name} reducer` })
+        })
+      }
     }
     // eslint-disable-next-line
   }, [])

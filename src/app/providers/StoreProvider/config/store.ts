@@ -4,12 +4,14 @@ import type { ReducersMapObject } from '@reduxjs/toolkit'
 import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
 import { createReducerManager } from './reducerManager'
+import { profileReducer } from 'entities/Profile'
 
 export const createReduxStore = (initialState?: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) => {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     counter: counterReducer,
-    user: userReducer
+    user: userReducer,
+    profile: profileReducer
   }
   const reducerManager = createReducerManager(rootReducers)
 
@@ -24,3 +26,5 @@ export const createReduxStore = (initialState?: StateSchema, asyncReducers?: Red
   console.log('store', store)
   return store
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']

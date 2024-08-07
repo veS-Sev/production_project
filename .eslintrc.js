@@ -73,7 +73,8 @@ module.exports = {
     "n/handle-callback-err": "off",
     "@typescript-eslint/consistent-type-imports": "warn",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"},
+    "react-hooks/exhaustive-deps": "error",
+  "@typescript-eslint/no-misused-promises": "warn"},
   globals: {
     __IS_DEV__: true,
   },
