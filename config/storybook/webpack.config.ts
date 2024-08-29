@@ -12,7 +12,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     src: path.resolve(__dirname, '..', '..', 'src')
 
   }
-// @ts-ignore
+  // @ts-ignore
   config!.module!.push(paths.src)
   config!.resolve!.extensions!.push('ts', 'tsx')
   // @ts-ignore
