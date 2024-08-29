@@ -47,9 +47,9 @@
     "./config/**/*.tsx",
     "./*.config.ts"
   ],
-  "exclude": [
-    "./config/storybook/webpack.config.ts"
-  ]
+  // "exclude": [
+  //   "./config/storybook/webpack.config.ts"
+  // ]
 }
 
 
