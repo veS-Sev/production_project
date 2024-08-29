@@ -10,8 +10,8 @@ export default {
     backgroundColor: { control: 'color' }
   }
 } as ComponentMeta<typeof MainPage>
-// @ts-expect-error: Такая ситуация возникает из-за дефолтного импорта
-const Template: ComponentStory<typeof MainPage> = (args) => <MainPage {...args} />
+
+const Template: ComponentStory<typeof MainPage> = (args) => <MainPage />
 
 export const Light = Template.bind({})
 Light.args = {}

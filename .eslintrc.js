@@ -74,9 +74,16 @@ module.exports = {
     "@typescript-eslint/consistent-type-imports": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
-  "@typescript-eslint/no-misused-promises": "warn"},
+  "@typescript-eslint/no-misused-promises": "warn",
+"@typescript-eslint/no-invalid-void-type": "warn",
+"react-hooks/exhaustive-deps": 'warn',
+"@typescript-eslint/no-unnecessary-type-assertion": "off",
+"@typescript-eslint/prefer-ts-expect-error": "off",
+"@typescript-eslint/ban-ts-comment": "off",
+"@typescript-eslint/no-non-null-assertion": "off"},
   globals: {
     __IS_DEV__: true,
+    __API__:true,
   },
   ignorePatterns: [".eslintrc.js", "generate-visual-json-report.js","json-server/index.js"],
 }

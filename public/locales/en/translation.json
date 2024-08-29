@@ -19,5 +19,7 @@
   "Вы ввели неверный логин или пароль": "Uncorrect username or password",
   "Выйти": "LogOut",
   "ФОРМА АВТОРИЗАЦИИ": "LOGIN FORM",
-  "Неверно ввели логин или пароль": "Uncorrect password or login"
+  "Неверно ввели логин или пароль": "Uncorrect password or login",
+  "Редактировать": "Edit",
+  "Профиль": "Profile"
 }

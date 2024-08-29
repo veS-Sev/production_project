@@ -12,9 +12,14 @@
   "Lorem ipsum dolor sit amet consectetur adipisicing elit": {
     " Recusandae, adipisci ut? Excepturi incidunt possimus ipsa quasi, esse sit sunt expedita necessitatibus laboriosam voluptatibus corporis, eligendi fugiat a molestias iste iure!": " Recusandae, adipisci ut? Excepturi incidunt possimus ipsa quasi, esse sit sunt expedita necessitatibus laboriosam voluptatibus corporis, eligendi fugiat a molestias iste iure!"
   },
+  "R": "R",
   "decrement": "decrement",
   "increment": "increment",
+  "В": "В",
   "Вsq": "",
+  "Ваша ": "Ваша ",
+  "Ваша фамилия": "Ваша фамилия",
+  "Ваше имя": "Ваше имя",
   "Введите ": "Введите ",
   "Введите логин": "Введите логин",
   "Введите пароль": "Введите пароль",
@@ -39,6 +44,8 @@
   "ПРОФИЛЬ": "ПРОФИЛЬ",
   "Произошла непрезвиденная ошибка": "Произошла непрезвиденная ошибка",
   "Прокидываем ошибку": "Прокидываем ошибку",
+  "Профиль": "Профиль",
+  "Редактировать": "Редактировать",
   "Свернуть развернуть": "Свернуть развернуть",
   "Свернуть/ развернуть": "Свернуть/ развернуть",
   "Свернуть/hазвернуть": "Свернуть/hазвернуть",

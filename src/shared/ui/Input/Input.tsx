@@ -3,7 +3,8 @@ import { memo, useEffect, useState } from 'react'
 import cls from './Input.module.scss'
 import type { InputHTMLAttributes } from 'react'
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'
+>
 
 interface InputProps extends HTMLInputProps {
   className?: string
@@ -15,7 +16,7 @@ interface InputProps extends HTMLInputProps {
 }
 
 export const Input = memo((props: InputProps) => {
-  Input.displayName = 'Input'
+  Input.displayName = 'Input'//
   const {
     className,
     value,
@@ -51,13 +52,28 @@ export const Input = memo((props: InputProps) => {
     setIsFocus(false)
   }
   return (
-    <div className={classNames(cls.InputWrapper, {}, [className])} >
-{placeholder && <div className={classNames(cls.placeholder)}>{`${placeholder}>`}</div>}
-<div className={classNames(cls.caretWrapper, {}, [className])}>
-<input onSelect={onSelect} onFocus={onFocus} onBlur={onBlur} type = {type} onChange={onChangeHandler} className={classNames(cls.Input, {}, [className])} {...otherProps} />
-{isFocus && (<span style={ { left: `${caretPosition * 9}px` } } className={classNames(cls.caret, {}, [className])}></span>)}
-
-</div>
- </div>
+    <div className={classNames(cls.InputWrapper, {}, [className])}>
+      {placeholder && (
+        <div className={classNames(cls.placeholder)}>{`${placeholder}>`}</div>
+      )}
+      <div className={classNames(cls.caretWrapper, {}, [className])}>
+        <input
+          onSelect={onSelect}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          type={type}
+value={value}
+          onChange={onChangeHandler}
+          className={classNames(cls.Input, {}, [className])}
+          {...otherProps}
+        />
+        {isFocus && (
+          <span
+            style={{ left: `${caretPosition * 9}px` }}
+            className={classNames(cls.caret, {}, [className])}
+          ></span>
+        )}
+      </div>
+    </div>
   )
 })

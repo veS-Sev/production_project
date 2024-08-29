@@ -25,12 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "first": "Евгения",
-  "last":"Смагина",
-  "name":"admin",
-  "currency":"RUB",
-  "avatar":"https://avatars.githubusercontent.com/u/58933477?s=400&amp;u=b18004e17def9e64f4070ea0b57394304d7b5212&amp;v=4",
-"city":"Orel",
-"age":"44",
-"country": "Russia" }
+  "profile": {
+    "first": "Evgenija",
+    "last": "Smagina",
+    "username": "SevDev",
+    "currency": "RUB",
+    "avatar": "https://avatars.githubusercontent.com/u/58933477?s",
+    "city": "Orel",
+    "age": 28,
+    "country": "Russia"
+  }
 }
