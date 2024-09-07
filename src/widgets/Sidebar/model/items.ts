@@ -6,10 +6,11 @@ export interface SidebarItemType {
   text: string
   path: string
   Icon: React.VFC<React.SVGProps<SVGSVGElement>>
+  authOnly?: true
 }
 
 export const SidebarItemList: SidebarItemType[] = [
   { text: 'Главная', path: RouterPath.main, Icon: MainIcon },
-  { text: 'О нас', path: RouterPath.about, Icon: AboutIcon },
-  { text: 'Профиль', path: RouterPath.profile, Icon: ProfileIcon }
+  { text: 'О Нас', path: RouterPath.about, Icon: AboutIcon },
+  { text: 'Профиль', path: RouterPath.profile, Icon: ProfileIcon, authOnly: true }
 ]

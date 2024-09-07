@@ -2,6 +2,7 @@
   "Тестовый пример": "Test example",
   "Перевод": "Translation",
   "О сайте": "About page",
+  "О Нас": "About Us",
   "Главная страница": "Main page",
   "Язык": "English",
   "Свернуть/развернуть": "TOGGLE",
@@ -21,5 +22,17 @@
   "ФОРМА АВТОРИЗАЦИИ": "LOGIN FORM",
   "Неверно ввели логин или пароль": "Uncorrect password or login",
   "Редактировать": "Edit",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Сохранить": "Save",
+  "Отменить": "Cancel",
+  "Ваш возраст": "Your age",
+  "Ваш ник": "Your username",
+  "Ваше имя": "your firstname",
+  "Ваша фамилия": "Your lastname",
+  "Произошла ошибка": "The error has happened",
+  "Попробуйте обновить страницу": "Try refreshing the page",
+  "Ваш город": "Your city",
+  "Ваш аватар": "Your avatar",
+  "Укажите валюту ": "Specify the currency",
+  "Укажите страну ": "Selection the country"
 }

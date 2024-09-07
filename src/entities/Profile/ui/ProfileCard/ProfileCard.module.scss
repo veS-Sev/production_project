@@ -3,10 +3,31 @@
   border: 2px solid var(--inverted-bg-color);
 }
 
-.header {
-  display: flex;
+.editing {
+  border: 2px solid var(--inverted-primary-color);
 }
 
-.editBtn {
-  margin-left: auto;
+.loading,
+.error {
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.avatarWrapper {
+  display: flex;
+  justify-content: center;
 }

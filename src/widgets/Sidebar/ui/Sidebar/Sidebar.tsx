@@ -13,7 +13,6 @@ interface SidebarProps {
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
   const [collapsed, setCollased] = useState(false)
-  const [test, setTest] = useState(0)
 
   const onToggle = () => {
     setCollased((prev) => !prev)

@@ -2,21 +2,22 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { memo, useEffect, useState } from 'react'
 import cls from './Input.module.scss'
 import type { InputHTMLAttributes } from 'react'
-
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'
+import type { Mods } from 'shared/lib/classNames/classNames'
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readonly'
 >
 
 interface InputProps extends HTMLInputProps {
   className?: string
-  value?: string
+  value?: string | number
   onChange?: (value: string) => void
   type?: string
   placeholder?: string
   autofocus?: boolean
+  readonly?: boolean
 }
 
 export const Input = memo((props: InputProps) => {
-  Input.displayName = 'Input'//
+  Input.displayName = 'Input'
   const {
     className,
     value,
@@ -24,12 +25,13 @@ export const Input = memo((props: InputProps) => {
     type = 'text',
     placeholder,
     autofocus,
+    readonly,
     ...otherProps
   } = props
 
   const [isFocus, setIsFocus] = useState(false)
   const [caretPosition, setCaretPosition] = useState(0)
-
+  const isCaretVisible = isFocus && !readonly
   useEffect(() => {
     if (autofocus) {
       setIsFocus(true)
@@ -51,6 +53,10 @@ export const Input = memo((props: InputProps) => {
   const onBlur = () => {
     setIsFocus(false)
   }
+  const mods: Mods = {
+    [cls.readonly]: readonly
+  }
+
   return (
     <div className={classNames(cls.InputWrapper, {}, [className])}>
       {placeholder && (
@@ -62,12 +68,13 @@ export const Input = memo((props: InputProps) => {
           onFocus={onFocus}
           onBlur={onBlur}
           type={type}
+          readOnly = {readonly}
 value={value}
           onChange={onChangeHandler}
-          className={classNames(cls.Input, {}, [className])}
+          className={classNames(cls.Input, mods, [className])}
           {...otherProps}
         />
-        {isFocus && (
+        {isCaretVisible && (
           <span
             style={{ left: `${caretPosition * 9}px` }}
             className={classNames(cls.caret, {}, [className])}
