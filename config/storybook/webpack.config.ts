@@ -39,7 +39,9 @@
 
 //   return config
 // }
-import webpack, { DefinePlugin, RuleSetRule } from 'webpack'
+import { type RuleSetRule } from 'webpack'
+import type webpack from 'webpack'
+import { DefinePlugin } from 'webpack'
 import path from 'path'
 import { buildCssLoaders } from '../build/loaders/buildCssLoaders'
 import { type BuildPaths } from '../build/types/config'
@@ -74,7 +76,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
   config!.plugins!.push(
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(true),
-      __API__: JSON.stringify('')
+      __API__: JSON.stringify(''),
+      __PROJECT__: JSON.stringify('storybook')
     })
   )
 

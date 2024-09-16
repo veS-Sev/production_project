@@ -2,6 +2,7 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import { Sidebar } from './Sidebar'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../../../../config/storybook/ThemeDecorator/ThemeDecorator'
+import { StoreDecorator } from '../../../../../config/storybook/StoreDecorator'
 
 export default {
   title: 'widgets/Sidebar',
@@ -15,8 +16,12 @@ const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />
 
 export const Light = Template.bind({})
 Light.args = {}
-
+Light.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({ user: { authData: {} } })]
 export const Dark = Template.bind({})
 Dark.args = {}
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: {} } })]
+
+export const NoAuth = Template.bind({})
+NoAuth.args = {}
+NoAuth.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({ user: {} })]

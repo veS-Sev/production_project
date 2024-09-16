@@ -34,5 +34,10 @@
   "Ваш город": "Your city",
   "Ваш аватар": "Your avatar",
   "Укажите валюту ": "Specify the currency",
-  "Укажите страну ": "Selection the country"
+  "Укажите страну ": "Selection the country",
+  "Не указан город": "The city is not specified",
+  "Ошибка при отправке данных": "Error sending data",
+  "Имя в Фамилия обязательны": "First name and Last Name are required",
+  "Форма не заполнена": "The form is not filled in",
+  "Не верно введен возраст": "The age is entered incorrectly"
 }

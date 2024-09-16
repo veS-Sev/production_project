@@ -80,10 +80,13 @@ module.exports = {
 "@typescript-eslint/no-unnecessary-type-assertion": "off",
 "@typescript-eslint/prefer-ts-expect-error": "off",
 "@typescript-eslint/ban-ts-comment": "off",
-"@typescript-eslint/no-non-null-assertion": "off"},
+"@typescript-eslint/no-non-null-assertion": "off",
+"@typescript-eslint/unbound-method": "warn"
+},
   globals: {
     __IS_DEV__: true,
     __API__:true,
+    __PROJECT: true
   },
   ignorePatterns: [".eslintrc.js", "generate-visual-json-report.js","json-server/index.js"],
 }

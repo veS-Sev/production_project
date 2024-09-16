@@ -8,6 +8,7 @@ import { Loader } from 'shared/ui/Loader/Loader'
 import { Avatar } from 'shared/ui/Avatar'
 import { type Currency, CurrencySelect } from 'entities/Currency'
 import { type Country, CountrySelect } from 'entities/Country'
+import { validateProfileData } from 'entities/Profile/model/services/validateProfileData/validateProfileData'
 interface ProfileCardProps {
   className?: string
   data?: Profile
@@ -56,6 +57,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       </div>
     )
   }
+
   if (error) {
     return (
       <div

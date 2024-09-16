@@ -11,10 +11,18 @@ export interface Profile {
   country?: Country
 }
 
+export enum ValidateProfileError {
+  ICORRECT_CITY = 'ICORRECT_CITY',
+  ICORRECT_NAME = 'ICORRECT_NAME',
+  ICORRECT_AGE = 'ICORRECT_AGE',
+  SERVER_ERROR = 'SERVER_ERROR',
+  EMPTY_DATA = 'EMPTY_DATA',
+}
 export interface ProfileSchema {
   data?: Profile
   form?: Profile
   error?: string
   isLoading: boolean
   readonly: boolean
+  validateErrors?: ValidateProfileError[]
 }

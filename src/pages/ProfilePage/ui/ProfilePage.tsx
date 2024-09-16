@@ -5,13 +5,14 @@ import {
 import {
   fetchProfileData,
   profileReducer,
-  getProfileData,
+  getProfileValidateErrors,
   getProfileError,
   getProfileIsLoading,
   profileActions,
   getProfileReadonly,
   getProfileForm,
-  ProfileCard
+  ProfileCard,
+  ValidateProfileError
 } from 'entities/Profile'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
@@ -19,6 +20,8 @@ import { useCallback, useEffect } from 'react'
 import { ProfilePageHeader } from './ProfilePageHeader'
 import { type Currency } from 'entities/Currency'
 import { type Country } from 'entities/Country'
+import { TextTheme, Text } from 'shared/ui/Text'
+import { useTranslation } from 'react-i18next'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -30,9 +33,22 @@ const ProfilePage = () => {
   const error = useSelector(getProfileError)
   const formData = useSelector(getProfileForm)
   const readonly = useSelector(getProfileReadonly)
+  const validateErrors = useSelector(getProfileValidateErrors)
+  const { t } = useTranslation()
+  const validateErrorTranslate = {
+    [ValidateProfileError.EMPTY_DATA]: t('Форма не заполнена'),
+    [ValidateProfileError.ICORRECT_AGE]: t('Не верно введен возраст'),
+    [ValidateProfileError.ICORRECT_CITY]: t('Не указан город'),
+    [ValidateProfileError.SERVER_ERROR]: t('Ошибка при отправке данных'),
+    [ValidateProfileError.ICORRECT_NAME]: t('Имя в Фамилия обязательны')
+  }
+
   useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [])
+
   const onChangeFirstname = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ firstname: value || '' }))
@@ -84,19 +100,27 @@ const ProfilePage = () => {
   return (
     <DynamicModuleLoader reducers={reducers}>
       <ProfilePageHeader />
+      {validateErrors?.length &&
+        validateErrors.map((err) => (
+          <Text
+            key={err}
+            theme={TextTheme.ERROR}
+            text={validateErrorTranslate[err]}
+          />
+        ))}
       <ProfileCard
         data={formData}
         isLoading={isLoading}
         error={error}
         onChangeLastname={onChangeLastname}
         onChangeFirstname={onChangeFirstname}
-        readonly ={readonly}
+        readonly={readonly}
         onChangeUsername={onChangeUsername}
         onChangeAge={onChangeAge}
         onChangeAvatar={onChangeAvatar}
         onChangeCity={onChangeCity}
         onChangeCurrency={onChangeCurrency}
-    onChangeCountry={onChangeCountry}
+        onChangeCountry={onChangeCountry}
       />
     </DynamicModuleLoader>
   )
