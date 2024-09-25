@@ -39,5 +39,7 @@
   "Ошибка при отправке данных": "Error sending data",
   "Имя в Фамилия обязательны": "First name and Last Name are required",
   "Форма не заполнена": "The form is not filled in",
-  "Не верно введен возраст": "The age is entered incorrectly"
+  "Не верно введен возраст": "The age is entered incorrectly",
+  "Статья в деталях": "Article Details Page",
+  "Статьи": "Articles Page"
 }
