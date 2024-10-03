@@ -1,7 +1,3 @@
-// import { type Dispatch } from '@reduxjs/toolkit'
-// import axios from 'axios'
-// import { type StateSchema } from 'app/providers/StoreProvider'
-// import { profileActions } from 'entities/Profile'
 import { fetchProfileData } from './fetchProfileData'
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 import { Currency } from 'entities/Currency'

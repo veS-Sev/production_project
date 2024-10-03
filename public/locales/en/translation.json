@@ -41,5 +41,7 @@
   "Форма не заполнена": "The form is not filled in",
   "Не верно введен возраст": "The age is entered incorrectly",
   "Статья в деталях": "Article Details Page",
-  "Статьи": "Articles Page"
+  "Статьи": "Articles Page",
+  "Статья не найдена": "Article is not found",
+  "Произошла ошибка при загрузке статьи": "error loading the article"
 }

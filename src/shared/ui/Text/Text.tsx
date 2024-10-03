@@ -3,12 +3,12 @@ import cls from './Text.module.scss'
 
 export enum TextTheme {
   ERROR = 'error',
-  PRIMARY = 'primary'
+  PRIMARY = 'primary',
 }
 export enum TextAlign {
   LEFT = 'left',
   CENTER = 'center',
-  RIGHT = 'right'
+  RIGHT = 'right',
 }
 
 interface TextProps {
@@ -28,13 +28,19 @@ export const Text = (props: TextProps) => {
     align = TextAlign.LEFT
   } = props
   const mods: Mods = {
+    // [cls[theme]]: true,
+    // [cls[align]]: true
     [cls[theme]]: true,
     [cls[align]]: true
+    // [cls[size]]: true,
   }
+  console.log(title, mods, cls)
   return (
-<div className={classNames(cls.Text, mods, [className, 'Text'])}>
-{title && <p className={classNames(cls.title, {}, [className])}>{ title }</p>}
-{text && <p className={classNames(cls.text, {}, [className])}>{ text }</p>}
-</div>
+    <div className={classNames(cls.Text, mods, [className, 'Text'])}>
+      {title && (
+        <p className={classNames(cls.title, {}, [className])}>{title}</p>
+      )}
+      {text && <p className={classNames(cls.text, {}, [className])}>{text}</p>}
+    </div>
   )
 }
