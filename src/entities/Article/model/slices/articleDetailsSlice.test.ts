@@ -1,14 +1,7 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
-import { ArticleDetails } from './ArticleDetails'
-import { StoreDecorator } from '../../../../../config/storybook/StoreDecorator'
-import { type Article, AtricleBlockType, AtricleType } from '../../model/types/article'
-export default {
-  title: 'entities/ArticleDetails',
-  component: ArticleDetails,
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
-} as ComponentMeta<typeof ArticleDetails>
+import { type Article, AtricleBlockType, AtricleType } from '../types/article'
+import { type ArticleDetailsSchema } from '../types/articleDetails'
+import { articleDetailsReducer } from './articleDetailsSlice'
+import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById'
 
 const article: Article = {
   id: 1,
@@ -57,36 +50,27 @@ const article: Article = {
   ]
 }
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => (
-  <ArticleDetails {...args} />
-)
-
-export const Primary = Template.bind({})
-Primary.args = {}
-Primary.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      data: article
-    }
+describe('Article details slice test ', () => {
+  test('test fetchArticleById pending', () => {
+    const state: DeepPartial<ArticleDetailsSchema> = { isLoading: false }
+    expect(
+      articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.pending)
+    ).toEqual({ isLoading: true })
   })
-]
 
-export const Loading = Template.bind({})
-Loading.args = {}
-Loading.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      isLoading: true
-    }
+  test('test fetchArticleById fulfilled', () => {
+    const action = { type: fetchArticleById.fulfilled.type, payload: article }
+    const state: DeepPartial<ArticleDetailsSchema> = { isLoading: true, error: undefined, data: undefined }
+    expect(
+      articleDetailsReducer(state as ArticleDetailsSchema, action)
+    ).toEqual({ isLoading: false, data: article, error: undefined })
   })
-]
 
-export const Error = Template.bind({})
-Error.args = {}
-Error.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      error: 'Ошибочка вышла'
-    }
+  test('test fetchArticleById rejected', () => {
+    const action = { type: fetchArticleById.rejected.type, payload: 'Ошибочка вышла' }
+    const state: DeepPartial<ArticleDetailsSchema> = { isLoading: true, error: undefined, data: undefined }
+    expect(
+      articleDetailsReducer(state as ArticleDetailsSchema, action)
+    ).toEqual({ isLoading: false, data: undefined, error: 'Ошибочка вышла' })
   })
-]
+})

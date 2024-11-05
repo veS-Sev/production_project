@@ -1,5 +1,5 @@
 // import { type Dispatch } from '@reduxjs/toolkit'
-import axios from 'axios'
+// import axios from 'axios'
 // import { type StateSchema } from 'app/providers/StoreProvider'
 import { userActions } from 'entities/User'
 import { loginByUsername } from './loginByUsername'

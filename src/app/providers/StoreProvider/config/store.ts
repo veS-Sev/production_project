@@ -4,7 +4,6 @@ import type { CombinedState, Reducer, ReducersMapObject } from '@reduxjs/toolkit
 import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
 import { createReducerManager } from './reducerManager'
-import { profileReducer } from 'entities/Profile'
 import { $api } from 'shared/api/api'
 import { type To } from 'history'
 import { type NavigateOptions } from 'react-router'

@@ -1,16 +1,8 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
-import { ArticleDetails } from './ArticleDetails'
-import { StoreDecorator } from '../../../../../config/storybook/StoreDecorator'
-import { type Article, AtricleBlockType, AtricleType } from '../../model/types/article'
-export default {
-  title: 'entities/ArticleDetails',
-  component: ArticleDetails,
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
-} as ComponentMeta<typeof ArticleDetails>
+import { fetchArticleById } from './fetchArticleById'
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
+import { AtricleType, AtricleBlockType } from '../../types/article'
 
-const article: Article = {
+const data = {
   id: 1,
   title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',
@@ -57,36 +49,25 @@ const article: Article = {
   ]
 }
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => (
-  <ArticleDetails {...args} />
-)
+describe('fetchArticleById', () => {
+  test('succes fetch article data by id', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById)
 
-export const Primary = Template.bind({})
-Primary.args = {}
-Primary.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      data: article
-    }
-  })
-]
+    thunk.api.get.mockReturnValue(Promise.resolve({ data }))
 
-export const Loading = Template.bind({})
-Loading.args = {}
-Loading.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      isLoading: true
-    }
-  })
-]
+    const result = await thunk.callThunk('1')
 
-export const Error = Template.bind({})
-Error.args = {}
-Error.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      error: 'Ошибочка вышла'
-    }
+    expect(thunk.api.get).toHaveBeenCalled()
+    expect(result.meta.requestStatus).toBe('fulfilled')
+    expect(result.payload).toEqual(data)
   })
-]
+
+  test('error ', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById)
+    thunk.api.get.mockReturnValue(Promise.resolve({ status: '403' }))
+
+    const result = await thunk.callThunk('1')
+    expect(result.meta.requestStatus).toBe('rejected')
+    expect(result.payload).toBe('error')
+  })
+})
