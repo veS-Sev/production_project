@@ -81,7 +81,8 @@ module.exports = {
 "@typescript-eslint/prefer-ts-expect-error": "off",
 "@typescript-eslint/ban-ts-comment": "off",
 "@typescript-eslint/no-non-null-assertion": "off",
-"@typescript-eslint/unbound-method": "warn"
+"@typescript-eslint/unbound-method": "warn",
+"quote-props": ["error", "as-needed"]
 },
   globals: {
     __IS_DEV__: true,

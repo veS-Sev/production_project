@@ -9,7 +9,7 @@ import {
 import { articleDetailsReducer } from '../../model/slices/articleDetailsSlice'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Text, TextAlign, TextSize } from 'shared/ui/Text'
-import { useEffect, memo, useCallback } from 'react'
+import { memo, useCallback } from 'react'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import {
   getArticleDetailsData,
@@ -25,6 +25,7 @@ import { AtricleBlockType, type ArticleBlock } from '../../index'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
+import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 interface ArticleDetailsProps {
   className?: string
   id: string
@@ -40,20 +41,16 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   const article = useSelector(getArticleDetailsData)
   const error = useSelector(getArticleDetailsError)
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchArticleById(id))
-    }
-  }, [dispatch, id])
+  useInitionalEffect(() => { dispatch(fetchArticleById(id)) })
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {
       case AtricleBlockType.CODE:
-        return <ArticleCodeBlockComponent key={block.id} block={block}/>
+        return <ArticleCodeBlockComponent key={block.id} block={block} />
       case AtricleBlockType.IMAGE:
-        return <ArticleImageBlockComponent key={block.id} block={block}/>
+        return <ArticleImageBlockComponent key={block.id} block={block} />
       case AtricleBlockType.TEXT:
-        return <ArticleTextBlockComponent key={block.id} block={block}/>
+        return <ArticleTextBlockComponent key={block.id} block={block} />
       default:
         return null
     }
