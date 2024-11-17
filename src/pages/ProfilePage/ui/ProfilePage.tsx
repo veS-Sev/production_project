@@ -16,18 +16,21 @@ import {
 } from 'entities/Profile'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import { ProfilePageHeader } from './ProfilePageHeader'
 import { type Currency } from 'entities/Currency'
 import { type Country } from 'entities/Country'
 import { TextTheme, Text } from 'shared/ui/Text'
 import { useTranslation } from 'react-i18next'
+import { useParams } from 'react-router-dom'
+import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 
 const reducers: ReducersList = {
   profile: profileReducer
 }
 
 const ProfilePage = () => {
+  const { id } = useParams<{ id: string }>()
   const dispatch = useAppDispatch()
   const isLoading = useSelector(getProfileIsLoading)
   const error = useSelector(getProfileError)
@@ -42,12 +45,11 @@ const ProfilePage = () => {
     [ValidateProfileError.SERVER_ERROR]: t('Ошибка при отправке данных'),
     [ValidateProfileError.ICORRECT_NAME]: t('Имя в Фамилия обязательны')
   }
-
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData())
+  useInitionalEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(id))
     }
-  }, [])
+  })
 
   const onChangeFirstname = useCallback(
     (value?: string) => {

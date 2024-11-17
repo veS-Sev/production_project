@@ -1,6 +1,6 @@
-import { lazy } from 'react'
+import { lazy, type FC } from 'react'
+import { type ArticleDetailsPageProps } from './ArticleDetailsPage'
 
-export const ArticleDetailsPageAsync = lazy(async () => await new Promise(resolve => {
-  // @ts-expect-error:ТАК В РЕАЛЬНЫХ ПРОЕКТАХ НЕ ДЕЛАТЬ!!!!! ДЕЛАЕМ ДЛЯ КУРСА!
-  setTimeout(() => { resolve(import('./ArticleDetailsPage')) }, 1500)
+export const ArticleDetailsPageAsync = lazy<FC<ArticleDetailsPageProps>>(async () => await new Promise(resolve => {
+  setTimeout(() => { resolve(import('./ArticleDetailsPage')) }, 1000)
 }))

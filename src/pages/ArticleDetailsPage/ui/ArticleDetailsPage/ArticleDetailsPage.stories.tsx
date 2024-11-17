@@ -1,8 +1,9 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import ArticleDetailsPage from './ArticleDetailsPage'
+import { StoreDecorator } from '../../../../../config/storybook/StoreDecorator'
 import { type Article, AtricleBlockType, AtricleType } from 'entities/Article/model/types/article'
 export default {
-  title: 'shared/ArticleDetailsPage',
+  title: 'pages/ArticleDetailsPage',
   component: ArticleDetailsPage,
   argTypes: {
     backgroundColor: { control: 'color' }
@@ -10,7 +11,7 @@ export default {
 } as ComponentMeta<typeof ArticleDetailsPage>
 
 const article: Article = {
-  id: 1,
+  id: '1',
   title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
@@ -60,3 +61,8 @@ const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDe
 
 export const Primary = Template.bind({})
 Primary.args = {}
+Primary.decorators = [StoreDecorator({
+  articleDetails: {
+    data: article
+  }
+})]

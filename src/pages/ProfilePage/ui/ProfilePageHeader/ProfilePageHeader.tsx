@@ -5,8 +5,9 @@ import { Button } from 'shared/ui/Button'
 import { Text } from 'shared/ui/Text'
 import { ButtonTheme } from 'shared/ui/Button/Button'
 import { useSelector } from 'react-redux'
-import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile'
+import { getProfileForm, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { getUserAuthData } from 'entities/User'
 
 interface ProfilePageHeaderProps {
   className?: string
@@ -16,6 +17,9 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const readonly = useSelector(getProfileReadonly)
+  const authData = useSelector(getUserAuthData)
+  const profileData = useSelector(getProfileForm)
+  const canEdit = authData?.id === profileData?.id
 
   const onEdit = () => {
     dispatch(profileActions.setReadonly(false))
@@ -30,6 +34,8 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   return (
     <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
       <Text title={t('Профиль')} />
+      {canEdit && (
+        <div className={cls.btnWrapper}>
       {readonly
         ? (
         <Button className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick ={onEdit}>
@@ -46,7 +52,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
 
         </div>
           )
-}
+}</div>)}
     </div>
   )
 }

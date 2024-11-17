@@ -3,6 +3,7 @@ import type { UserSchema } from 'entities/User'
 import type { LoginShema } from 'features/authByUsername'
 import type { ProfileSchema } from 'entities/Profile'
 import type { ArticleDetailsSchema } from 'entities/Article/model/types/articleDetails'
+import type { AddCommentFormSchema } from 'features/addCommentForm/model/type/addCommentFormSchema'
 import type { AnyAction, ReducersMapObject, Reducer, EnhancedStore, CombinedState } from '@reduxjs/toolkit'
 import { type AxiosInstance } from 'axios'
 import { type To } from 'history'
@@ -17,6 +18,7 @@ export interface StateSchema {
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsShcema
+  addCommentForm?: AddCommentFormSchema
 }
 
 export type StateSchemaKeys = keyof StateSchema

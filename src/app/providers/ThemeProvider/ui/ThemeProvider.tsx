@@ -23,7 +23,6 @@ const ThemeProvider: FC<ThemeProviderProps> = (props) => {
     }),
     [theme]
   )
-  console.log('theme', theme)
   return (
     <ThemeContext.Provider value={defaultProps}>
       {children}

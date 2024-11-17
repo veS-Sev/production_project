@@ -47,7 +47,6 @@ describe('loginByUsername', () => {
     thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }))
 
     const result = await thunk.callThunk({ username: '123', password: '123' })
-    console.log('result', result)
     expect(thunk.dispatch).toBeCalledWith(userActions.setAuthData(userValue))
     // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(thunk.api.post).toHaveBeenCalled()
