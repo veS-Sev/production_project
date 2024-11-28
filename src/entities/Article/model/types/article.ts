@@ -1,9 +1,14 @@
+import { type User } from 'entities/User'
 export enum AtricleBlockType {
   IMAGE = 'IMAGE',
   TEXT = 'TEXT',
   CODE = 'CODE',
 }
 
+export enum ArticleView {
+  BIG = 'BIG',
+  SMALL = 'SMALL'
+}
 export interface ArticleBlockBase {
   id: string
   type: AtricleBlockType
@@ -37,6 +42,7 @@ export interface Article {
   id: string
   title: string
   subtitle: string
+  user: User
   img: string
   views: number
   createdAt: string

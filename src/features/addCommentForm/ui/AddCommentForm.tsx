@@ -9,7 +9,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
 import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
-import { getCommentFormText, getCommentFormError } from '../model/selectors/getCommentForm'
+import { getCommentFormText } from '../model/selectors/getCommentForm'
 
 const initialReducers: ReducersList = {
   addCommentForm: addCommentFormReducer

@@ -4,5 +4,5 @@ export const useInitionalEffect = (callback: () => void) => {
     if (__PROJECT__ !== 'storybook') {
       callback()
     }
-  }, [])
+  }, [callback])
 }

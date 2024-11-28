@@ -3,7 +3,7 @@ import { ArticleDetails } from './ArticleDetails'
 import { StoreDecorator } from '../../../../../config/storybook/StoreDecorator'
 import { type Article, AtricleBlockType, AtricleType } from '../../model/types/article'
 export default {
-  title: 'entities/ArticleDetails',
+  title: 'entities/Article/ArticleDetails',
   component: ArticleDetails,
   argTypes: {
     backgroundColor: { control: 'color' }
@@ -16,6 +16,10 @@ const article: Article = {
   subtitle: 'Что нового в JS за 2022 год?',
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
+  user: {
+    id: '1',
+    username: 'admin'
+  },
   createdAt: '26.02.2022',
   type: [AtricleType.IT],
   blocks: [
