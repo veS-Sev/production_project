@@ -7,7 +7,7 @@ import { ArticleListItemSkeleton } from '../ArticleListItemSkeleton/ArticleListI
 interface ArticleListProps {
   className?: string
   articles: Article[]
-  view?: ArticleView
+  view: ArticleView
   isLoading: boolean
 }
 
@@ -18,7 +18,7 @@ const getSceletons = (view: ArticleView) => {
 }
 
 export const ArticleList = (props: ArticleListProps) => {
-  const { className, view = ArticleView.SMALL, articles, isLoading } = props
+  const { className, view, articles, isLoading } = props
   if (isLoading) {
     return (<div className={classNames(cls.ArticleList, {}, [className, cls[view]])}> {getSceletons(view)}
   </div>)

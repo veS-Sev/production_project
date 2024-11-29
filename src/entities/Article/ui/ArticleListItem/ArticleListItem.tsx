@@ -75,7 +75,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
       {...bindHover}
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
-      <Card className={classNames(cls.card)} >
+      <Card onClick={onOpenArticle} className={classNames(cls.card)} >
         <div className={classNames(cls.imageWrapper)}>
           <img
             src={article.img}
