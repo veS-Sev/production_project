@@ -9,7 +9,7 @@ interface BugButtonProps {
 }
 
 export const BugButton = ({ className }: BugButtonProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('translation')
   const [error, setError] = useState(false)
   const throwError = () => {
     setError(true)

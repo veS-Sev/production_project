@@ -1,6 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useSelector } from 'react-redux'
-import { useTranslation } from 'react-i18next'
 import cls from './ArticleDetails.module.scss'
 import {
   DynamicModuleLoader,
@@ -26,6 +25,7 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
+import { useTranslation } from 'react-i18next'
 interface ArticleDetailsProps {
   className?: string
   id: string

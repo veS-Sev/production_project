@@ -54,5 +54,6 @@
       }
     }
   },
-  "К списку статей": "Back to articles"
+  "К списку статей": "Back to articles",
+  "Прокидываем ошибку":"Throw error"
 }

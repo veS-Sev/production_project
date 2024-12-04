@@ -18,6 +18,8 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { Button } from 'shared/ui/Button'
 import { RouterPath } from 'shared/config/routeConfig'
+import { Page } from 'shared/ui/Page'
+
 export interface ArticleDetailsPageProps {
   className?: string
 }
@@ -46,15 +48,15 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         {t('Статья не найдена')}
-      </div>
+      </Page>
     )
   }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-    <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+    <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
     <Button onClick={onBackToArticlesList}>{t('К списку статей')}</Button>
       <ArticleDetails id={id} />
       <Text title={t('Комментарии')} />
@@ -63,7 +65,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
       isLoading={commentsIsLoading}
         comments={comments}
       />
-    </div>
+    </Page>
     </DynamicModuleLoader>
   )
 }

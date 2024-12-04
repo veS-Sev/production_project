@@ -9,7 +9,7 @@ import { type AxiosInstance } from 'axios'
 import { type To } from 'history'
 import { type NavigateOptions } from 'react-router'
 import { type ArticleDetailsCommentsShcema } from 'pages/ArticleDetailsPage'
-import { type ArticlesPageShcema } from 'pages/ArticlesPage'
+import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
@@ -20,7 +20,7 @@ export interface StateSchema {
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsShcema
   addCommentForm?: AddCommentFormSchema
-  articlesPage?: ArticlesPageShcema
+  articlesPage?: ArticlesPageSchema
 }
 
 export type StateSchemaKeys = keyof StateSchema

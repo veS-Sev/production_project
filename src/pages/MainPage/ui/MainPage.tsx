@@ -1,14 +1,15 @@
-import { useTranslation } from 'react-i18next'
 import { BugButton } from 'app/providers/ErrorBoundary'
 import { memo } from 'react'
+import { Page } from 'shared/ui/Page'
+import { useTranslation } from 'react-i18next'
 
 const MainPage = memo(() => {
   const { t } = useTranslation('main')
   return (
-        <div>
+        <Page>
           <BugButton/>
             {t('Главная страница')}
-        </div>
+        </Page>
   )
 })
 

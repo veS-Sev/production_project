@@ -8,11 +8,11 @@ import { Text } from 'shared/ui/Text'
 import { useHover } from 'shared/lib/hooks/useHover/useHover'
 import { Avatar } from 'shared/ui/Avatar'
 import { Button } from 'shared/ui/Button'
-import { useTranslation } from 'react-i18next'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { useNavigate } from 'react-router-dom'
 import { useCallback } from 'react'
 import { RouterPath } from 'shared/config/routeConfig'
+import { useTranslation } from 'react-i18next'
 interface ArticleListItemProps {
   className?: string
   article: Article
@@ -21,7 +21,7 @@ interface ArticleListItemProps {
 
 export const ArticleListItem = (props: ArticleListItemProps) => {
   const { className, article, view } = props
-  const { t } = useTranslation()
+  const { t } = useTranslation('articles')
   const [isHover, bindHover] = useHover()
   const navigate = useNavigate()
 
@@ -58,7 +58,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
             />
             <Text text={article.createdAt} className={classNames(cls.date)} />
           </div>
-          <Text title={article.title} className={classNames(cls.title)} />
+          <Text title={article.subtitle} className={classNames(cls.title)} />
           {types}
           <img src={article.img} className={classNames(cls.image)} />
           {textBlock && (<ArticleTextBlockComponent block={textBlock} className={classNames(cls.textBlock)}/>)}
@@ -79,7 +79,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
         <div className={classNames(cls.imageWrapper)}>
           <img
             src={article.img}
-            alt={article.title}
+            alt={article.subtitle}
             className={classNames(cls.image)}
           />
           <Text text={article.createdAt} className={classNames(cls.date)} />
@@ -88,7 +88,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
           {types}
           {views}
         </div>
-        <Text text={article.title} className={classNames(cls.title)} />
+        <Text text={article.subtitle} className={classNames(cls.title)} />
       </Card>
     </div>
   )

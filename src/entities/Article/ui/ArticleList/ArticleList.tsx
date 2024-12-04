@@ -19,17 +19,18 @@ const getSceletons = (view: ArticleView) => {
 
 export const ArticleList = (props: ArticleListProps) => {
   const { className, view, articles, isLoading } = props
-  if (isLoading) {
-    return (<div className={classNames(cls.ArticleList, {}, [className, cls[view]])}> {getSceletons(view)}
-  </div>)
-  }
+  // if (isLoading) {
+  //   return (<div className={classNames(cls.ArticleList, {}, [className, cls[view]])}> {getSceletons(view)}
+  // </div>)
+  // }
   const renderArticles = (articles: Article[]) =>
     articles.map((article, id) => (
       <ArticleListItem className={cls.card} key={article.id} view={view} article={article} />
     ))
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-      {articles.length > 0 ? renderArticles(articles) : 'СТАТЕЙ ПОКА НЕТ'}
+      {articles.length > 0 ? renderArticles(articles) : null}
+      {isLoading && getSceletons(view)}
     </div>
   )
 }
