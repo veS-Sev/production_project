@@ -6,8 +6,8 @@ import type { ArticleDetailsSchema } from 'entities/Article/model/types/articleD
 import type { AddCommentFormSchema } from 'features/addCommentForm/model/type/addCommentFormSchema'
 import type { AnyAction, ReducersMapObject, Reducer, EnhancedStore, CombinedState } from '@reduxjs/toolkit'
 import { type AxiosInstance } from 'axios'
-import { type To } from 'history'
-import { type NavigateOptions } from 'react-router'
+// import { type To } from 'history'
+// import { type NavigateOptions } from 'react-router'
 import { type ArticleDetailsCommentsShcema } from 'pages/ArticleDetailsPage'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 export interface StateSchema {
@@ -24,7 +24,7 @@ export interface StateSchema {
 }
 
 export type StateSchemaKeys = keyof StateSchema
-
+export type MountedReducers = OptionalRecord<StateSchemaKeys, boolean>
 export interface ReducerManager {
   getReducerMap: () => ReducersMapObject<StateSchema>
 
@@ -33,6 +33,9 @@ export interface ReducerManager {
   add: (key: StateSchemaKeys, reducer: Reducer) => void
 
   remove: (key: StateSchemaKeys) => void
+
+  getMountedReducers: () => MountedReducers
+  // true - вмонтирован false-демонтирован
 }
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
   reducerManager: ReducerManager
@@ -40,7 +43,7 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 
 export interface ThunkExtraArg {
   api: AxiosInstance
-  navigate?: (to: To, options?: NavigateOptions) => void
+  // navigate?: (to: To, options?: NavigateOptions) => void
 }
 
 export interface ThunkConfig<T> {

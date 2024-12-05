@@ -1,12 +1,13 @@
 import { ArticleView } from 'entities/Article'
-import { fetchNextArticlesPage } from './fetchNextArticlesPage'
+import { initArticlesPage } from './initArticlesPage'
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList'
 
 jest.mock('../fetchArticlesList/fetchArticlesList')
-describe('fetchNextArticlesPage.test', () => {
-  test('succes', async () => {
-    const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
+
+describe('initArticlesPage test', () => {
+  test('wasn`t initialized', async () => {
+    const thunk = new TestAsyncThunk(initArticlesPage, {
       articlesPage: {
         ids: [],
         isLoading: false,
@@ -14,7 +15,8 @@ describe('fetchNextArticlesPage.test', () => {
         view: ArticleView.SMALL,
         page: 2,
         hasMore: true,
-        limit: 5
+        limit: 5,
+        _inited: false
       }
     })
 
@@ -24,35 +26,17 @@ describe('fetchNextArticlesPage.test', () => {
     expect(fetchArticlesList).toHaveBeenCalledWith({ page: 3 })
   })
 
-  test('fetch Articles List has not been called', async () => {
-    const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
+  test('has already been initialized', async () => {
+    const thunk = new TestAsyncThunk(initArticlesPage, {
       articlesPage: {
         ids: [],
         isLoading: false,
         entities: {},
         view: ArticleView.SMALL,
         page: 2,
-        hasMore: false,
-        limit: 5
-      }
-    })
-
-    await thunk.callThunk()
-
-    expect(thunk.dispatch).toBeCalledTimes(2)
-    expect(fetchArticlesList).not.toHaveBeenCalled()
-  })
-
-  test('fetchNextArticlesPage is loading', async () => {
-    const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
-      articlesPage: {
-        ids: [],
-        isLoading: true,
-        entities: {},
-        view: ArticleView.SMALL,
-        page: 2,
         hasMore: true,
-        limit: 5
+        limit: 5,
+        _inited: true
       }
     })
 
