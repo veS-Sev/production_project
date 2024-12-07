@@ -2,6 +2,7 @@ import type { CounterSchema } from 'entities/Counter'
 import type { UserSchema } from 'entities/User'
 import type { LoginShema } from 'features/authByUsername'
 import type { ProfileSchema } from 'entities/Profile'
+import type { UISchema } from 'features/UI'
 import type { ArticleDetailsSchema } from 'entities/Article/model/types/articleDetails'
 import type { AddCommentFormSchema } from 'features/addCommentForm/model/type/addCommentFormSchema'
 import type { AnyAction, ReducersMapObject, Reducer, EnhancedStore, CombinedState } from '@reduxjs/toolkit'
@@ -13,7 +14,7 @@ import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
-
+  ui: UISchema
   // Async reducers
   loginForm?: LoginShema
   profile?: ProfileSchema

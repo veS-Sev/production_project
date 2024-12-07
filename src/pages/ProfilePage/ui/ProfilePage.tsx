@@ -24,7 +24,7 @@ import { TextTheme, Text } from 'shared/ui/Text'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
-import { Page } from 'shared/ui/Page'
+import { Page } from 'widgets/Page'
 
 const reducers: ReducersList = {
   profile: profileReducer

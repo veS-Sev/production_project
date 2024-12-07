@@ -18,7 +18,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { Button } from 'shared/ui/Button'
 import { RouterPath } from 'shared/config/routeConfig'
-import { Page } from 'shared/ui/Page'
+import { Page } from 'widgets/Page'
 
 export interface ArticleDetailsPageProps {
   className?: string

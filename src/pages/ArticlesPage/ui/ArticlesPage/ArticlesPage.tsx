@@ -24,7 +24,7 @@ import {
   getArticlesPageInited
 } from 'pages/ArticlesPage/model/selectors/articlesPageSelectors'
 import { ArticlesViewSelector } from 'entities/Article/index'
-import { Page } from 'shared/ui/Page'
+import { Page } from 'widgets/Page'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 interface ArticlesPageProps {
   className?: string
