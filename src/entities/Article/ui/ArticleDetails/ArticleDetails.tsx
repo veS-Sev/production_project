@@ -20,7 +20,7 @@ import { Avatar } from 'shared/ui/Avatar'
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg'
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg'
 import { Icon } from 'shared/ui/Icon'
-import { AtricleBlockType, type ArticleBlock } from '../../index'
+import { ArticleBlockType, type ArticleBlock } from '../../index'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
@@ -45,11 +45,11 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {
-      case AtricleBlockType.CODE:
+      case ArticleBlockType.CODE:
         return <ArticleCodeBlockComponent key={block.id} block={block} />
-      case AtricleBlockType.IMAGE:
+      case ArticleBlockType.IMAGE:
         return <ArticleImageBlockComponent key={block.id} block={block} />
-      case AtricleBlockType.TEXT:
+      case ArticleBlockType.TEXT:
         return <ArticleTextBlockComponent key={block.id} block={block} />
       default:
         return null

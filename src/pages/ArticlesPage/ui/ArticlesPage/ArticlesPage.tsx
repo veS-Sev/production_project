@@ -20,12 +20,12 @@ import { useSelector } from 'react-redux'
 import {
   getArticlesPageError,
   getArticlesPageIsLoading,
-  getArticlesPageView,
-  getArticlesPageInited
+  getArticlesPageView
 } from 'pages/ArticlesPage/model/selectors/articlesPageSelectors'
-import { ArticlesViewSelector } from 'entities/Article/index'
 import { Page } from 'widgets/Page'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
+import { useSearchParams } from 'react-router-dom'
 interface ArticlesPageProps {
   className?: string
 }
@@ -42,20 +42,21 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const isLoading = useSelector(getArticlesPageIsLoading)
   const view = useSelector(getArticlesPageView)
   const error = useSelector(getArticlesPageError)
+  const [searchParams] = useSearchParams()
 
-  const onChangeView = useCallback(
-    (view: ArticleView) => {
-      dispatch(articlesPageActions.setView(view))
-    },
-    [dispatch]
-  )
+  // const onChangeView = useCallback(
+  //   (view: ArticleView) => {
+  //     dispatch(articlesPageActions.setView(view))
+  //   },
+  //   [dispatch]
+  // )
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage())
   }, [dispatch])
 
   useInitionalEffect(() => {
-    dispatch(initArticlesPage())
+    dispatch(initArticlesPage(searchParams))
   })
 
   return (
@@ -64,7 +65,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.ArticlesPage, {}, [className])}
       >
-        <ArticlesViewSelector onViewClick={onChangeView} view={view} />
+        <ArticlesPageFilters/>
         {t('Статьи')}
         <ArticleList view={view} isLoading={isLoading} articles={articles} />
       </Page>

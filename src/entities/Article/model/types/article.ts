@@ -1,8 +1,14 @@
 import { type User } from 'entities/User'
-export enum AtricleBlockType {
+export enum ArticleBlockType {
   IMAGE = 'IMAGE',
   TEXT = 'TEXT',
   CODE = 'CODE',
+}
+
+export enum ArticleSortField {
+  VIEWS = 'views',
+  CREATED = 'created',
+  TITLE = 'title',
 }
 
 export enum ArticleView {
@@ -11,31 +17,32 @@ export enum ArticleView {
 }
 export interface ArticleBlockBase {
   id: string
-  type: AtricleBlockType
+  type: ArticleBlockType
 }
 export interface ArticleTextBlock extends ArticleBlockBase {
-  type: AtricleBlockType.TEXT
+  type: ArticleBlockType.TEXT
   title?: string
   paragraphs: Array<string>
 }
 
 export interface ArticleImageBlock extends ArticleBlockBase {
-  type: AtricleBlockType.IMAGE
+  type: ArticleBlockType.IMAGE
   src: string
   title: string
 }
 
 export interface ArticleCodeBlock extends ArticleBlockBase {
-  type: AtricleBlockType.CODE
+  type: ArticleBlockType.CODE
   code: string
 }
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock
 
-export enum AtricleType {
+export enum ArticleType {
+  ALL = 'ALL',
   IT = 'IT',
   SCIENCE = 'SCIENCE',
-  ECONEMICS = 'ECONEMICS',
+  ECONOMICS = 'ECONOMICS',
 }
 
 export interface Article {
@@ -46,6 +53,6 @@ export interface Article {
   img: string
   views: number
   createdAt: string
-  type: Array<AtricleType>
+  type: Array<ArticleType>
   blocks: Array<ArticleBlock>
 }

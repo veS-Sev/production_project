@@ -1,9 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames'
+import { memo } from 'react'
 import cls from './ArticleList.module.scss'
 import { type Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItemSkeleton/ArticleListItemSkeleton'
-
+import { Text, TextSize } from 'shared/ui/Text'
 interface ArticleListProps {
   className?: string
   articles: Article[]
@@ -17,12 +18,11 @@ const getSceletons = (view: ArticleView) => {
   ))
 }
 
-export const ArticleList = (props: ArticleListProps) => {
+export const ArticleList = memo((props: ArticleListProps) => {
   const { className, view, articles, isLoading } = props
-  // if (isLoading) {
-  //   return (<div className={classNames(cls.ArticleList, {}, [className, cls[view]])}> {getSceletons(view)}
-  // </div>)
-  // }
+  if (!isLoading && articles.length === 0) {
+    return (<Text title={'Статьи не найдены'} size={TextSize.L}/>)
+  }
   const renderArticles = (articles: Article[]) =>
     articles.map((article, id) => (
       <ArticleListItem className={cls.card} key={article.id} view={view} article={article} />
@@ -34,3 +34,4 @@ export const ArticleList = (props: ArticleListProps) => {
     </div>
   )
 }
+)

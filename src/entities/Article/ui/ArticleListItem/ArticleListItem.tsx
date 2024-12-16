@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleListItem.module.scss'
 import { Icon } from 'shared/ui/Icon'
 import Eye from 'shared/assets/icons/eye-20-20.svg'
-import { type Article, type ArticleTextBlock, ArticleView, AtricleBlockType } from 'entities/Article/model/types/article'
+import { type Article, type ArticleTextBlock, ArticleView, ArticleBlockType } from 'entities/Article/model/types/article'
 import { Card } from 'shared/ui/Card'
 import { Text } from 'shared/ui/Text'
 import { useHover } from 'shared/lib/hooks/useHover/useHover'
@@ -25,7 +25,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
   const [isHover, bindHover] = useHover()
   const navigate = useNavigate()
 
-  const textBlock = article.blocks.find(block => block.type === AtricleBlockType.TEXT) as ArticleTextBlock
+  const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT) as ArticleTextBlock
   const onOpenArticle = useCallback(() => {
     navigate(`${RouterPath.article_details}${article.id}`)
   }, [navigate, article.id])

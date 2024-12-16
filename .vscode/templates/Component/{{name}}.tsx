@@ -5,6 +5,7 @@ interface {{name}}Props {
   className?: string
 }
 
-export const {{name}} = ({ className }: {{name}}Props) => {
+export const {{name}} = ( props: {{name}}Props) => {
+  const { className } = props
   return <div className={classNames(cls.{{name}}, {}, [className])}></div>
 }

@@ -1,6 +1,6 @@
 import { fetchArticleById } from './fetchArticleById'
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
-import { AtricleType, AtricleBlockType } from '../../types/article'
+import { ArticleType, ArticleBlockType } from '../../types/article'
 
 const data = {
   id: 1,
@@ -9,11 +9,11 @@ const data = {
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.02.2022',
-  type: [AtricleType.IT],
+  type: [ArticleType.IT],
   blocks: [
     {
       id: '1',
-      type: AtricleBlockType.TEXT,
+      type: ArticleBlockType.TEXT,
       title: 'Заголовок этого блока',
       paragraphs: [
         'Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.',
@@ -23,12 +23,12 @@ const data = {
     },
     {
       id: '4',
-      type: AtricleBlockType.CODE,
+      type: ArticleBlockType.CODE,
       code: '<!DOCTYPE html>\n<html>\n  <body>\n    <p id="hello"></p>\n\n    <script>\n      document.getElementById("hello").innerHTML = "Hello, world!";\n    </script>\n  </body>\n</html>;'
     },
     {
       id: '5',
-      type: AtricleBlockType.TEXT,
+      type: ArticleBlockType.TEXT,
       title: 'Заголовок этого блока',
       paragraphs: [
         'Программа, которую по традиции называют «Hello, world!», очень проста. Она выводит куда-либо фразу «Hello, world!», или другую подобную, средствами некоего языка.',
@@ -37,13 +37,13 @@ const data = {
     },
     {
       id: '2',
-      type: AtricleBlockType.IMAGE,
+      type: ArticleBlockType.IMAGE,
       src: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
       title: 'Рисунок 1 - скриншот сайта'
     },
     {
       id: '3',
-      type: AtricleBlockType.CODE,
+      type: ArticleBlockType.CODE,
       code: "const path = require('path');\n\nconst server = jsonServer.create();\n\nconst router = jsonServer.router(path.resolve(__dirname, 'db.json'));\n\nserver.use(jsonServer.defaults({}));\nserver.use(jsonServer.bodyParser);"
     }
   ]

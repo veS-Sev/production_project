@@ -6,21 +6,37 @@ import {
 } from '../../selectors/articlesPageSelectors'
 import { articlesPageActions } from '../../slice/articlesPageSlice'
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList'
+import { type URLSearchParams } from 'url'
+import { type ArticleType, type ArticleSortField } from 'entities/Article'
+import { type SortOrder } from 'shared/types'
 
 export const initArticlesPage = createAsyncThunk<
-void, void,
+void,
+URLSearchParams,
 ThunkConfig<string>
->('articlesPage/initArticlesPage', async (_, thunkApi) => {
+>('articlesPage/initArticlesPage', async (searchParams, thunkApi) => {
   const { getState, dispatch } = thunkApi
-  const page = getArticlesPageNum(getState())
   const inited = getArticlesPageInited(getState())
+  const orderFromURL = searchParams.get('order') as SortOrder
+  const sortFromURL = searchParams.get('sort') as ArticleSortField
+  const searchFromURL = searchParams.get('search')
+  const typeFromURL = searchParams.get('type') as ArticleType
+  if (orderFromURL) {
+    dispatch(articlesPageActions.setOrder(orderFromURL))
+  }
+  if (sortFromURL) {
+    dispatch(articlesPageActions.setSort(sortFromURL))
+  }
+  if (searchFromURL) {
+    dispatch(articlesPageActions.setSearch(searchFromURL))
+  }
+
+  if (typeFromURL) {
+    dispatch(articlesPageActions.setType(typeFromURL))
+  }
 
   if (!inited) {
     dispatch(articlesPageActions.initState())
-    dispatch(
-      fetchArticlesList({
-        page: page + 1
-      }))
+    dispatch(fetchArticlesList({}))
   }
-}
-)
+})
