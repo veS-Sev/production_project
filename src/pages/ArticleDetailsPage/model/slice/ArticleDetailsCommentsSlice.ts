@@ -9,7 +9,7 @@ const commentsAdapter = createEntityAdapter<Comment>({
 
 export const getArticleComments = commentsAdapter.getSelectors(
   (state: StateSchema) =>
-    state.articleDetailsComments || commentsAdapter.getInitialState()
+    state.articleDetailsPage?.comments || commentsAdapter.getInitialState()
 )
 
 const articleDetailsCommentsSlice = createSlice({
@@ -17,26 +17,6 @@ const articleDetailsCommentsSlice = createSlice({
   initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsShcema>({
     ids: ['1', '2'],
     entities: {
-      // '1': {
-      //   id: '1',
-      //   text: 'comment 1',
-      //   user: {
-      //     id: '1',
-      //     username: 'Evgenija',
-      //     avatar:
-      //       'https://i.pinimg.com/originals/d2/60/35/d260355157095d3552efa64fbd893a3d.jpg'
-      //   }
-      // },
-      // '2': {
-      //   id: '2',
-      //   text: 'comment 2',
-      //   user: {
-      //     id: '1',
-      //     username: 'Evgenija',
-      //     avatar:
-      //       'https://i.pinimg.com/originals/d2/60/35/d260355157095d3552efa64fbd893a3d.jpg'
-      //   }
-      // }
     },
     isLoading: false,
     error: undefined

@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import { memo } from 'react'
+import { type HTMLAttributeAnchorTarget, memo } from 'react'
 import cls from './ArticleList.module.scss'
 import { type Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
@@ -8,8 +8,9 @@ import { Text, TextSize } from 'shared/ui/Text'
 interface ArticleListProps {
   className?: string
   articles: Article[]
-  view: ArticleView
-  isLoading: boolean
+  view?: ArticleView
+  isLoading?: boolean
+  target?: HTMLAttributeAnchorTarget
 }
 
 const getSceletons = (view: ArticleView) => {
@@ -19,16 +20,17 @@ const getSceletons = (view: ArticleView) => {
 }
 
 export const ArticleList = memo((props: ArticleListProps) => {
-  const { className, view, articles, isLoading } = props
+  const { className, view = ArticleView.SMALL, articles, isLoading, target } = props
+
   if (!isLoading && articles.length === 0) {
     return (<Text title={'Статьи не найдены'} size={TextSize.L}/>)
   }
   const renderArticles = (articles: Article[]) =>
     articles.map((article, id) => (
-      <ArticleListItem className={cls.card} key={article.id} view={view} article={article} />
+      <ArticleListItem target = {target}className={cls.card} key={article.id} view={view} article={article} />
     ))
   return (
-    <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+    <div className={classNames(cls.ArticleList, {}, [cls[view], className])}>
       {articles.length > 0 ? renderArticles(articles) : null}
       {isLoading && getSceletons(view)}
     </div>

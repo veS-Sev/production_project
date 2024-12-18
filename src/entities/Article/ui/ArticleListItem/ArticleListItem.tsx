@@ -9,26 +9,24 @@ import { useHover } from 'shared/lib/hooks/useHover/useHover'
 import { Avatar } from 'shared/ui/Avatar'
 import { Button } from 'shared/ui/Button'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-import { useNavigate } from 'react-router-dom'
-import { useCallback } from 'react'
+import { type HTMLAttributeAnchorTarget } from 'react'
 import { RouterPath } from 'shared/config/routeConfig'
 import { useTranslation } from 'react-i18next'
+import { AppLink } from 'shared/ui/AppLink'
 interface ArticleListItemProps {
   className?: string
   article: Article
   view: ArticleView
+  target?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleListItem = (props: ArticleListItemProps) => {
-  const { className, article, view } = props
+  const { className, article, view, target } = props
   const { t } = useTranslation('articles')
   const [isHover, bindHover] = useHover()
-  const navigate = useNavigate()
 
   const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT) as ArticleTextBlock
-  const onOpenArticle = useCallback(() => {
-    navigate(`${RouterPath.article_details}${article.id}`)
-  }, [navigate, article.id])
+
   const types = (
     <Text text={article.type.join(', ')} className={classNames(cls.types)} />
   )
@@ -63,7 +61,9 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
           <img src={article.img} className={classNames(cls.image)} />
           {textBlock && (<ArticleTextBlockComponent block={textBlock} className={classNames(cls.textBlock)}/>)}
           <div className={classNames(cls.footer)}>
-            <Button onClick={onOpenArticle}>{t('Читать далее')}</Button>
+            <AppLink to = {
+      `${RouterPath.article_details}${article.id}`
+    } target={target}> <Button>{t('Читать далее')}</Button></AppLink>
             {views}
           </div>
         </Card>
@@ -71,11 +71,13 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
     )
   }
   return (
-    <div
+    <AppLink to = {
+      `${RouterPath.article_details}${article.id}`
+    } target= {target}
       {...bindHover}
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
-      <Card onClick={onOpenArticle} className={classNames(cls.card)} >
+      <Card className={classNames(cls.card)} >
         <div className={classNames(cls.imageWrapper)}>
           <img
             src={article.img}
@@ -90,6 +92,6 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
         </div>
         <Text text={article.subtitle} className={classNames(cls.title)} />
       </Card>
-    </div>
+    </AppLink>
   )
 }

@@ -11,7 +11,8 @@ import { articleDetailsReducer } from 'entities/Article/model/slices/articleDeta
 const DefaultAsyncReducer: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
-  articleDetails: articleDetailsReducer
+  articleDetails: articleDetailsReducer,
+  articleDetailsPage: articleDetailsReducer
 }
 export const StoreDecorator =
   (

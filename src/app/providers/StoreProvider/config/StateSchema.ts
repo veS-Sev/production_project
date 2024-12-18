@@ -9,7 +9,7 @@ import type { AnyAction, ReducersMapObject, Reducer, EnhancedStore, CombinedStat
 import { type AxiosInstance } from 'axios'
 // import { type To } from 'history'
 // import { type NavigateOptions } from 'react-router'
-import { type ArticleDetailsCommentsShcema } from 'pages/ArticleDetailsPage'
+import type { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 export interface StateSchema {
   counter: CounterSchema
@@ -19,9 +19,9 @@ export interface StateSchema {
   loginForm?: LoginShema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
-  articleDetailsComments?: ArticleDetailsCommentsShcema
   addCommentForm?: AddCommentFormSchema
   articlesPage?: ArticlesPageSchema
+  articleDetailsPage?: ArticleDetailsPageSchema
 }
 
 export type StateSchemaKeys = keyof StateSchema
