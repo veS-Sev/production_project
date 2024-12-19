@@ -15,9 +15,8 @@ import { getArticleCommentsIsLoading, getArticleCommentsError } from 'pages/Arti
 import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
-import { Button } from 'shared/ui/Button'
-import { RouterPath } from 'shared/config/routeConfig'
 import { Page } from 'widgets/Page'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { getArticleRecommendationsIsLoading, getArticleRecommendationsError } from '../../model/selectors/recommendations'
 import { getArticleRecommendations } from '../../model/slice/articleDetailsPageRecomendation.slice'
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList'
@@ -41,7 +40,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading)
   const recommendationsError = useSelector(getArticleRecommendationsError)
   const dispatch = useAppDispatch()
-  const navigate = useNavigate()
   useInitionalEffect(() => {
     dispatch(fetchCommentsByArticleId(id))
     dispatch(fetchArticleRecommendations())
@@ -50,10 +48,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text))
   }, [dispatch])
-
-  const onBackToArticlesList = useCallback(() => {
-    navigate(RouterPath.articles)
-  }, [navigate])
 
   if (!id) {
     return (
@@ -66,7 +60,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
     <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-    <Button onClick={onBackToArticlesList}>{t('К списку статей')}</Button>
+    <ArticleDetailsPageHeader/>
       <ArticleDetails id={id} />
       <Text size={TextSize.L} title={t('Рекомендации')} className={cls.recommendationsTitle}/>
       <ArticleList target={'_blank'} articles={recommendations} isLoading={recommendationsIsLoading} className={cls.recommendations}/>
