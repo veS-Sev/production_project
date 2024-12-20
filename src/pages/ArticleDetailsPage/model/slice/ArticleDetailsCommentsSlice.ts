@@ -3,7 +3,7 @@ import { type StateSchema } from 'app/providers/StoreProvider'
 import { type Comment } from 'entities/Comment'
 import { type ArticleDetailsCommentsShcema } from '../types/articleDetailsPageComments'
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-const commentsAdapter = createEntityAdapter<Comment>({
+export const commentsAdapter = createEntityAdapter<Comment>({
   selectId: (comment) => comment.id
 })
 
@@ -12,7 +12,7 @@ export const getArticleComments = commentsAdapter.getSelectors(
     state.articleDetailsPage?.comments || commentsAdapter.getInitialState()
 )
 
-const articleDetailsCommentsSlice = createSlice({
+export const articleDetailsCommentsSlice = createSlice({
   name: 'articleDetailsCommentsSlice',
   initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsShcema>({
     isLoading: false,

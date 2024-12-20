@@ -12,7 +12,7 @@ export const getArticleRecommendations = recommendationsAdapter.getSelectors(
     state.articleDetailsPage?.recommendations || recommendationsAdapter.getInitialState()
 )
 
-const articleDetailsPageRecomendationSlice = createSlice({
+export const articleDetailsPageRecomendationSlice = createSlice({
   name: 'articleDetailsPageRecomendationSlice',
   initialState: recommendationsAdapter.getInitialState<ArticleDetailsPageRecomendationShcema>({
     ids: [],
