@@ -3,8 +3,8 @@ import { type StateSchema } from 'app/providers/StoreProvider'
 import { type Comment } from 'entities/Comment'
 import { type ArticleDetailsCommentsShcema } from '../types/articleDetailsPageComments'
 import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations'
-import { ArticleDetailsPageRecomendationShcema } from '../types/articleDetailsPageRecomendation'
-import { Article } from 'entities/Article'
+import { type ArticleDetailsPageRecomendationShcema } from '../types/articleDetailsPageRecomendation'
+import { type Article } from 'entities/Article'
 const recommendationsAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id
 })

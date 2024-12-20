@@ -3,9 +3,7 @@ import cls from './ArticlesPage.module.scss'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback } from 'react'
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList'
-import { type ArticleView } from 'entities/Article/model/types/article'
 import {
-  articlesPageActions,
   articlesPageReducer,
   getArticles
 } from '../../model/slice/articlesPageSlice'
@@ -43,13 +41,6 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const view = useSelector(getArticlesPageView)
   const error = useSelector(getArticlesPageError)
   const [searchParams] = useSearchParams()
-
-  // const onChangeView = useCallback(
-  //   (view: ArticleView) => {
-  //     dispatch(articlesPageActions.setView(view))
-  //   },
-  //   [dispatch]
-  // )
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage())
