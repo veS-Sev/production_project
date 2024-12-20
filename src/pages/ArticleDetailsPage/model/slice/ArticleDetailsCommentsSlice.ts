@@ -15,11 +15,11 @@ export const getArticleComments = commentsAdapter.getSelectors(
 const articleDetailsCommentsSlice = createSlice({
   name: 'articleDetailsCommentsSlice',
   initialState: commentsAdapter.getInitialState<ArticleDetailsCommentsShcema>({
-    ids: ['1', '2'],
-    entities: {
-    },
     isLoading: false,
-    error: undefined
+    error: undefined,
+    ids: [],
+    entities: {
+    }
   }),
   reducers: {},
   extraReducers: (builder) => {
@@ -33,7 +33,6 @@ const articleDetailsCommentsSlice = createSlice({
         (state, action: PayloadAction<Comment[]>) => {
           state.isLoading = false
           commentsAdapter.setAll(state, action.payload)
-          // state.data = action.payload
         }
       )
       .addCase(fetchCommentsByArticleId.rejected, (state, action) => {

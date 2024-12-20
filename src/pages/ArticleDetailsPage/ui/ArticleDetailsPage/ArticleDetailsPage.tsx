@@ -18,7 +18,7 @@ import { addCommentForArticle } from '../../model/services/addCommentForArticle/
 import { Page } from 'widgets/Page'
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { getArticleRecommendationsIsLoading, getArticleRecommendationsError } from '../../model/selectors/recommendations'
-import { getArticleRecommendations } from '../../model/slice/articleDetailsPageRecomendation.slice'
+import { getArticleRecommendations } from '../../model/slice/articleDetailsPageRecomendationSlice'
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList'
 import { fetchArticleRecommendations } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations'
 import { articleDetailsPageReducers } from '../../model/slice/index'

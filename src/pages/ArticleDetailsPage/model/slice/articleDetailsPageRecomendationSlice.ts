@@ -1,7 +1,5 @@
 import { createSlice, createEntityAdapter, type PayloadAction } from '@reduxjs/toolkit'
 import { type StateSchema } from 'app/providers/StoreProvider'
-import { type Comment } from 'entities/Comment'
-import { type ArticleDetailsCommentsShcema } from '../types/articleDetailsPageComments'
 import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations'
 import { type ArticleDetailsPageRecomendationShcema } from '../types/articleDetailsPageRecomendation'
 import { type Article } from 'entities/Article'
@@ -34,7 +32,6 @@ const articleDetailsPageRecomendationSlice = createSlice({
         (state, action: PayloadAction<Article[]>) => {
           state.isLoading = false
           recommendationsAdapter.setAll(state, action.payload)
-          // state.data = action.payload
         }
       )
       .addCase(fetchArticleRecommendations.rejected, (state, action) => {
