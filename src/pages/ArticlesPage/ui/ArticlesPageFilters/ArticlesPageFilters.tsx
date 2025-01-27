@@ -15,14 +15,14 @@ import {
   getArticlesPageOrder,
   getArticlesPageSearch,
   getArticlesPageType
-} from 'pages/ArticlesPage/model/selectors/articlesPageSelectors'
+} from '../../model/selectors/articlesPageSelectors'
 import { ArticlesViewSelector } from 'entities/Article/index'
 import { articlesPageActions } from '../../model/slice/articlesPageSlice'
 import { ArticleSortSelector, ArticleTypeTabs } from 'entities/Article'
 import { Card } from 'shared/ui/Card'
 import { Input } from 'shared/ui/Input'
 import { type SortOrder } from 'shared/types/SortOrder'
-import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList'
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebaunce'
 
 interface ArticlesPageFiltersProps {

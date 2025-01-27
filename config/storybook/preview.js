@@ -1,9 +1,9 @@
 import { addDecorator } from '@storybook/react'
-import { StyleDecorator } from './StyleDecorator/StyleDecorator'
+import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from './ThemeDecorator/ThemeDecorator'
-import { RouterDecorator } from './RouterDecorator/RouterDecorator'
-import { StoreDecorator } from './StoreDecorator'
+import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator'
+import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

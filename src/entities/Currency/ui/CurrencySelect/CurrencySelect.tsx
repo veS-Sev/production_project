@@ -1,7 +1,7 @@
 import { classNames, type Mods } from 'shared/lib/classNames/classNames'
 import cls from './CurrencySelect.module.scss'
 import { memo, useMemo } from 'react'
-import { Currency } from 'entities/Currency/model/types/currency'
+import { Currency } from '../../model/types/currency'
 import { Select } from 'shared/ui/Select'
 import { useTranslation } from 'react-i18next'
 interface CurrencySelectProps {

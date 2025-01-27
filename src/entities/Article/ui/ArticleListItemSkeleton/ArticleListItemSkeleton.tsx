@@ -4,7 +4,7 @@ import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
 import { Card } from 'shared/ui/Card'
 import {
   ArticleView
-} from 'entities/Article/model/types/article'
+} from '../../model/types/article'
 interface ArticleListItemSkeletonProps {
   className?: string
   view: ArticleView

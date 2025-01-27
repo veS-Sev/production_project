@@ -1,5 +1,5 @@
 import { type Story } from '@storybook/react'
-import '../../../src/app/styles/index.scss'
+import 'app/styles/index.scss'
 import type { ReducersMapObject } from '@reduxjs/toolkit'
 import type { StateSchema } from 'app/providers/StoreProvider'
 import { StoreProvider } from 'app/providers/StoreProvider'

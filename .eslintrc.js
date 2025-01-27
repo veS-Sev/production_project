@@ -54,7 +54,8 @@ module.exports = {
     "react",
     "@typescript-eslint",
     "i18next",
-    "react-hooks"
+    "react-hooks",
+    "sev-plugin"
   ],
   rules: {
     "react/react-in-jsx-scope": "off",
@@ -74,6 +75,7 @@ module.exports = {
     "@typescript-eslint/consistent-type-imports": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
+    "sev-plugin/path-checker":"error",
   "@typescript-eslint/no-misused-promises": "warn",
 "@typescript-eslint/no-invalid-void-type": "warn",
 "react-hooks/exhaustive-deps": 'warn',

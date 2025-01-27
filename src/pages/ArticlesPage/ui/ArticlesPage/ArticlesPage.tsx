@@ -19,7 +19,7 @@ import {
   getArticlesPageError,
   getArticlesPageIsLoading,
   getArticlesPageView
-} from 'pages/ArticlesPage/model/selectors/articlesPageSelectors'
+} from '../../model/selectors/articlesPageSelectors'
 import { Page } from 'widgets/Page'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'

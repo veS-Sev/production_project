@@ -1,7 +1,7 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import MainPage from './MainPage'
 import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from '../../../../config/storybook/ThemeDecorator/ThemeDecorator'
+import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
 
 export default {
   title: 'Pages/MainPage',
