@@ -116,3 +116,19 @@ TextSizeLDark.args = {
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 }
 TextSizeLDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const TextSizeM = Template.bind({})
+TextSizeM.args = {
+  size: TextSize.M,
+  align: TextAlign.LEFT,
+  title: 'Lorem ipsum dolor',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+}
+
+export const TextSizeS = Template.bind({})
+TextSizeS.args = {
+  size: TextSize.S,
+  align: TextAlign.LEFT,
+  title: 'Lorem ipsum dolor',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+}

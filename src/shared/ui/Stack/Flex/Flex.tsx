@@ -5,7 +5,9 @@ type FlexJustify = 'start' | 'end' | 'center' | 'between'
 type FlexAlign = 'center' | 'start' | 'end'
 type FlexDirection = 'row' | 'column'
 type FlexGap = '4' | '8' | '16' | '32'
-export interface FlexProps {
+
+type DivProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+export interface FlexProps extends DivProps {
   className?: string
   children: React.ReactNode
   justify?: FlexJustify
