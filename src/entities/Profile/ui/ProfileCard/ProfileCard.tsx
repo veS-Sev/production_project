@@ -8,6 +8,7 @@ import { Loader } from 'shared/ui/Loader/Loader'
 import { Avatar } from 'shared/ui/Avatar'
 import { type Currency, CurrencySelect } from 'entities/Currency'
 import { type Country, CountrySelect } from 'entities/Country'
+import { HStack, VStack } from 'shared/ui/Stack'
 interface ProfileCardProps {
   className?: string
   data?: Profile
@@ -47,19 +48,19 @@ export const ProfileCard = (props: ProfileCardProps) => {
   }
   if (isLoading) {
     return (
-      <div
+      <HStack max justify='center'
         className={classNames(cls.ProfileCard, { [cls.loading]: true }, [
           className
         ])}
       >
         <Loader />
-      </div>
+      </HStack>
     )
   }
 
   if (error) {
     return (
-      <div
+      <HStack max justify='center'
         className={classNames(cls.ProfileCard, { [cls.loading]: true }, [
           className
         ])}
@@ -70,14 +71,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
           title={t('Произошла ошибка')}
           text={t('Попробуйте обновить страницу')}
         />
-      </div>
+      </HStack>
     )
   }
   return (
-    <div className={classNames(cls.ProfileCard, mods, [className])}>
-      <div className={cls.data}>
-        <div className={cls.avatarWrapper}>
-          {' '}
+    <VStack justify='center' max className={classNames(cls.ProfileCard, mods, [className])}>
+        <HStack justify='center' max>
           {data?.avatar && (
             <Avatar
               src={data?.avatar}
@@ -85,8 +84,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
               alt={'Тут должен быть аватар'}
             />
           )}
-        </div>
-
+        </HStack>
+ <VStack align='start' className={cls.data} max>
         <Input
           value={data?.firstname}
           placeholder={t('Ваше имя')}
@@ -153,7 +152,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
           readonly={readonly}
           onChange={onChangeCountry}
         />
-      </div>
-    </div>
+      </VStack >
+    </VStack>
   )
 }

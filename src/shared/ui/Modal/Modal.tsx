@@ -5,6 +5,7 @@ import '../../../app/styles/index.scss'
 import { Portal } from '../Portal'
 import { type Mods } from 'shared/lib/classNames/classNames'
 import { useTheme } from 'app/providers/ThemeProvider'
+
 export interface ModalProps {
   className?: string
   children?: ReactNode

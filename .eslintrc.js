@@ -68,7 +68,11 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": "warn",
     "i18next/no-literal-string": [
       1,
-      { markupOnly: true, ignoreAttribute: ["to"] },
+      { markupOnly: true, ignoreAttribute: ["to", "justify",
+        "align",
+        "direction",
+        "gap"
+        ] },
     ],
     "react/display-name": "off",
     "n/handle-callback-err": "off",

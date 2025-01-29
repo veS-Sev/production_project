@@ -1,13 +1,5 @@
-.item {
-  display: flex;
-  margin-top: 10px;
-  align-items: center;
-}
-
 .icon {
   fill: var(--inverted-primary-color);
-
-  // margin-right: 10px;
 }
 
 .link {
@@ -19,6 +11,6 @@
   .link {
     opacity: 0;
     transition: 0.2s opacity;
-    width: 0;
+    margin-left: 0;
   }
 }

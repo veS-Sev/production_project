@@ -1,16 +1,9 @@
 .Sidebar {
   height: calc(100vh - var(--navbar-height));
   background-color: var(--inverted-bg-color);
-  width: 300px;
+  width: var(--sidebar-width);
   position: relative;
   transition: width 0.3s;
-}
-
-.items {
-  display: flex;
-  margin-top: 20px;
-  flex-direction: column;
-  margin-left: 30px;
 }
 
 .switchers {
@@ -26,6 +19,11 @@
   margin-left: 20px;
 }
 
+.items {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
 .collapseBTN {
   position: absolute;
   z-index: 100;
@@ -35,6 +33,7 @@
 
 .collapsed {
   width: var(--sidebar-width-collapsed);
+  padding: 20px 0 0;
   .switchers {
     flex-direction: column;
     align-items: center;

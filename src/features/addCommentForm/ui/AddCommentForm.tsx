@@ -10,6 +10,7 @@ import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/Di
 import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { getCommentFormText } from '../model/selectors/getCommentForm'
+import { HStack } from 'shared/ui/Stack'
 
 const initialReducers: ReducersList = {
   addCommentForm: addCommentFormReducer
@@ -33,10 +34,10 @@ const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) 
     onCommentTextChange('')
   }, [onSendComment, text, onCommentTextChange])
   return (<DynamicModuleLoader reducers={initialReducers} >
-  <div className={classNames(cls.AddCommentForm, {}, [className])}>
+  <HStack className={classNames(cls.AddCommentForm, {}, [className])}>
     <Input placeholder={t('Текст комментария')} onChange={onCommentTextChange}className={cls.input} value={text}/>
     <Button onClick={onSendHandler} theme={ButtonTheme.OUTLINE}>{t('Отправить')}</Button>
-  </div>
+  </HStack>
   </DynamicModuleLoader>)
 })
 export default AddCommentForm

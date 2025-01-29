@@ -26,6 +26,7 @@ import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleC
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { useTranslation } from 'react-i18next'
+import { HStack, VStack } from 'shared/ui/Stack'
 interface ArticleDetailsProps {
   className?: string
   id: string
@@ -91,30 +92,33 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     )
   } else {
     content = (
-      <>
-        <div className={cls.avatarWrapper}>
+      <VStack gap={'8'}>
+        <HStack max>
           <Avatar
             size={200}
             src={article?.img}
             alt={'Аватар'}
             className={cls.avatar}
           />
-        </div>
+        </HStack>
         <Text
           size={TextSize.L}
-          title={article?.title}
-          text={article?.subtitle}
+          text={article?.title}
         />
-        <div className={cls.articleInfo}>
+          <Text
+          size={TextSize.L}
+          title={article?.subtitle}
+        />
+        <HStack gap={'8'} className={cls.articleInfo}>
           <Icon Svg={EyeIcon} className={cls.icon} />
           <Text text={String(article?.views)} />
-        </div>
-        <div className={cls.articleInfo}>
+        </HStack>
+        <HStack gap={'8'} className={cls.articleInfo}>
           <Icon Svg={CalendarIcon} className={cls.icon} />
           <Text text={article?.createdAt} />
-        </div>
+        </HStack>
         {article?.blocks?.map(renderBlock)}
-      </>
+      </VStack>
     )
   }
 

@@ -9,10 +9,7 @@
 
 .loading,
 .error {
-  align-items: center;
-  display: flex;
   height: 300px;
-  justify-content: center;
 }
 
 .left {
@@ -25,9 +22,4 @@
 
 .right {
   text-align: right;
-}
-
-.avatarWrapper {
-  display: flex;
-  justify-content: center;
 }

@@ -25,6 +25,7 @@ import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { Page } from 'widgets/Page'
+import { HStack } from 'shared/ui/Stack'
 
 const reducers: ReducersList = {
   profile: profileReducer

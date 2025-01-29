@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux'
 import { getProfileForm, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { getUserAuthData } from 'entities/User'
+import { HStack } from 'shared/ui/Stack'
 
 interface ProfilePageHeaderProps {
   className?: string
@@ -32,7 +33,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }
 
   return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+    <HStack justify='between' className={classNames(cls.ProfilePageHeader, {}, [className])}>
       <Text title={t('Профиль')} />
       {canEdit && (
         <div className={cls.btnWrapper}>
@@ -53,6 +54,6 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
         </div>
           )
 }</div>)}
-    </div>
+    </HStack>
   )
 }
