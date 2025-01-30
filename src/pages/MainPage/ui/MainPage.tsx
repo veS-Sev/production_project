@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next'
 const MainPage = memo(() => {
   const { t } = useTranslation('main')
   return (
-        <Page>
-          <BugButton/>
-            {t('Главная страница')}
-        </Page>
+    <Page>
+      <BugButton />
+      {t('Главная страница')}
+    </Page>
   )
 })
 
