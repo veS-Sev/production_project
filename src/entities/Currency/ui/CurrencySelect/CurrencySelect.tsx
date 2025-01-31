@@ -32,7 +32,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
 
   return (
     <div className={classNames(cls.CurrencySelect, mods, [className])}>
-      <ListBox onChange={onChangeHandler} readonly={readonly} items={options} value={value} defaultValue={'Выберите валюту'} direction={'top'} label={label}/>
+      <ListBox onChange={onChangeHandler} readonly={readonly} items={options} value={value} defaultValue={'Выберите валюту'} direction={'top-right'} label={label}/>
     </div>
   )
 })

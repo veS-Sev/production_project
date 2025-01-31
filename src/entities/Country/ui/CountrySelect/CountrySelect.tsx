@@ -33,7 +33,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
 
   return (
     <div className={classNames(cls.CountrySelect, mods, [className])}>
-            <ListBox onChange={onChangeHandler} readonly={readonly} items={options} value={value} defaultValue={'Укажите страну'} direction={'bottom'} label={label}/>
+            <ListBox onChange={onChangeHandler} readonly={readonly} items={options} value={value} defaultValue={'Укажите страну'} direction={'bottom-left'} label={label}/>
     </div>
   )
 })
