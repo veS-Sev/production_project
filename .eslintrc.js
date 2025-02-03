@@ -95,6 +95,6 @@ module.exports = {
     __API__:true,
     __PROJECT: true
   },
-  ignorePatterns: [".eslintrc.js", "generate-visual-json-report.js","json-server/index.js"],
+  ignorePatterns: [".eslintrc.js", "generate-visual-json-report.js","json-server/index.js", "scripts/createSlice/*.js", "scripts/createSlice/*/*.js"],
 }
 
