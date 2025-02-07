@@ -1,20 +1,23 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import cls from './ProfilePageHeader.module.scss'
+import cls from './EditableProfileHeader.module.scss'
 import { Button } from 'shared/ui/Button'
 import { Text } from 'shared/ui/Text'
 import { ButtonTheme } from 'shared/ui/Button/Button'
 import { useSelector } from 'react-redux'
-import { getProfileForm, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile'
+import { profileActions } from '../../model/slice/profileSlice'
+import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { getUserAuthData } from 'entities/User'
 import { HStack } from 'shared/ui/Stack'
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData'
 
-interface ProfilePageHeaderProps {
+interface EditableProfileHeaderProps {
   className?: string
 }
 
-export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
+export const EditableProfileHeader = ({ className }: EditableProfileHeaderProps) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const readonly = useSelector(getProfileReadonly)
@@ -33,7 +36,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }
 
   return (
-    <HStack justify='between' className={classNames(cls.ProfilePageHeader, {}, [className])}>
+    <HStack max justify='between' className={classNames(cls.EditableProfileHeader, {}, [className])}>
       <Text title={t('Профиль')} />
       {canEdit && (
         <div className={cls.btnWrapper}>

@@ -1,4 +1,4 @@
-import { ValidateProfileError, type ProfileSchema } from '../types/profile'
+import { ValidateProfileError, type ProfileSchema } from '../types/editableProfileCardSchema'
 import { profileReducer, profileActions } from './profileSlice'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
 import { Currency } from 'entities/Currency'

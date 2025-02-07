@@ -4,7 +4,7 @@ import type { ReducersMapObject } from '@reduxjs/toolkit'
 import type { StateSchema } from 'app/providers/StoreProvider'
 import { StoreProvider } from 'app/providers/StoreProvider'
 import { loginReducer } from 'features/authByUsername/model/slice/loginSlice/loginSlice'
-import { profileReducer } from 'entities/Profile'
+import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice'
 import { type ReducersList } from 'shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from 'entities/Article/model/slices/articleDetailsSlice'
 

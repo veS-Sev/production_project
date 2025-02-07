@@ -5,9 +5,8 @@ import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
 import { createReducerManager } from './reducerManager'
 import { $api } from 'shared/api/api'
-import { type To } from 'history'
-import { type NavigateOptions } from 'react-router'
 import { uiReduser } from 'features/UI'
+import { rtkApi } from 'shared/api'
 
 export const createReduxStore = (
   initialState?: StateSchema,
@@ -18,7 +17,8 @@ export const createReduxStore = (
     ...asyncReducers,
     ui: uiReduser,
     counter: counterReducer,
-    user: userReducer
+    user: userReducer,
+    [rtkApi.reducerPath]: rtkApi.reducer
   }
   const reducerManager = createReducerManager(rootReducers)
 
@@ -36,7 +36,7 @@ export const createReduxStore = (
         thunk: {
           extraArgument: extraArg
         }
-      })
+      }).concat(rtkApi.middleware)
   })
   // @ts-expect-error Correct leter
   store.reducerManager = reducerManager

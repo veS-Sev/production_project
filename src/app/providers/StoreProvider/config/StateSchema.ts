@@ -1,16 +1,15 @@
 import type { CounterSchema } from 'entities/Counter'
 import type { UserSchema } from 'entities/User'
 import type { LoginShema } from 'features/authByUsername'
-import type { ProfileSchema } from 'entities/Profile'
+import type { ProfileSchema } from 'features/editableProfileCard/model/types/editableProfileCardSchema'
 import type { UISchema } from 'features/UI'
 import type { ArticleDetailsSchema } from 'entities/Article/model/types/articleDetails'
 import type { AddCommentFormSchema } from 'features/addCommentForm/model/type/addCommentFormSchema'
 import type { AnyAction, ReducersMapObject, Reducer, EnhancedStore, CombinedState } from '@reduxjs/toolkit'
 import { type AxiosInstance } from 'axios'
-// import { type To } from 'history'
-// import { type NavigateOptions } from 'react-router'
 import type { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
+import { type rtkApi } from 'shared/api'
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
@@ -22,6 +21,7 @@ export interface StateSchema {
   addCommentForm?: AddCommentFormSchema
   articlesPage?: ArticlesPageSchema
   articleDetailsPage?: ArticleDetailsPageSchema
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 }
 
 export type StateSchemaKeys = keyof StateSchema

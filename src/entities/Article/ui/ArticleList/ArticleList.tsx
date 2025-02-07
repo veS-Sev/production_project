@@ -68,8 +68,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
   return (
     <WindowScroller
-      onScroll={() => console.log('@scroll')}
+      // onScroll={() => console.log('@scroll')}
       scrollElement={document.getElementById(PAGE_ID) as Element}
+      // width={700}
     >
       {({
         height,
@@ -82,15 +83,14 @@ export const ArticleList = memo((props: ArticleListProps) => {
         <div
           className={classNames(cls.ArticleList, {}, [cls[view], className])}
           ref={registerChild}
-        >
+        >{width}
           <List
             autoHeight
-            autoWidth = {isBig}
             height={height ?? 700}
             rowCount={rowCount}
             rowHeight={isBig ? 700 : 330 }
             rowRenderer={rowRender}
-            width={width}
+            width={width ? width - 80 : 700}
             onScroll={onChildScroll}
             isScrolling={isScrolling}
             scrollTop={scrollTop}
