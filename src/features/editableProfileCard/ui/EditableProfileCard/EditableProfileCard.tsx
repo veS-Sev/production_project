@@ -12,7 +12,7 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { EditableProfileHeader } from '../EditableProfileHeader'
-import { useParams } from 'react-router-dom'
+
 import { TextTheme, Text } from 'shared/ui/Text'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
@@ -32,12 +32,12 @@ const reducers: ReducersList = {
 
 interface EditableProfileCardProps {
   className?: string
+  id: string
 }
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
-  const { className } = props
+  const { className, id } = props
   const { t } = useTranslation()
-  const { id } = useParams<{ id: string }>()
   const dispatch = useAppDispatch()
   const isLoading = useSelector(getProfileIsLoading)
   const error = useSelector(getProfileError)
@@ -118,8 +118,9 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
               key={err}
               theme={TextTheme.ERROR}
               text={validateErrorTranslate[err]}
+                data-testid='EditableProfileCard.Error'
             />
-          ))}{' '}
+          ))}
         <ProfileCard
           data={formData}
           isLoading={isLoading}

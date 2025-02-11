@@ -70,6 +70,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
           align={TextAlign.CENTER}
           title={t('Произошла ошибка')}
           text={t('Попробуйте обновить страницу')}
+          // data-testid={'EditableProfileCard.Error'}
         />
       </HStack>
     )
@@ -94,6 +95,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
           readonly={readonly}
           onChange={onChangeFirstname}
           type={'text'}
+          data-testid={'EditableProfileCard.Firstname'}
         />
         <Input
           type={'text'}
@@ -103,6 +105,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
           autofocus={false}
           readonly={readonly}
           onChange={onChangeLastname}
+          data-testid={'EditableProfileCard.Lastname'}
         />
         <Input
           type={'text'}
@@ -112,6 +115,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
           autofocus={false}
           readonly={readonly}
           onChange={onChangeUsername}
+          data-testid={'EditableProfileCard.Username'}
         />
         <Input
           type={'text'}
@@ -121,6 +125,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
           autofocus={false}
           readonly={readonly}
           onChange={onChangeAge}
+          data-testid={'EditableProfileCard.Age'}
         />
         <Input
           type={'text'}
@@ -130,6 +135,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
           autofocus={false}
           readonly={readonly}
           onChange={onChangeCity}
+          data-testid={'EditableProfileCard.City'}
         />
         <Input
           type={'text'}
@@ -139,6 +145,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
           autofocus={false}
           readonly={readonly}
           onChange={onChangeAvatar}
+          data-testid={'EditableProfileCard.Avatar'}
         />
         <CurrencySelect
          className={cls.input}

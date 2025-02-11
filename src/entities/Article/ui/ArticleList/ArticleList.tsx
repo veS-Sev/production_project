@@ -1,9 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import {
-  List,
-  WindowScroller,
-  type ListRowProps
-} from 'react-virtualized'
+import { List, WindowScroller, type ListRowProps } from 'react-virtualized'
 import { type HTMLAttributeAnchorTarget, memo } from 'react'
 import cls from './ArticleList.module.scss'
 import { type Article, ArticleView } from '../../model/types/article'
@@ -17,6 +13,7 @@ interface ArticleListProps {
   view?: ArticleView
   isLoading?: boolean
   target?: HTMLAttributeAnchorTarget
+  virtualized?: boolean
 }
 
 const getSceletons = (view: ArticleView) => {
@@ -31,7 +28,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
     view = ArticleView.SMALL,
     articles,
     isLoading,
-    target
+    target,
+    virtualized = true
   } = props
 
   const isBig = view === ArticleView.BIG
@@ -63,14 +61,16 @@ export const ArticleList = memo((props: ArticleListProps) => {
       )
     }
 
-    return <div key={key} style={style} className={cls.row}>{items}</div>
+    return (
+      <div key={key} style={style} className={cls.row}>
+        {items}
+      </div>
+    )
   }
 
   return (
     <WindowScroller
-      // onScroll={() => console.log('@scroll')}
       scrollElement={document.getElementById(PAGE_ID) as Element}
-      // width={700}
     >
       {({
         height,
@@ -83,18 +83,24 @@ export const ArticleList = memo((props: ArticleListProps) => {
         <div
           className={classNames(cls.ArticleList, {}, [cls[view], className])}
           ref={registerChild}
-        >{width}
-          <List
-            autoHeight
-            height={height ?? 700}
-            rowCount={rowCount}
-            rowHeight={isBig ? 700 : 330 }
-            rowRenderer={rowRender}
-            width={width ? width - 80 : 700}
-            onScroll={onChildScroll}
-            isScrolling={isScrolling}
-            scrollTop={scrollTop}
-          />
+        >
+          {virtualized
+            ? (<List
+              autoHeight
+              height={height ?? 700}
+              rowCount={rowCount}
+              rowHeight={isBig ? 700 : 330}
+              rowRenderer={rowRender}
+              width={width ? width - 80 : 700}
+              onScroll={onChildScroll}
+              isScrolling={isScrolling}
+              scrollTop={scrollTop}
+            />
+              )
+            : (articles.map((article) => <ArticleListItem
+            className={cls.card} article={article} view={view} target={target} key={article.id}/>)
+              )}
+
           {isLoading && getSceletons(view)}
         </div>
       )}

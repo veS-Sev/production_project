@@ -15,7 +15,7 @@ const ProfilePage = () => {
   return (
     <Page>
       <VStack gap='16' max>
-        <EditableProfileCard />
+        <EditableProfileCard id={id} />
       </VStack>
     </Page>
   )

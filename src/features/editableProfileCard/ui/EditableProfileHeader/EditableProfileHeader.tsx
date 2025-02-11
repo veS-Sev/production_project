@@ -42,15 +42,15 @@ export const EditableProfileHeader = ({ className }: EditableProfileHeaderProps)
         <div className={cls.btnWrapper}>
       {readonly
         ? (
-        <Button className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick ={onEdit}>
+        <Button data-testid={'EditableProfileHeader.EditButton'} className={cls.editBtn} theme={ButtonTheme.OUTLINE} onClick ={onEdit}>
           {t('Редактировать')}
         </Button>)
         : (
         <div>
-                  <Button className={cls.cancelBtn} theme={ButtonTheme.OUTLINE} onClick = {onCancel}>
+                  <Button data-testid={'EditableProfileHeader.CancelButton'} className={cls.cancelBtn} theme={ButtonTheme.OUTLINE} onClick = {onCancel}>
           {t('Отменить')}
         </Button>
-        <Button className={cls.saveBtn} theme={ButtonTheme.OUTLINE_RED} onClick = {onSave}>
+        <Button data-testid={'EditableProfileHeader.SaveButton'} className={cls.saveBtn} theme={ButtonTheme.OUTLINE_RED} onClick = {onSave}>
           {t('Сохранить')}
         </Button>
 
