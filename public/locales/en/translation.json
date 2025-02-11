@@ -62,5 +62,7 @@
   "Наука": "SCIENCE",
   "Экономика": "ECONOMICS",
   "Айти": "IT",
-  "Рекомендации": "Recommendations"
+  "Рекомендации": "Recommendations",
+  "Доступ запрещен": "Forbidden page",
+  "Админка": "Admin Panel"
 }

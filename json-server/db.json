@@ -15,16 +15,23 @@
     {
       "id": "1",
       "username": "admin",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "password": "123",
       "avatar": "https://avatars.githubusercontent.com/u/58933477?s"
     },
     {
       "id": "2",
       "username": "user",
-      "role": "USER",
+      "roles": ["USER"],
       "password": "123",
       "avatar": "https://i.pinimg.com/originals/d2/60/35/d260355157095d3552efa64fbd893a3d.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "roles": ["MANAGER"],
+      "password": "123",
+      "avatar": "https://images.neventum.com/2012/201/1400/ib_17805_5bed49de.jpg"
     }
   ],
   "profile": [

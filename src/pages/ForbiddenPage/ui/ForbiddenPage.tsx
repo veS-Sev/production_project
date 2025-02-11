@@ -2,13 +2,13 @@ import { memo } from 'react'
 import { Page } from 'widgets/Page'
 import { useTranslation } from 'react-i18next'
 
-const MainPage = memo(() => {
-  const { t } = useTranslation('main')
+const ForbiddenPage = memo(() => {
+  const { t } = useTranslation('forbidden')
   return (
     <Page>
-      {t('Главная страница')}
+      {t('Доступ запрещен')}
     </Page>
   )
 })
 
-export default MainPage
+export default ForbiddenPage
