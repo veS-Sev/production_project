@@ -54,7 +54,7 @@ export function ListBox (props: ListBoxProps) {
         value={value}
         onChange={onChange}
       >
-        <Listbox.Button className={cls.trigger} disabled={readonly}>
+        <Listbox.Button className={cls.trigger}>
           <Button disabled={readonly}>{value ?? defaultValue}</Button>
         </Listbox.Button>
         <Listbox.Options className={classNames(cls.options, {}, optionClasses)}>

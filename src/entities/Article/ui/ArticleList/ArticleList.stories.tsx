@@ -92,7 +92,12 @@ export const BigItems = Template.bind({})
 BigItems.args = {
   view: ArticleView.BIG,
   isLoading: false,
-  articles
+  articles: new Array(9)
+    .fill(0)
+    .map((item, index) => ({
+      ...article,
+      id: String(index)
+    }))
 }
 
 export const SmallItems = Template.bind({})

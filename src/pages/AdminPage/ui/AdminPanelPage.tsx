@@ -7,7 +7,7 @@ const AdminPanelPage = memo(() => {
   const { t } = useTranslation('admin')
   return (
     <Page>
-      <BugButton />
+      <BugButton style ={{ marginRight: '30px' }} />
       {t('Админ страница')}
     </Page>
   )

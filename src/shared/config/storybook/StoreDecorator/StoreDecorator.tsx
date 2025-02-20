@@ -8,20 +8,21 @@ import { profileReducer } from 'features/editableProfileCard/model/slice/profile
 import { type ReducersList } from 'shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from 'entities/Article/model/slices/articleDetailsSlice'
 
-const DefaultAsyncReducer: ReducersList = {
+const defaultAsyncReducer: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
+  // addCommentForm: addCommentFormReducer,
   articleDetailsPage: articleDetailsReducer
 }
 export const StoreDecorator =
   (
     state: DeepPartial<StateSchema>,
-    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
+    asyncReducers?: ReducersList
   ) => (StoryComponent: Story) => (
       <StoreProvider
         initialState={state}
-        asyncReducers={{ ...asyncReducers, ...DefaultAsyncReducer }}
+        asyncReducers={{ ...asyncReducers, ...defaultAsyncReducer }}
       >
         <StoryComponent />
       </StoreProvider>)

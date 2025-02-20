@@ -29,7 +29,7 @@ import { useTranslation } from 'react-i18next'
 import { HStack, VStack } from 'shared/ui/Stack'
 interface ArticleDetailsProps {
   className?: string
-  id: string
+  id?: string
 }
 
 const reducers: ReducersList = {
@@ -42,7 +42,11 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   const article = useSelector(getArticleDetailsData)
   const error = useSelector(getArticleDetailsError)
 
-  useInitionalEffect(() => { dispatch(fetchArticleById(id)) })
+  useInitionalEffect(() => {
+    if (!id && __PROJECT__ !== 'storybook') {
+      dispatch(fetchArticleById(id))
+    }
+  })
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {

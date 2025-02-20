@@ -68,7 +68,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         <Text
           theme={TextTheme.ERROR}
           align={TextAlign.CENTER}
-          title={t('Произошла ошибка')}
+          title={t('Профиль не найден')}
           text={t('Попробуйте обновить страницу')}
           // data-testid={'EditableProfileCard.Error'}
         />

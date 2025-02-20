@@ -56,6 +56,17 @@
       "city": "Orel",
       "age": 24,
       "country": "Russia"
+    },
+    {
+      "id": "3",
+      "firstname": "Lusha",
+      "lastname": "Smagina",
+      "username": "Lusha",
+      "currency": "RUB",
+      "avatar": "https://i.pinimg.com/originals/d2/60/35/d260355157095d3552efa64fbd893a3d.jpg",
+      "city": "Mars",
+      "age": 2400,
+      "country": "Russia"
     }
   ],
   "articles": [

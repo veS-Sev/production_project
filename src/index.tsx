@@ -1,4 +1,4 @@
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import '../src/app/styles/index.scss'
 import { StoreProvider } from 'app/providers/StoreProvider'
 import { BrowserRouter } from 'react-router-dom'
@@ -7,15 +7,21 @@ import App from './app/App'
 import './shared/config/i18n/i18n'
 import { ErrorBoundary } from 'app/providers/ErrorBoundary'
 
-render(
+const container = document.getElementById('root')
+
+if (!container) {
+  throw new Error('Root не найден. Не удалось вмонтировать react-приложение ')
+}
+
+const root = createRoot(container)
+root.render(
   <BrowserRouter>
     <StoreProvider>
       <ErrorBoundary>
         <ThemeProvider>
-          <App />
+        <App />
         </ThemeProvider>
       </ErrorBoundary>
     </StoreProvider>
-  </BrowserRouter>,
-  document.getElementById('root')
+  </BrowserRouter>
 )

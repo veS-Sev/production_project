@@ -1,7 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleDetailsPage.module.scss'
-import { useTranslation } from 'react-i18next'
-
 import { ArticleDetails } from 'entities/Article'
 import { useParams } from 'react-router-dom'
 
@@ -23,16 +21,7 @@ const reducers: ReducersList = {
 }
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
-  const { t } = useTranslation('articles')
   const { id } = useParams<{ id: string }>()
-
-  if (!id) {
-    return (
-      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        {t('Статья не найдена')}
-      </Page>
-    )
-  }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>

@@ -5,7 +5,7 @@ import { Text, TextSize } from 'shared/ui/Text'
 import { CommentList } from 'entities/Comment'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import { useCallback } from 'react'
+import { Suspense, useCallback } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
@@ -15,7 +15,7 @@ import { VStack } from 'shared/ui/Stack'
 
 interface ArticleDetailsPageCommentsProps {
   className?: string
-  id: string
+  id?: string
 }
 
 export const ArticleDetailsComments = (
@@ -45,7 +45,9 @@ export const ArticleDetailsComments = (
         size={TextSize.L}
         title={t('Комментарии')}
       />
-      <AddCommentForm onSendComment={onSendComment} />
+      <Suspense fallback={'Идёт загрузка'}>
+        <AddCommentForm onSendComment={onSendComment} />
+      </Suspense>
       <CommentList isLoading={commentsIsLoading} comments={comments} />
     </VStack>
   )

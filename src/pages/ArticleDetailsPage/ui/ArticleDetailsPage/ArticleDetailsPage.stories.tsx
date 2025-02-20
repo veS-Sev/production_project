@@ -1,9 +1,9 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import ArticleDetailsPage from './ArticleDetailsPage'
-import { StoreDecorator } from '../../../../shared/config/storybook/StoreDecorator'
+import { StoreDecorator } from '../../../../shared/config/storybook'
 import { type Article, ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
 export default {
-  title: 'pages/ArticleDetailsPage',
+  title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
   component: ArticleDetailsPage,
   argTypes: {
     backgroundColor: { control: 'color' }

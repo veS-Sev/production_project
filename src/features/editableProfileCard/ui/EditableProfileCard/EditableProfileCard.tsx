@@ -32,7 +32,7 @@ const reducers: ReducersList = {
 
 interface EditableProfileCardProps {
   className?: string
-  id: string
+  id?: string
 }
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
@@ -54,7 +54,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     [ValidateProfileError.ICORRECT_NAME]: t('Имя в Фамилия обязательны')
   }
   useInitionalEffect(() => {
-    if (id) {
+    if (id && __PROJECT__ !== 'storybook') {
       dispatch(fetchProfileData(id))
     }
   })
