@@ -1,6 +1,6 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import { ListBox } from './ListBox'
-import { Country } from 'entities/Country/model/types/country'
+import { Country } from 'entities/Country/model/consts/consts'
 
 export default {
   title: 'shared/ListBox',

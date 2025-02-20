@@ -2,11 +2,12 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { List, WindowScroller, type ListRowProps } from 'react-virtualized'
 import { type HTMLAttributeAnchorTarget, memo } from 'react'
 import cls from './ArticleList.module.scss'
-import { type Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItemSkeleton/ArticleListItemSkeleton'
 import { Text, TextSize } from 'shared/ui/Text'
 import { PAGE_ID } from 'widgets/Page'
+import { type Article, ArticleView } from 'pages/ArticlesPage'
+
 interface ArticleListProps {
   className?: string
   articles: Article[]

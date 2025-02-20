@@ -1,7 +1,7 @@
 import { classNames, type Mods } from 'shared/lib/classNames/classNames'
 import cls from './CurrencySelect.module.scss'
 import { memo, useMemo } from 'react'
-import { Currency } from '../../model/types/currency'
+import { Currency } from '../../model/consts/consts'
 import { useTranslation } from 'react-i18next'
 import { ListBox } from 'shared/ui/ListBox/ListBox'
 interface CurrencySelectProps {

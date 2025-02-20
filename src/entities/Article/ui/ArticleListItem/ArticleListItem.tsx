@@ -2,7 +2,6 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleListItem.module.scss'
 import { Icon } from 'shared/ui/Icon'
 import Eye from 'shared/assets/icons/eye-20-20.svg'
-import { type Article, type ArticleTextBlock, ArticleView, ArticleBlockType } from '../../model/types/article'
 import { Card } from 'shared/ui/Card'
 import { Text } from 'shared/ui/Text'
 import { useHover } from 'shared/lib/hooks/useHover/useHover'
@@ -13,6 +12,7 @@ import { type HTMLAttributeAnchorTarget } from 'react'
 import { RouterPath } from 'shared/config/routeConfig'
 import { useTranslation } from 'react-i18next'
 import { AppLink } from 'shared/ui/AppLink'
+import { type Article, ArticleView, ArticleBlockType, type ArticleTextBlock } from 'pages/ArticlesPage'
 interface ArticleListItemProps {
   className?: string
   article: Article

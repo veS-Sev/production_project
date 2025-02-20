@@ -1,7 +1,7 @@
 import { classNames, type Mods } from 'shared/lib/classNames/classNames'
 import cls from './CountrySelect.module.scss'
 import { memo, useMemo } from 'react'
-import { Country } from '../../model/types/country'
+import { Country } from '../../model/consts/consts'
 import { useTranslation } from 'react-i18next'
 import { ListBox } from 'shared/ui/ListBox/ListBox'
 

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Tabs, type TabItem } from 'shared/ui/Tabs/Tabs'
 import { memo, useCallback, useMemo } from 'react'
-import { ArticleType } from '../../model/types/article'
+import { ArticleType } from '../../model/consts/consts'
 
 interface ArticleTypeTabsProps {
   className?: string
