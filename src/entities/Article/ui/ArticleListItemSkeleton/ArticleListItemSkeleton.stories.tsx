@@ -1,21 +1,19 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { ArticleListItemSkeleton } from '../ArticleListItemSkeleton/ArticleListItemSkeleton'
 import { ArticleView } from '../../model/consts/consts'
 
-export default {
+const meta: Meta<typeof ArticleListItemSkeleton> = {
   title: 'entities/Article/ArticleListItemSkeleton',
   component: ArticleListItemSkeleton,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof ArticleListItemSkeleton>
+}
+export default meta
 
-const Template: ComponentStory<typeof ArticleListItemSkeleton> = (args) => (
-  <ArticleListItemSkeleton {...args} />
-)
+type Story = StoryObj<typeof ArticleListItemSkeleton>
 
-export const Big = Template.bind({})
-Big.args = { view: ArticleView.BIG }
+export const Big: Story = { args: { view: ArticleView.BIG } }
 
-export const Small = Template.bind({})
-Small.args = { view: ArticleView.SMALL }
+export const Small: Story = { args: { view: ArticleView.SMALL } }

@@ -1,4 +1,4 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import { type ComponentStory, type Meta } from '@storybook/react'
 import { {{name}} } from './{{name}}'
 
 export default {
@@ -7,7 +7,7 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' }
   }
-} as ComponentMeta<typeof {{name}}>
+} as Meta<typeof {{name}}>
 
 const Template: ComponentStory<typeof {{name}}> = (args) => <{{name}} {...args} />
 

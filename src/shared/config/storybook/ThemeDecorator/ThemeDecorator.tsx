@@ -1,8 +1,8 @@
-import { type Story } from '@storybook/react'
+// import { type StoryObj } from '@storybook/react'
 import type { Theme } from 'app/providers/ThemeProvider'
 import { ThemeProvider } from 'app/providers/ThemeProvider'
 
-export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) =>
+export const ThemeDecorator = (theme: Theme) => (StoryComponent: any) =>
   (
     <ThemeProvider initialTheme={theme}>
       <div className={`app ${theme}`}>
@@ -10,3 +10,16 @@ export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) =>
       </div>
     </ThemeProvider>
   )
+
+// import { type Story } from '@storybook/react'
+// import type { Theme } from 'app/providers/ThemeProvider'
+// import { ThemeProvider } from 'app/providers/ThemeProvider'
+
+// export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) =>
+//   (
+//     <ThemeProvider initialTheme={theme}>
+//       <div className={`app ${theme}`}>
+//         <StoryComponent />
+//       </div>
+//     </ThemeProvider>
+//   )

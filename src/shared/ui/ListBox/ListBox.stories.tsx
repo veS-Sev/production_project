@@ -1,86 +1,91 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { ListBox } from './ListBox'
 import { Country } from 'entities/Country/model/consts/consts'
 
-export default {
+const meta: Meta<typeof ListBox> = {
   title: 'shared/ListBox',
   component: ListBox,
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ padding: '100px' }}>
+  decorators: [(Story) => (
+      <div style={{ padding: '200px' }}>
         <Story />
       </div>
-    )
-  ]
-} as ComponentMeta<typeof ListBox>
+  )],
+  parameters: {
+    /* ... */
+  }
+}
+export default meta
 
-const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />
+type Story = StoryObj<typeof ListBox>
 
-export const Bottom = Template.bind({})
-Bottom.args = {
-  items: [
-    { value: Country.BEL, content: Country.BEL },
-    { value: Country.RUS, content: Country.RUS },
-    { value: Country.USA, content: Country.USA }
-  ],
-  value: 'Укажите страну',
-  direction: 'bottom'
+export const Bottom: Story = {
+  args: {
+    items: [
+      { value: Country.BEL, content: Country.BEL },
+      { value: Country.RUS, content: Country.RUS },
+      { value: Country.USA, content: Country.USA }
+    ],
+    value: 'Укажите страну',
+    direction: 'bottom'
+  }
 }
 
-export const BottomRight = Template.bind({})
-BottomRight.args = {
-  items: [
-    { value: Country.BEL, content: Country.BEL },
-    { value: Country.RUS, content: Country.RUS },
-    { value: Country.USA, content: Country.USA }
-  ],
-  value: 'Укажите страну',
-  direction: 'bottom-right'
+export const BottomRight: Story = {
+  args: {
+    items: [
+      { value: Country.BEL, content: Country.BEL },
+      { value: Country.RUS, content: Country.RUS },
+      { value: Country.USA, content: Country.USA }
+    ],
+    value: 'Укажите страну',
+    direction: 'bottom-right'
+  }
 }
 
-export const BottomLeft = Template.bind({})
-BottomLeft.args = {
-  items: [
-    { value: Country.BEL, content: Country.BEL },
-    { value: Country.RUS, content: Country.RUS },
-    { value: Country.USA, content: Country.USA }
-  ],
-  value: 'Укажите страну',
-  direction: 'bottom-left'
+export const BottomLeft: Story = {
+  args: {
+    items: [
+      { value: Country.BEL, content: Country.BEL },
+      { value: Country.RUS, content: Country.RUS },
+      { value: Country.USA, content: Country.USA }
+    ],
+    value: 'Укажите страну',
+    direction: 'bottom-left'
+  }
 }
 
-export const Top = Template.bind({})
-Top.args = {
-  items: [
-    { value: Country.BEL, content: Country.BEL },
-    { value: Country.RUS, content: Country.RUS },
-    { value: Country.USA, content: Country.USA }
-  ],
-  value: 'Укажите страну',
-  direction: 'top'
+export const Top: Story = {
+  args: {
+    items: [
+      { value: Country.BEL, content: Country.BEL },
+      { value: Country.RUS, content: Country.RUS },
+      { value: Country.USA, content: Country.USA }
+    ],
+    value: 'Укажите страну',
+    direction: 'top'
+  }
 }
 
-export const TopLeft = Template.bind({})
-TopLeft.args = {
-  items: [
-    { value: Country.BEL, content: Country.BEL },
-    { value: Country.RUS, content: Country.RUS },
-    { value: Country.USA, content: Country.USA }
-  ],
-  value: 'Укажите страну',
-  direction: 'top-left'
+export const TopLef: Story = {
+  args: {
+    items: [
+      { value: Country.BEL, content: Country.BEL },
+      { value: Country.RUS, content: Country.RUS },
+      { value: Country.USA, content: Country.USA }
+    ],
+    value: 'Укажите страну',
+    direction: 'top-left'
+  }
 }
 
-export const TopRight = Template.bind({})
-TopRight.args = {
-  items: [
-    { value: Country.BEL, content: Country.BEL },
-    { value: Country.RUS, content: Country.RUS },
-    { value: Country.USA, content: Country.USA }
-  ],
-  value: 'Укажите страну',
-  direction: 'top-right'
+export const TopRight: Story = {
+  args: {
+    items: [
+      { value: Country.BEL, content: Country.BEL },
+      { value: Country.RUS, content: Country.RUS },
+      { value: Country.USA, content: Country.USA }
+    ],
+    value: 'Укажите страну',
+    direction: 'top-right'
+  }
 }

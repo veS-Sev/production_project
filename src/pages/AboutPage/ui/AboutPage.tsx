@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next'
 const AboutPage = memo(() => {
   const { t } = useTranslation('translation')
   return (
-        <Page>{t('О сайте')}
+    <Page>
+      {t('О сайте')}
         </Page>
   )
 })

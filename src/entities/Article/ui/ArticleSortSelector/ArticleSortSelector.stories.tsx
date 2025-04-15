@@ -1,15 +1,16 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { ArticleSortSelector } from './ArticleSortSelector'
 
-export default {
+const meta: Meta<typeof ArticleSortSelector> = {
   title: 'entities/Article/ArticleSortSelector',
   component: ArticleSortSelector,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof ArticleSortSelector>
+}
+export default meta
 
-const Template: ComponentStory<typeof ArticleSortSelector> = (args) => <ArticleSortSelector {...args} />
+type Story = StoryObj<typeof ArticleSortSelector>
 
-export const Primary = Template.bind({})
-Primary.args = {}
+export const Primary: Story = {}

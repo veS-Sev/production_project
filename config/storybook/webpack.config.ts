@@ -4,7 +4,7 @@ import { DefinePlugin } from 'webpack'
 import path from 'path'
 import { buildCssLoaders } from '../build/loaders/buildCssLoaders'
 import { type BuildPaths } from '../build/types/config'
-
+console.log(import.meta.url)
 export default ({ config }: { config: webpack.Configuration }) => {
   const paths: BuildPaths = {
     build: '',
@@ -14,13 +14,16 @@ export default ({ config }: { config: webpack.Configuration }) => {
     locales: '',
     buildLocales: ''
   }
-  config!.resolve!.modules!.push(paths.src)
+
+  // config!.resolve!.modules!.push(paths.src)
   config!.resolve!.extensions!.push('.ts', '.tsx')
+
+  config!.resolve!.modules = [paths.src, 'node_modules']
 
   // eslint-disable-next-line no-param-reassign
   // @ts-ignore
   config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
-  // eslint-disable-next-line @typescript-eslint/prefer-includes
+    // eslint-disable-next-line @typescript-eslint/prefer-includes
     if (/svg/.test(rule.test as string)) {
       return { ...rule, exclude: /\.svg$/i }
     }

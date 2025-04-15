@@ -1,11 +1,11 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import ProfilePage from './ProfilePage'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from '../../../shared/config/storybook'
-import { Currency } from 'entities/Currency'
-import { Country } from 'entities/Country'
+import { Country } from '../../../entities/Country'
 import AvatarImage from 'shared/assets/test/scale_1200.png'
+import { Currency } from 'entities/Currency'
 
 const form = {
   firstname: 'Fifa',
@@ -17,45 +17,38 @@ const form = {
   age: 98,
   country: Country.RUS
 }
-export default {
-  title: 'Pages/ProfilePage',
+
+const meta: Meta<typeof ProfilePage> = {
+  title: 'pages/ProfilePager',
   component: ProfilePage,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [
+    ThemeDecorator(Theme.LIGHT),
+    StoreDecorator({
+      profile: {
+        form
+      }
+    })
+  ],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof ProfilePage>
+}
+export default meta
 
-const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage />
+type Story = StoryObj<typeof ProfilePage>
 
-export const Light = Template.bind({})
-Light.args = {}
-Light.decorators = [
-  ThemeDecorator(Theme.LIGHT),
-  StoreDecorator({
-    profile: {
-      form
-    }
-  })
-]
+export const Light: Story = {}
 
-export const Dark = Template.bind({})
-Dark.args = { id: '1' }
-Dark.decorators = [
-  ThemeDecorator(Theme.DARK),
-  StoreDecorator({
-    profile: {
-      form
-    }
-  })
-]
+export const Dark: Story = {
+  args: { id: '1' },
+  decorators: [
+    ThemeDecorator(Theme.DARK)
+  ]
+}
 
-export const Peach = Template.bind({})
-Peach.args = { id: '1' }
-Peach.decorators = [
-  ThemeDecorator(Theme.PEACH),
-  StoreDecorator({
-    profile: {
-      form
-    }
-  })
-]
+export const Peach: Story = {
+  args: { id: '1' },
+  decorators: [
+    ThemeDecorator(Theme.PEACH)
+  ]
+}

@@ -1,15 +1,16 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { ArticleTypeTabs } from './ArticleTypeTabs'
 
-export default {
+const meta: Meta<typeof ArticleTypeTabs> = {
   title: 'entities/Article/ArticleTypeTabs',
   component: ArticleTypeTabs,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof ArticleTypeTabs>
+}
+export default meta
 
-const Template: ComponentStory<typeof ArticleTypeTabs> = (args) => <ArticleTypeTabs {...args} />
+type Story = StoryObj<typeof ArticleTypeTabs>
 
-export const Primary = Template.bind({})
-Primary.args = {}
+export const Primary: Story = {}

@@ -25,9 +25,7 @@ export default {
   coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: ['node_modules'],
-  modulePaths: [
-    '<rootDir>src'
-  ],
+  modulePaths: ['<rootDir>src'],
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
@@ -52,13 +50,17 @@ export default {
   },
   reporters: [
     'default',
-    ['jest-html-reporters', {
-      publicPath: '<rootDir>/reports/unit',
-      filename: 'report.html',
-      inlineSource: true,
-      openReport: false
-    }]
-  ]
+    [
+      'jest-html-reporters',
+      {
+        publicPath: '<rootDir>/reports/unit',
+        filename: 'report.html',
+        inlineSource: true,
+        openReport: false
+      }
+    ]
+  ],
+  transformIgnorePatterns: ['node_modules/(?!axios)']
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: ["\\\\node_modules\\\\"],

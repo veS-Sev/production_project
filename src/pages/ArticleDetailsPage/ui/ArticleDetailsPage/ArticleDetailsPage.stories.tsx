@@ -1,14 +1,7 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import ArticleDetailsPage from './ArticleDetailsPage'
 import { StoreDecorator } from '../../../../shared/config/storybook'
 import { type Article, ArticleType, ArticleBlockType } from 'entities/Article'
-export default {
-  title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
-  component: ArticleDetailsPage,
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
-} as ComponentMeta<typeof ArticleDetailsPage>
 
 const article: Article = {
   id: '1',
@@ -61,12 +54,40 @@ const article: Article = {
   ]
 }
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />
-
-export const Primary = Template.bind({})
-Primary.args = {}
-Primary.decorators = [StoreDecorator({
-  articleDetails: {
-    data: article
+const meta: Meta<typeof ArticleDetailsPage> = {
+  title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
+  component: ArticleDetailsPage,
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        data: article
+      }
+    })
+  ],
+  parameters: {
+    /* ... */
   }
-})]
+}
+export default meta
+
+type Story = StoryObj<typeof ArticleDetailsPage>
+
+export const Primary: Story = {}
+
+// export default {
+//   title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
+//   component: ArticleDetailsPage,
+//   argTypes: {
+//     backgroundColor: { control: 'color' }
+//   }
+// } as Meta<typeof ArticleDetailsPage>
+
+// const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />
+
+// export const Primary = Template.bind({})
+// Primary.args = {}
+// Primary.decorators = [StoreDecorator({
+//   articleDetails: {
+//     data: article
+//   }
+// })]

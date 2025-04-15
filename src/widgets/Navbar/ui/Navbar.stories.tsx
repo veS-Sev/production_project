@@ -1,29 +1,28 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Navbar } from './Navbar'
 import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { StoreDecorator } from '../../../shared/config/storybook'
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { StoreDecorator } from 'shared/config/storybook'
 
-export default {
+const meta: Meta<typeof Navbar> = {
   title: 'widgets/Navbar',
   component: Navbar,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [
+    ThemeDecorator(Theme.LIGHT),
+    StoreDecorator({})
+  ],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof Navbar>
+}
+export default meta
 
-const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />
+type Story = StoryObj<typeof Navbar>
 
-export const Light = Template.bind({})
-Light.args = {}
-Light.decorators = [StoreDecorator({})]
+export const Basic: Story = {}
 
-export const Dark = Template.bind({})
-Dark.args = {}
+export const Light: Story = {}
 
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]
+export const Dark: Story = { decorators: [ThemeDecorator(Theme.DARK)] }
 
-export const AuthNavbar = Template.bind({})
-AuthNavbar.args = {}
-
-AuthNavbar.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: {} } })]
+export const AuthNavbar: Story = { decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: {} } })] }

@@ -1,134 +1,145 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
 import { TextSize, TextTheme, TextAlign, Text } from './Text'
-export default {
+
+const meta: Meta<typeof Text> = {
   title: 'shared/Text',
   component: Text,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [ThemeDecorator(Theme.LIGHT)],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof Text>
+}
+export default meta
 
-const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />
+type Story = StoryObj<typeof Text>
 
-export const Primary = Template.bind({})
-Primary.args = {
-  size: TextSize.M,
-  align: TextAlign.LEFT,
-  theme: TextTheme.PRIMARY,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const Primary: Story = {
+  args: {
+    size: TextSize.M,
+    align: TextAlign.LEFT,
+    theme: TextTheme.PRIMARY,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
+}
+export const PrimaryDark: Story = {
+  args: {
+    size: TextSize.M,
+    align: TextAlign.LEFT,
+    theme: TextTheme.PRIMARY,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  decorators: [ThemeDecorator(Theme.DARK)]
 }
 
-export const PrimaryDark = Template.bind({})
-PrimaryDark.args = {
-  size: TextSize.M,
-  align: TextAlign.LEFT,
-  theme: TextTheme.PRIMARY,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const PrimaryPeach: Story = {
+  args: {
+    theme: TextTheme.PRIMARY,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  decorators: [ThemeDecorator(Theme.PEACH)]
 }
 
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
-
-export const PrimaryPeach = Template.bind({})
-PrimaryPeach.args = {
-  theme: TextTheme.PRIMARY,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const Error: Story = {
+  args: {
+    theme: TextTheme.ERROR,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
 }
 
-PrimaryPeach.decorators = [ThemeDecorator(Theme.PEACH)]
-
-export const Error = Template.bind({})
-Error.args = {
-  theme: TextTheme.ERROR,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const ErrorDark: Story = {
+  args: {
+    theme: TextTheme.ERROR,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  decorators: [ThemeDecorator(Theme.DARK)]
 }
 
-export const ErrorDark = Template.bind({})
-ErrorDark.args = {
-  theme: TextTheme.ERROR,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const ErrorPeach: Story = {
+  args: {
+    size: TextSize.M,
+    align: TextAlign.LEFT,
+    theme: TextTheme.ERROR,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  decorators: [ThemeDecorator(Theme.PEACH)]
 }
 
-ErrorDark.decorators = [ThemeDecorator(Theme.DARK)]
-
-export const ErrorPeach = Template.bind({})
-ErrorPeach.args = {
-  size: TextSize.M,
-  align: TextAlign.LEFT,
-  theme: TextTheme.ERROR,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const OnlyText: Story = {
+  args: {
+    size: TextSize.M,
+    align: TextAlign.LEFT,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
 }
 
-ErrorPeach.decorators = [ThemeDecorator(Theme.PEACH)]
-
-export const OnlyText = Template.bind({})
-OnlyText.args = {
-  size: TextSize.M,
-  align: TextAlign.LEFT,
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const OnlyTextDark: Story = {
+  args: {
+    size: TextSize.M,
+    align: TextAlign.LEFT,
+    theme: TextTheme.PRIMARY,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  decorators: [ThemeDecorator(Theme.DARK)]
 }
 
-export const OnlyTextDark = Template.bind({})
-OnlyTextDark.args = {
-  size: TextSize.M,
-  align: TextAlign.LEFT,
-  theme: TextTheme.PRIMARY,
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const OnlyTitle: Story = {
+  args: {
+    size: TextSize.M,
+    align: TextAlign.LEFT,
+    title: 'Lorem ipsum dolor'
+  }
 }
 
-OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
-
-export const OnlyTitle = Template.bind({})
-OnlyTitle.args = {
-  size: TextSize.M,
-  align: TextAlign.LEFT,
-  title: 'Lorem ipsum dolor'
+export const OnlyTitleDark: Story = {
+  args: {
+    theme: TextTheme.PRIMARY,
+    title: 'Lorem ipsum dolor'
+  },
+  decorators: [ThemeDecorator(Theme.DARK)]
 }
 
-export const OnlyTitleDark = Template.bind({})
-OnlyTitleDark.args = {
-  theme: TextTheme.PRIMARY,
-  title: 'Lorem ipsum dolor'
+export const TextSizeL: Story = {
+  args: {
+    size: TextSize.L,
+    align: TextAlign.LEFT,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
 }
 
-OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)]
+export const TextSizeLDark: Story = {
+  args: {
+    size: TextSize.L,
+    align: TextAlign.LEFT,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  },
+  decorators: [ThemeDecorator(Theme.DARK)]
+}
+// TextSizeLDark.decorators = [ThemeDecorator(Theme.DARK)]
 
-export const TextSizeL = Template.bind({})
-TextSizeL.args = {
-  size: TextSize.L,
-  align: TextAlign.LEFT,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const TextSizeM: Story = {
+  args: {
+    size: TextSize.M,
+    align: TextAlign.LEFT,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
 }
 
-export const TextSizeLDark = Template.bind({})
-TextSizeLDark.args = {
-  size: TextSize.L,
-  align: TextAlign.LEFT,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-}
-TextSizeLDark.decorators = [ThemeDecorator(Theme.DARK)]
-
-export const TextSizeM = Template.bind({})
-TextSizeM.args = {
-  size: TextSize.M,
-  align: TextAlign.LEFT,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-}
-
-export const TextSizeS = Template.bind({})
-TextSizeS.args = {
-  size: TextSize.S,
-  align: TextAlign.LEFT,
-  title: 'Lorem ipsum dolor',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const TextSizeS: Story = {
+  args: {
+    size: TextSize.S,
+    align: TextAlign.LEFT,
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  }
 }

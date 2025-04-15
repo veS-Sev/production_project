@@ -1,27 +1,41 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { Sidebar } from './Sidebar'
 import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from '../../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { StoreDecorator } from '../../../../shared/config/storybook'
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { StoreDecorator } from 'shared/config/storybook'
 
-export default {
+const meta: Meta<typeof Sidebar> = {
   title: 'widgets/Sidebar',
   component: Sidebar,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [
+    ThemeDecorator(Theme.LIGHT),
+    StoreDecorator({ user: { authData: {} } })
+  ],
+  // render: () => <Sidebar prop="value" />,
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof Sidebar>
+}
+export default meta
 
-const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />
+type Story = StoryObj<typeof Sidebar>
 
-export const Light = Template.bind({})
-Light.args = {}
-Light.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({ user: { authData: {} } })]
-export const Dark = Template.bind({})
-Dark.args = {}
+// export default {
+//   title: 'widgets/Sidebar',
+//   component: Sidebar,
+//   argTypes: {
+//     backgroundColor: { control: 'color' }
+//   }
+// } as ComponentMeta<typeof Sidebar>
 
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: {} } })]
+// export const WithProp: Story = {
+//   render: () => <Sidebar prop="value" />
+// }
 
-export const NoAuth = Template.bind({})
-NoAuth.args = {}
-NoAuth.decorators = [ThemeDecorator(Theme.LIGHT), StoreDecorator({ user: {} })]
+// const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />
+
+export const Light: Story = { decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({ user: { authData: {} } })] }
+
+export const Dark: Story = { decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: {} } })] }
+
+export const NoAuth: Story = { decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({ user: {} })] }

@@ -1,21 +1,22 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import AddCommentForm from './AddCommentForm'
 import { action } from '@storybook/addon-actions'
 import { StoreDecorator } from '../../../shared/config/storybook'
-export default {
+
+const meta: Meta<typeof AddCommentForm> = {
   title: 'features/AddCommentForm',
   component: AddCommentForm,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [StoreDecorator({ user: { authData: {} } })],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof AddCommentForm>
-
-const Template: ComponentStory<typeof AddCommentForm> = (args) => <AddCommentForm {...args} />
-
-export const Primary = Template.bind({})
-Primary.args = {
-  onSendComment: action('onSendComment')
 }
-Primary.decorators = [
-  StoreDecorator({})
-]
+export default meta
+
+type Story = StoryObj<typeof AddCommentForm>
+
+export const Primary: Story = {
+  args: {
+    onSendComment: action('onSendComment')
+  }
+}

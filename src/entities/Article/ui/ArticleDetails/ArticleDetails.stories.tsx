@@ -1,15 +1,12 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
+// import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import { ArticleDetails } from './ArticleDetails'
 import { StoreDecorator } from '../../../../shared/config/storybook'
-import { type Article, ArticleType, ArticleBlockType } from 'pages/ArticlesPage'
-
-export default {
-  title: 'entities/Article/ArticleDetails',
-  component: ArticleDetails,
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
-} as ComponentMeta<typeof ArticleDetails>
+import {
+  type Article,
+  ArticleType,
+  ArticleBlockType
+} from 'pages/ArticlesPage'
 
 const article: Article = {
   id: '1',
@@ -62,36 +59,43 @@ const article: Article = {
   ]
 }
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => (
-  <ArticleDetails {...args} />
-)
+const meta: Meta<typeof ArticleDetails> = {
+  title: 'entities/Article/ArticleDetails',
+  component: ArticleDetails,
+  decorators: [],
+  parameters: {
+    /* ... */
+  }
+}
+export default meta
 
-export const Primary = Template.bind({})
-Primary.args = {}
-Primary.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      data: article
-    }
-  })
-]
+type Story = StoryObj<typeof ArticleDetails>
 
-export const Loading = Template.bind({})
-Loading.args = {}
-Loading.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      isLoading: true
-    }
-  })
-]
+export const Primary: Story = {
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        data: article
+      }
+    })
+  ]
+}
 
-export const Error = Template.bind({})
-Error.args = {}
-Error.decorators = [
-  StoreDecorator({
-    articleDetails: {
-      error: 'Ошибочка вышла'
-    }
-  })
-]
+export const Loading: Story = {
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        isLoading: true
+      }
+    })
+  ]
+}
+export const Error: Story = {
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        error: 'Ошибочка вышла'
+      }
+    })
+  ]
+}

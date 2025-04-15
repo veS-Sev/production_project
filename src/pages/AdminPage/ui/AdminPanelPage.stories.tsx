@@ -1,36 +1,28 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import AdminPanelPage from './AdminPanelPage'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from 'shared/config/storybook'
 
-export default {
-  title: 'Pages/AdminPanelPage',
+const meta: Meta<typeof AdminPanelPage> = {
+  title: 'pages/AdminPanelPage',
   component: AdminPanelPage,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({})],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof AdminPanelPage>
+}
+export default meta
 
-const Template: ComponentStory<typeof AdminPanelPage> = (args) => <AdminPanelPage />
+type Story = StoryObj<typeof AdminPanelPage>
 
-export const Light = Template.bind({})
-Light.args = {}
-Light.decorators = [ThemeDecorator(Theme.LIGHT),
-  StoreDecorator({
-  })
-]
+export const Light: Story = {
+  decorators: [ThemeDecorator(Theme.LIGHT)]
+}
 
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK),
-  StoreDecorator({
-  })
-]
-
-export const Peach = Template.bind({})
-Peach.args = {}
-Peach.decorators = [ThemeDecorator(Theme.PEACH),
-  StoreDecorator({
-  })
-]
+export const Dark: Story = {
+  decorators: [ThemeDecorator(Theme.DARK)]
+}
+export const Peach: Story = {
+  decorators: [ThemeDecorator(Theme.PEACH)]
+}

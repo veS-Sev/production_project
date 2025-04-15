@@ -1,33 +1,27 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { NotFoundPage } from './NotFoundPage'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from 'shared/config/storybook'
 
-export default {
-  title: 'Pages/NotFoundPage',
+const meta: Meta<typeof NotFoundPage> = {
+  title: 'pages/NotFoundPage',
   component: NotFoundPage,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({})],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof NotFoundPage>
+}
+export default meta
 
-const Template: ComponentStory<typeof NotFoundPage> = (args) => <NotFoundPage {...args} />
+type Story = StoryObj<typeof NotFoundPage>
 
-export const Light = Template.bind({})
-Light.args = {}
-Light.decorators = [ThemeDecorator(Theme.DARK),
-  StoreDecorator({
-  })]
+export const Light: Story = {}
 
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK),
-  StoreDecorator({
-  })]
-export const Peach = Template.bind({})
-Peach.args = {}
-Peach.decorators = [ThemeDecorator(Theme.PEACH),
-  StoreDecorator({
-  })
-]
+export const Dark: Story = {
+  decorators: [ThemeDecorator(Theme.DARK)]
+}
+export const Peach: Story = {
+  decorators: [ThemeDecorator(Theme.PEACH)
+  ]
+}

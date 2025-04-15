@@ -12,7 +12,7 @@ import { type HTMLAttributeAnchorTarget } from 'react'
 import { RouterPath } from 'shared/config/routeConfig'
 import { useTranslation } from 'react-i18next'
 import { AppLink } from 'shared/ui/AppLink'
-import { type Article, ArticleView, ArticleBlockType, type ArticleTextBlock } from 'pages/ArticlesPage'
+import { type Article, ArticleView, ArticleBlockType } from 'pages/ArticlesPage'
 interface ArticleListItemProps {
   className?: string
   article: Article
@@ -25,7 +25,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
   const { t } = useTranslation('articles')
   const [isHover, bindHover] = useHover()
 
-  const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT) as ArticleTextBlock
+  const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT)!
 
   const types = (
     <Text text={article.type.join(', ')} className={classNames(cls.types)} />

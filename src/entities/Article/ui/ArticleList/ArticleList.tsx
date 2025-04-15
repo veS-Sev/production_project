@@ -15,6 +15,8 @@ interface ArticleListProps {
   isLoading?: boolean
   target?: HTMLAttributeAnchorTarget
   virtualized?: boolean
+  //
+  label?: any
 }
 
 const getSceletons = (view: ArticleView) => {

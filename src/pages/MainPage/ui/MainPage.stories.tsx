@@ -1,33 +1,28 @@
-import { type ComponentStory, type ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import MainPage from './MainPage'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { RouterDecorator, StoreDecorator } from 'shared/config/storybook'
+import { StoreDecorator } from 'shared/config/storybook'
 
-export default {
-  title: 'Pages/MainPage',
+const meta: Meta<typeof MainPage> = {
+  title: 'pages/MainPager',
   component: MainPage,
-  argTypes: {
-    backgroundColor: { control: 'color' }
+  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({})],
+  parameters: {
+    /* ... */
   }
-} as ComponentMeta<typeof MainPage>
+}
+export default meta
 
-const Template: ComponentStory<typeof MainPage> = (args) => <MainPage />
+type Story = StoryObj<typeof MainPage>
 
-export const Light = Template.bind({})
-Light.args = {}
-Light.decorators = [ThemeDecorator(Theme.LIGHT),
-  StoreDecorator({
-  })]
+export const Light: Story = {}
 
-export const Dark = Template.bind({})
-Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK),
-  StoreDecorator({
-  })]
-export const Peach = Template.bind({})
-Peach.args = {}
-Peach.decorators = [ThemeDecorator(Theme.PEACH),
-  StoreDecorator({
-  })
-]
+export const Dark: Story = {
+  decorators: [ThemeDecorator(Theme.DARK)]
+}
+
+export const Peach: Story = {
+  decorators: [ThemeDecorator(Theme.PEACH)
+  ]
+}
