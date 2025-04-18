@@ -19,6 +19,7 @@ import { Input } from 'shared/ui/Input'
 import { type SortOrder } from 'shared/types/SortOrder'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebaunce'
+import { HStack, VStack } from 'shared/ui/Stack'
 
 interface ArticlesPageFiltersProps {
   className?: string
@@ -33,6 +34,7 @@ export const ArticlesPageFilters = memo(
     const sort = useSelector(getArticlesPageSort)
     const search = useSelector(getArticlesPageSearch)
     const type = useSelector(getArticlesPageType)
+    console.log('@@@type', type)
     const fetchData = useCallback(() => {
       dispatch(fetchArticlesList({ replace: true }))
     }, [dispatch])
@@ -69,8 +71,8 @@ export const ArticlesPageFilters = memo(
     }
 
     return (
-      <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
-        <div className={classNames(cls.sortWrapper)}>
+      <VStack gap={'16'} max className={classNames(cls.ArticlesPageFilters, {}, [className])}>
+        <HStack max className={classNames(cls.sortWrapper)}>
           <ArticleSortSelector
             order={order}
             sort={sort}
@@ -78,8 +80,8 @@ export const ArticlesPageFilters = memo(
             onChangeSortField={onChangeSortField}
           />
           <ArticlesViewSelector onViewClick={onChangeView} view={view} />
-        </div>
-        <Card>
+        </HStack>
+        <Card className={classNames(cls.inputCard)}>
           <Input
             value={search}
             onChange={onChangeSearch}
@@ -87,7 +89,7 @@ export const ArticlesPageFilters = memo(
           />
         </Card>
         <ArticleTypeTabs onChangeType={onChangeType} value={type} />
-      </div>
+      </VStack>
     )
   }
 )

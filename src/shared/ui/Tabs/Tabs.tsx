@@ -26,7 +26,7 @@ export const Tabs = memo((props: TabsProps) => {
     },
     [onClickTab]
   )
-  console.log('@clickHandle', clickHandle)
+
   return (
     <div className={classNames(cls.Tabs, {}, [className])}>
       {tabs.map((tab) => (

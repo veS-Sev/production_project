@@ -4,6 +4,7 @@ import {
   getArticlesPageIsLoading,
   getArticlesPageView,
   getArticlesPageError
+  , getArticlesPageLimit
 } from '../../model/selectors/articlesPageSelectors'
 import { getArticles } from '../../model/slice/articlesPageSlice'
 import { useSelector } from 'react-redux'
@@ -15,22 +16,28 @@ interface ArticleInfiniteListProps {
 }
 
 export const ArticleInfiniteList = (props: ArticleInfiniteListProps) => {
+  const limit = useSelector(getArticlesPageLimit)
   const { t } = useTranslation()
   const articles = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlesPageIsLoading)
+  // const isLoading = true
   const view = useSelector(getArticlesPageView)
   const error = useSelector(getArticlesPageError)
 
+  let conditionalVirtualized = true
   if (error) {
     return (
       <Text title={'Статьи не были загружены'}/>
     )
   }
+  if (limit > articles.length) {
+    conditionalVirtualized = false
+  }
 
   return (
     <VStack max gap={'8'}>
       <Text title={t('Статьи')}/>
-      <ArticleList view={view} isLoading={isLoading} articles={articles} />
+      <ArticleList view={view} isLoading={isLoading} articles={articles} virtualized={conditionalVirtualized} />
     </VStack>
   )
 }

@@ -6,6 +6,7 @@ import { Button } from 'shared/ui/Button'
 import { ButtonTheme } from 'shared/ui/Button/Button'
 import { Icon } from 'shared/ui/Icon'
 import { ArticleView } from '../../model/consts/consts'
+import { HStack } from 'shared/ui/Stack'
 
 interface ArticlesViewSelectorProps {
   className?: string
@@ -24,17 +25,16 @@ export const ArticlesViewSelector = (props: ArticlesViewSelectorProps) => {
   }
 
   return (
-    <div className={classNames(cls.ArticlesViewSelector, {}, [className])}>
+    <HStack align={'center'} className={classNames(cls.ArticlesViewSelector, {}, [className])}>
       {viewTypes.map((viewType) => (
         <Button
           onClick={onClick(viewType.view)}
           theme={ButtonTheme.CLEAR}
           key={viewType.view}
         >
-            {/* className={classNames('', { [cls.notSelected]: viewType.view !== view })} */}
-          <Icon Svg={viewType.icon} className={classNames('', { [cls.notSelected]: viewType.view !== view })}/>
+          <Icon Svg={viewType.icon} className={classNames(cls.icon, { [cls.notSelected]: viewType.view !== view })}/>
         </Button>
       ))}
-    </div>
+    </HStack>
   )
 }

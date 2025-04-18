@@ -19,7 +19,6 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
   const { className, label, value, options, onChange, readonly } = props
   const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     if (onChange) {
-      console.log('@', e.target.value)
       onChange(e.target.value as T)
     }
   }

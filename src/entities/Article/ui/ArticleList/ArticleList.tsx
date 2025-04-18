@@ -6,7 +6,9 @@ import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItemSkeleton/ArticleListItemSkeleton'
 import { Text, TextSize } from 'shared/ui/Text'
 import { PAGE_ID } from 'widgets/Page'
-import { type Article, ArticleView } from 'pages/ArticlesPage'
+import { ArticleView } from '../../model/consts/consts'
+import { type Article } from '../../model/types/article'
+import { HStack } from 'shared/ui/Stack'
 
 interface ArticleListProps {
   className?: string
@@ -34,7 +36,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
     target,
     virtualized = true
   } = props
-
   const isBig = view === ArticleView.BIG
   const itemsPerRow = isBig ? 1 : 3
   const rowCount = isBig
@@ -46,7 +47,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
   }
 
   const rowRender = ({ index, isScrolling, key, style }: ListRowProps) => {
-    console.log('@scroll Articles list')
     const items = []
     const fromIndex = index * itemsPerRow
     // константа с индексом, которым ограничиваемся
@@ -65,9 +65,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
-      <div key={key} style={style} className={cls.row}>
+      <HStack gap={'16'} key={key} style={style} className={cls.row}>
         {items}
-      </div>
+      </HStack>
     )
   }
 
@@ -83,7 +83,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         isScrolling,
         scrollTop
       }) => (
-        <div
+        <HStack
           className={classNames(cls.ArticleList, {}, [cls[view], className])}
           // ref={registerChild}
         >
@@ -105,7 +105,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
               )}
 
           {isLoading && getSceletons(view)}
-        </div>
+        </HStack>
       )}
     </WindowScroller>
   )

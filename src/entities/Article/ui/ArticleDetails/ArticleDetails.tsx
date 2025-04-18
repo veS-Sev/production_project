@@ -42,9 +42,8 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   const isLoading = useSelector(getArticleDetailsIsLoading)
   const article = useSelector(getArticleDetailsData)
   const error = useSelector(getArticleDetailsError)
-
   useInitionalEffect(() => {
-    if (!id && __PROJECT__ !== 'storybook') {
+    if (__PROJECT__ !== 'storybook') {
       dispatch(fetchArticleById(id))
     }
   })
@@ -65,7 +64,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
   if (isLoading) {
     content = (
-      <>
+      <VStack max gap={'16'}>
         <Skeleton
           className={cls.avatar}
           width={200}
@@ -86,7 +85,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
           height={300}
           border={'0%'}
         />
-      </>
+      </VStack>
     )
   } else if (error) {
     content = (
@@ -102,7 +101,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
           <Avatar
             size={200}
             src={article?.img}
-            alt={'Аватар'}
+            alt={'Оложка статьи'}
             className={cls.avatar}
           />
         </HStack>
