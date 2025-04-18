@@ -20,7 +20,6 @@ export const ArticleInfiniteList = (props: ArticleInfiniteListProps) => {
   const { t } = useTranslation()
   const articles = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlesPageIsLoading)
-  // const isLoading = true
   const view = useSelector(getArticlesPageView)
   const error = useSelector(getArticlesPageError)
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import withMock from 'storybook-addon-mock'
+// import withMock from 'storybook-addon-mock'
 import { ArticleRecomendationsList } from './ArticleRecomendationsList'
 import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook'
 import { Theme } from 'app/providers/ThemeProvider'
@@ -20,7 +20,7 @@ const article: Article = {
 const meta: Meta<typeof ArticleRecomendationsList> = {
   title: 'features/ArticleRecomendationsList',
   component: ArticleRecomendationsList,
-  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({}), withMock],
+  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({})],
   parameters: {
     mockData: [
       {
@@ -39,35 +39,6 @@ const meta: Meta<typeof ArticleRecomendationsList> = {
 export default meta
 
 type Story = StoryObj<typeof ArticleRecomendationsList>
-
-// export default {
-//   title: 'features/ArticleRecomendationsList',
-//   component: ArticleRecomendationsList,
-//   argTypes: {
-//     backgroundColor: { control: 'color' }
-//   },
-//   decorators: [withMock, StoreDecorator({})],
-//   parameters: {
-//     mockData: [
-//       {
-//         url: `${__API__}/articles?_limit=3`,
-//         method: 'GET',
-//         status: 200,
-//         response: [
-//           { ...article, id: '1' },
-//           { ...article, id: '2' },
-//           { ...article, id: '3' }
-//         ]
-//       }
-//     ]
-//   }
-//   // decorators: [StoreDecorator({})]
-// } as Meta<typeof ArticleRecomendationsList>
-
-// const Template: ComponentStory<typeof ArticleRecomendationsList> = (args) => (
-//   <ArticleRecomendationsList {...args} />
-// )
-
 export const Light: Story = {}
 
 export const Dark: Story = { decorators: [ThemeDecorator(Theme.DARK)] }

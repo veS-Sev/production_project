@@ -78,22 +78,15 @@ const article = {
   ]
 } as Article
 
-const articles = new Array(9).fill(article)
+const articles = new Array(9).fill(article).map((item, index) => ({
+  ...article,
+  id: String(index)
+}))
 
 const meta: Meta<typeof ArticleList> = {
   title: 'entities/Article/ArticleList',
   component: ArticleList,
   decorators: [],
-  // render: () => (
-  //   <ArticleList
-  //     view={ArticleView.BIG}
-  //     isLoading={false}
-  //     articles={new Array(9).fill(0).map((item, index) => ({
-  //       ...article,
-  //       id: String(index)
-  //     }))}
-  //   />
-  // ),
   parameters: {
     /* ... */
   }
@@ -102,38 +95,12 @@ export default meta
 
 type Story = StoryObj<typeof ArticleList>
 
-export const ArticleListBig: Story = {
-  render: () => (
-    <ArticleList
-      view={ArticleView.BIG}
-      isLoading={false}
-      articles={new Array(9).fill(0).map((item, index) => ({
-        ...article,
-        id: String(index)
-      }))}
-    />
-  )
-}
-// export default {
-//   title: 'entities/Article/ArticleList',
-//   component: ArticleList,
-//   argTypes: {
-//     backgroundColor: { control: 'color' }
-//   }
-// } as Meta<typeof ArticleList>
-
-// const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />
-
 export const BigItems: Story = {
   args: {
     view: ArticleView.BIG,
     isLoading: false,
-    articles: new Array(9)
-      .fill(0)
-      .map((item, index) => ({
-        ...article,
-        id: String(index)
-      }))
+    articles,
+    virtualized: false
   }
 }
 
@@ -141,6 +108,7 @@ export const SmallItems: Story = {
   args: {
     view: ArticleView.SMALL,
     isLoading: false,
-    articles
+    articles,
+    virtualized: false
   }
 }

@@ -12,6 +12,7 @@ import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice'
 import { useSelector } from 'react-redux'
 import { VStack } from 'shared/ui/Stack'
+import { Loader } from 'shared/ui/Loader/Loader'
 
 interface ArticleDetailsPageCommentsProps {
   className?: string
@@ -45,7 +46,7 @@ export const ArticleDetailsComments = (
         size={TextSize.L}
         title={t('Комментарии')}
       />
-      <Suspense fallback={'Идёт загрузка'}>
+      <Suspense fallback={<Loader/>}>
         <AddCommentForm onSendComment={onSendComment} />
       </Suspense>
       <CommentList isLoading={commentsIsLoading} comments={comments} />

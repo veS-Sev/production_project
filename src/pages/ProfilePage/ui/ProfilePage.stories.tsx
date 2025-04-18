@@ -19,7 +19,7 @@ const form = {
 }
 
 const meta: Meta<typeof ProfilePage> = {
-  title: 'pages/ProfilePager',
+  title: 'pages/ProfilePage',
   component: ProfilePage,
   decorators: [
     ThemeDecorator(Theme.LIGHT),

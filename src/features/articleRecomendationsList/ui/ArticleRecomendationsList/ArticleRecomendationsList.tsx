@@ -1,4 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
+import cls from './ArticleRecomendationsList.module.scss'
 import { useTranslation } from 'react-i18next'
 import { useArticleRecomendatonsList } from '../../model/api/api'
 import { memo } from 'react'
@@ -31,6 +32,7 @@ export const ArticleRecomendationsList = memo(
           articles={articles}
           isLoading={isLoading}
           virtualized={false}
+          className={classNames(cls.recommendationsWrapper)}
         />
       </VStack>
     )
