@@ -1,2 +1,2 @@
-export * from './SortOrder'
-export * from './dropdownDirection'
+export type { SortOrder } from './SortOrder'
+export type { DropdownDirection } from './dropdownDirection'
