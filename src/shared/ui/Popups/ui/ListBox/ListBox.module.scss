@@ -12,7 +12,7 @@
 
 .options {
   position: absolute;
-  z-index: 1000;
+  z-index: var(--popup-z-index);
   background-color: var(--list-box-bg);
   box-shadow: 4px 4px 8px var(--list-box-bg);
   border-radius: 4px;
@@ -22,40 +22,4 @@
 
 .item {
   padding: 10px;
-}
-
-.active {
-  background-color: var(--inverted-bg-color);
-}
-
-.disabled {
-  opacity: 0.7;
-}
-
-.optionsTop {
-  bottom: 100%;
-}
-
-.optionsBottom {
-  top: 100%;
-}
-
-.optionsBottomLeft {
-  top: 0;
-  right: 100%;
-}
-
-.optionsBottomRight {
-  top: 0;
-  left: 100%;
-}
-
-.optionsTopLeft {
-  bottom: 0;
-  right: 100%;
-}
-
-.optionsTopRight {
-  bottom: 0;
-  left: 100%;
 }

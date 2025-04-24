@@ -3,7 +3,7 @@ import cls from './CurrencySelect.module.scss'
 import { memo, useMemo } from 'react'
 import { Currency } from '../../model/consts/consts'
 import { useTranslation } from 'react-i18next'
-import { ListBox } from 'shared/ui/ListBox/ListBox'
+import { ListBox } from 'shared/ui/Popups/ui/ListBox/ListBox'
 interface CurrencySelectProps {
   className?: string
   label?: string

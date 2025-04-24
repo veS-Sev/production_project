@@ -1,0 +1,45 @@
+.optionsTop {
+  bottom: 100%;
+}
+
+.optionsBottom {
+  top: 100%;
+}
+
+.optionsBottomLeft {
+  top: 0;
+  right: 100%;
+}
+
+.optionsBottomRight {
+  top: 0;
+  left: 100%;
+}
+
+.optionsTopLeft {
+  bottom: 0;
+  right: 100%;
+}
+
+.optionsTopRight {
+  bottom: 0;
+  left: 100%;
+}
+
+.active {
+  background-color: var(--inverted-bg-color);
+}
+
+.disabled {
+  opacity: 0.7;
+}
+
+.trigger {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}

@@ -1,0 +1,22 @@
+.Dropdown {
+  position: relative;
+}
+
+.menu {
+  z-index: var(--popup-z-index);
+  position: absolute;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: var(--inverted-primary-color);
+}
+
+.item {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  margin: 0;
+  padding: 10px;
+  min-width: 125px;
+  width: 100%;
+  border: none;
+}

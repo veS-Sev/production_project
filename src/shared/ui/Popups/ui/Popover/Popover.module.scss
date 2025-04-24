@@ -1,0 +1,15 @@
+.Popover {
+  position: relative;
+  width: 100%;
+}
+
+.panel {
+  position: absolute;
+  background-color: var(--inverted-primary-color);
+  border-radius: 4px;
+  color: var(--primary-color);
+  padding: 10px;
+  z-index: var(--popup-z-index);
+  width: 300px;
+  overflow-y: hidden;
+}

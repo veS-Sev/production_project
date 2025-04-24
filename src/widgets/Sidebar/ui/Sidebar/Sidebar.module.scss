@@ -26,7 +26,7 @@
 
 .collapseBTN {
   position: absolute;
-  z-index: 100;
+  z-index: var(--sidebar-z-index);
   bottom: 40px;
   right: -40px;
 }
