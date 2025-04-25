@@ -12,7 +12,9 @@ interface NotificationListProps {
 
 export const NotificationList = (props: NotificationListProps) => {
   const { className } = props
-  const { data, isLoading } = useNotificationList(null)
+  const { data, isLoading } = useNotificationList(null, {
+    pollingInterval: 10000
+  })
 
   if (isLoading) {
     return <VStack max gap={'16'} className={classNames(cls.NotificationList, {}, [className])}>

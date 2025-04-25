@@ -5,6 +5,7 @@ import '../../../app/styles/index.scss'
 import { Portal } from '../Portal'
 import { type Mods } from 'shared/lib/classNames/classNames'
 import { useTheme } from 'app/providers/ThemeProvider'
+import { Overlay } from '../Overlay/Overlay'
 
 export interface ModalProps {
   className?: string
@@ -67,11 +68,10 @@ export const Modal = (props: ModalProps) => {
       <div
         className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}
       >
-        <div className={cls.overlay} onClick={closeHandler}>
+        <Overlay className={cls.overlay} onClick={closeHandler}/>
           <div className={cls.content} onClick={onContentClick}>
             {children}
           </div>
-        </div>
       </div>
     </Portal>
   )

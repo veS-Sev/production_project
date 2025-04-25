@@ -4,7 +4,6 @@ import { Button } from 'shared/ui/Button'
 import { useCallback, useState, memo } from 'react'
 import { ButtonTheme } from 'shared/ui/Button/Button'
 import { LoginModal } from 'features/authByUsername'
-
 import {
   getUserAuthData
 } from 'entities/User'
@@ -14,7 +13,6 @@ import { Text, TextSize, TextTheme } from 'shared/ui/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink'
 import { RouterPath } from 'shared/config/routeConfig'
 import { HStack } from 'shared/ui/Stack'
-
 import { NotificationButton } from 'features/notificationButton'
 import { AvatarDropdown } from 'features/avatarDropdown'
 

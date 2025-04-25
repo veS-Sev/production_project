@@ -7,6 +7,7 @@ export const buildCssLoaders = (isDev: boolean) => {
       {
         loader: 'css-loader',
         options: {
+          // api: 'modern-compiler',
           modules: {
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
             localIdentName: isDev
@@ -17,6 +18,5 @@ export const buildCssLoaders = (isDev: boolean) => {
       },
       'sass-loader'
     ]
-
   }
 }
