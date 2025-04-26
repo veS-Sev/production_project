@@ -11,7 +11,5 @@ const meta: Meta<typeof Drawer> = {
 }
 export default meta
 
-
 type Story = StoryObj<typeof Drawer>
 export const Basic: Story = {}
-
