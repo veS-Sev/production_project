@@ -7,6 +7,7 @@ import { BrowserView, MobileView } from 'react-device-detect'
 import { Drawer } from 'shared/ui/Drawer/Drawer'
 import { Button } from 'shared/ui/Button'
 import { ButtonTheme } from 'shared/ui/Button/Button'
+import { AnimationProvider } from 'shared/lib/components/AnimationProvider'
 
 interface NotificationButtonProps {
   className?: string
@@ -30,6 +31,7 @@ export const NotificationButton = (props: NotificationButtonProps) => {
   </BrowserView>
     <MobileView>
       {trigger}
+      <AnimationProvider>
      <Drawer isOpen={isOpenDrawer} onClose={onCloseDrawer}><NotificationList /></Drawer>
-    </MobileView></div>
+    </AnimationProvider></MobileView></div>
 }
