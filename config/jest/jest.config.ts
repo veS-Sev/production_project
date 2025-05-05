@@ -23,30 +23,23 @@ export default {
   testEnvironment: 'jsdom',
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
+
+  // An array of file extensions your modules use
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: ['node_modules'],
   modulePaths: ['<rootDir>src'],
+  // The glob patterns Jest uses to detect test files
+  testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
-  // An array of file extensions your modules use
-  moduleFileExtensions: [
-    'js',
-    'mjs',
-    'cjs',
-    'jsx',
-    'ts',
-    'tsx',
-    'json',
-    'node'
-  ],
   // The root directory that Jest should scan for tests and modules within
   rootDir: '../../',
   setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
 
-  // The glob patterns Jest uses to detect test files
-  testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
-    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '@/(.*)$': '<rootDir>/src/$1'
   },
   reporters: [
     'default',
@@ -111,7 +104,6 @@ export default {
   // maxWorkers: "50%",
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],

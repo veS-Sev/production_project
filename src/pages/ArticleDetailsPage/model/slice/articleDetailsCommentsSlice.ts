@@ -3,8 +3,8 @@ import {
   createEntityAdapter,
   type PayloadAction
 } from '@reduxjs/toolkit'
-import { type StateSchema } from 'app/providers/StoreProvider'
-import { type Comment } from 'entities/Comment'
+import { type StateSchema } from '@/app/providers/StoreProvider'
+import { type Comment } from '@/entities/Comment'
 import { type ArticleDetailsCommentsSchema } from '../types/articleDetailsPageComments'
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 export const commentsAdapter = createEntityAdapter<Comment>({

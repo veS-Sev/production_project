@@ -1,13 +1,13 @@
 import './styles/index.scss'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppRouter } from './providers/router/ui/AppRouter'
-import { Navbar } from 'widgets/Navbar'
-import { Sidebar } from 'widgets/Sidebar/ui'
+import { Navbar } from '@/widgets/Navbar'
+import { Sidebar } from '@/widgets/Sidebar/ui'
 import { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userActions } from 'entities/User'
-import { useTheme } from 'app/providers/ThemeProvider'
-import { getUserInited } from 'entities/User/index'
+import { userActions } from '@/entities/User'
+import { useTheme } from '@/app/providers/ThemeProvider'
+import { getUserInited } from '@/entities/User/index'
 
 const App = () => {
   const { theme } = useTheme()

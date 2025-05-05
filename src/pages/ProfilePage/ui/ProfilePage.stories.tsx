@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import ProfilePage from './ProfilePage'
-import { Theme } from 'app/providers/ThemeProvider'
+import { Theme } from '@/app/providers/ThemeProvider'
 import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from '../../../shared/config/storybook'
 import { Country } from '../../../entities/Country'
-import AvatarImage from 'shared/assets/test/scale_1200.png'
-import { Currency } from 'entities/Currency'
+import AvatarImage from '@/shared/assets/test/scale_1200.png'
+import { Currency } from '@/entities/Currency'
 
 const form = {
   firstname: 'Fifa',

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader'
-import { StoreDecorator } from 'shared/config/storybook'
+import { StoreDecorator } from '@/shared/config/storybook'
 
 const meta: Meta<typeof ArticleDetailsPageHeader> = {
   title: 'pages/ArticleDetailsPage/ArticleDetailsPageHeader',

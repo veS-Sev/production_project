@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticlesPage.module.scss'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback } from 'react'
@@ -8,11 +8,11 @@ import {
 import {
   DynamicModuleLoader,
   type ReducersList
-} from 'shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
-import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
+} from '@/shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
+import { useInitionalEffect } from '@/shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Page } from 'widgets/Page'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Page } from '@/widgets/Page'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 import { useSearchParams } from 'react-router-dom'

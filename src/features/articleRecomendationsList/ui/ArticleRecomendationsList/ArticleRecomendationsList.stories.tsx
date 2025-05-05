@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 // import withMock from 'storybook-addon-mock'
 import { ArticleRecomendationsList } from './ArticleRecomendationsList'
-import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook'
-import { Theme } from 'app/providers/ThemeProvider'
-import { type Article } from 'entities/Article'
+import { StoreDecorator, ThemeDecorator } from '@/shared/config/storybook'
+import { Theme } from '@/app/providers/ThemeProvider'
+import { type Article } from '@/entities/Article'
 
 const article: Article = {
   id: '1',

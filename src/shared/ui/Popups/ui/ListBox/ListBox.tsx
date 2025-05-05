@@ -1,6 +1,6 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ListBox.module.scss'
-import { type DropdownDirection } from 'shared/types'
+import { type DropdownDirection } from '@/shared/types'
 import { Fragment } from 'react'
 import { Listbox } from '@headlessui/react'
 import { Button } from '../../../Button/Button'

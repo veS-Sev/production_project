@@ -43,7 +43,7 @@ export function buildPlugins ({ paths, isDev, apiUrl, project }: BuildOptions): 
   if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin())
     plugins.push(new webpack.HotModuleReplacementPlugin())
-    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }))
+    plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: true }))
   }
   return plugins
 }

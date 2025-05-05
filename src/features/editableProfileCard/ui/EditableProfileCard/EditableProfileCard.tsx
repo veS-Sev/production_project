@@ -1,19 +1,19 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback } from 'react'
-import { type Country } from 'entities/Country'
-import { type Currency } from 'entities/Currency'
+import { type Country } from '@/entities/Country'
+import { type Currency } from '@/entities/Currency'
 
 import { useSelector } from 'react-redux'
 import {
   type ReducersList,
   DynamicModuleLoader
-} from 'shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
+} from '@/shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useInitionalEffect } from '@/shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { EditableProfileHeader } from '../EditableProfileHeader'
 
-import { TextTheme, Text } from 'shared/ui/Text'
+import { TextTheme, Text } from '@/shared/ui/Text'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
@@ -21,10 +21,10 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 
-import { ProfileCard } from 'entities/Profile/ui/ProfileCard/ProfileCard'
+import { ProfileCard } from '@/entities/Profile/ui/ProfileCard/ProfileCard'
 import { profileReducer, profileActions } from '../../model/slice/profileSlice'
 import { ValidateProfileError } from '../../model/types/editableProfileCardSchema'
-import { VStack } from 'shared/ui/Stack'
+import { VStack } from '@/shared/ui/Stack'
 
 const reducers: ReducersList = {
   profile: profileReducer

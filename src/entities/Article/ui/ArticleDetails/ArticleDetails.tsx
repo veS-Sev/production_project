@@ -1,13 +1,13 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useSelector } from 'react-redux'
 import cls from './ArticleDetails.module.scss'
 import {
   DynamicModuleLoader,
   type ReducersList
-} from 'shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
+} from '@/shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from '../../model/slices/articleDetailsSlice'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Text, TextAlign, TextSize } from 'shared/ui/Text'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text'
 import { memo, useCallback } from 'react'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import {
@@ -15,19 +15,19 @@ import {
   getArticleDetailsIsLoading,
   getArticleDetailsError
 } from '../../model/selectors/articleDetails'
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
-import { Avatar } from 'shared/ui/Avatar'
-import EyeIcon from 'shared/assets/icons/eye-20-20.svg'
-import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg'
-import { Icon } from 'shared/ui/Icon'
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
+import { Avatar } from '@/shared/ui/Avatar'
+import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
+import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg'
+import { Icon } from '@/shared/ui/Icon'
 import { ArticleBlockType } from '../../model/consts/consts'
 import { type ArticleBlock } from '../../model/types/article'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
-import { useInitionalEffect } from 'shared/lib/hooks/useInitionalEffect/useInitionalEffect'
+import { useInitionalEffect } from '@/shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { useTranslation } from 'react-i18next'
-import { HStack, VStack } from 'shared/ui/Stack'
+import { HStack, VStack } from '@/shared/ui/Stack'
 interface ArticleDetailsProps {
   className?: string
   id?: string

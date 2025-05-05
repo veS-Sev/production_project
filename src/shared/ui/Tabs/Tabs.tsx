@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Tabs.module.scss'
 import { useCallback, type ReactNode, memo } from 'react'
 import { CapdTheme, Card } from '../Card'

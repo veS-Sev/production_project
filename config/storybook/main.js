@@ -1,13 +1,14 @@
+import path from 'path'
 module.exports = {
   stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx)'],
 
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-actions',
     '@storybook/addon-interactions',
     'storybook-addon-mock',
     '@storybook/react',
-    '@storybook/addon-actions',
     '@storybook/test',
     '@storybook/addon-webpack5-compiler-babel'
   ],
@@ -32,5 +33,14 @@ module.exports = {
         lazyCompilation: true
       }
     }
+  },
+  webpackFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@': path.resolve(__dirname, '../../src')
+      }
+    }
+    return config
   }
 }

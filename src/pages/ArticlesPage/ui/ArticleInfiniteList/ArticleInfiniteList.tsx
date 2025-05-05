@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList'
+import { ArticleList } from '@/entities/Article/ui/ArticleList/ArticleList'
 import {
   getArticlesPageIsLoading,
   getArticlesPageView,
@@ -8,8 +8,8 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import { getArticles } from '../../model/slice/articlesPageSlice'
 import { useSelector } from 'react-redux'
-import { VStack } from 'shared/ui/Stack'
-import { Text } from 'shared/ui/Text/index'
+import { VStack } from '@/shared/ui/Stack'
+import { Text } from '@/shared/ui/Text/index'
 
 interface ArticleInfiniteListProps {
   className?: string
