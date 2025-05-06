@@ -99,8 +99,7 @@ export const BigItems: Story = {
   args: {
     view: ArticleView.BIG,
     isLoading: false,
-    articles,
-    virtualized: false
+    articles
   }
 }
 
@@ -108,7 +107,6 @@ export const SmallItems: Story = {
   args: {
     view: ArticleView.SMALL,
     isLoading: false,
-    articles,
-    virtualized: false
+    articles
   }
 }

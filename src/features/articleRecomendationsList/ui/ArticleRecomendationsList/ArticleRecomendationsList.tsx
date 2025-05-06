@@ -31,7 +31,6 @@ export const ArticleRecomendationsList = memo(
           target={'_blank'}
           articles={articles}
           isLoading={isLoading}
-          virtualized={false}
           className={classNames(cls.recommendationsWrapper)}
         />
       </VStack>
