@@ -1,49 +1,9 @@
-// import { classNames, type Mods } from 'shared/lib/classNames/classNames'
-// import cls from './Drawer.module.scss'
-// import { Overlay } from '../Overlay/Overlay'
-// import { Portal } from '../Portal'
-// import { type ReactNode } from 'react'
-// import { useTheme } from 'app/providers/ThemeProvider'
-// import { useModal } from 'shared/lib/hooks/useModal/useModal'
-// interface DrawerProps {
-//   className?: string
-//   children?: ReactNode
-//   isOpen: boolean
-//   onClose: () => void
-
-// }
-
-// export const Drawer = (props: DrawerProps) => {
-//   const {
-//     className, children,
-//     isOpen, onClose
-//   } = props
-
-//   const {
-//     isClosing,
-//     close
-//   } = useModal({ isOpen, onClose })
-//   const mods: Mods = {
-//     [cls.opened]: isOpen,
-//     [cls.closed]: isClosing
-//   }
-//   const { theme } = useTheme()
-//   return <Portal>
-//     <div className={classNames(cls.Drawer, mods, [className, theme, 'app_drawer'])}>
-//       <Overlay onClick={close} />
-//       <div className={classNames(cls.content, {}, [className])}>
-//         {children}
-//       </div>
-//     </div>
-//   </Portal>
-// }
-
-import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
-import React, {
+import { classNames } from '@/shared/lib/classNames/classNames'
+import {
   memo, type ReactNode, useCallback, useEffect
 } from 'react'
 import { useTheme } from '@/app/providers/ThemeProvider'
-import { useAnimationLibs } from '@/shared/lib/components/AnimationProvider'
+import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider'
 import { Overlay } from '../Overlay/Overlay'
 import cls from './Drawer.module.scss'
 import { Portal } from '../Portal/Portal'
@@ -66,8 +26,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
     className,
     children,
     onClose,
-    isOpen,
-    lazy
+    isOpen
   } = props
 
   const openDrawer = useCallback(() => {
@@ -114,11 +73,6 @@ export const DrawerContent = memo((props: DrawerProps) => {
     }
   )
 
-  const mods: Mods = {
-    [cls.opened]: isOpen
-    // [cls.closed]: isClosing
-  }
-
   if (!isOpen) {
     return null
   }
@@ -141,7 +95,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
   )
 })
 
-export const Drawer = memo((props: DrawerProps) => {
+const Drawer = memo((props: DrawerProps) => {
   const { isLoaded } = useAnimationLibs()
 
   if (!isLoaded) {
@@ -149,4 +103,11 @@ export const Drawer = memo((props: DrawerProps) => {
   }
 
   return <DrawerContent {...props} />
+})
+
+export const DrawerAsync = memo((props: DrawerProps) => {
+  return (
+    <AnimationProvider>
+      <Drawer {...props} />
+    </AnimationProvider>)
 })
