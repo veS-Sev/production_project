@@ -11,7 +11,5 @@ const meta: Meta<typeof {{name}}> = {
 }
 export default meta
 
-
 type Story = StoryObj<typeof {{ name }}>
 export const Basic: Story = {}
-

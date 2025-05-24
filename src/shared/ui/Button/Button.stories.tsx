@@ -115,3 +115,12 @@ export const SquareSizeXL: Story = {
     size: ButtonSize.XL
   }
 }
+
+export const FullWidth: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.BACKGROUND,
+    disabled: true,
+    fullWidth: true
+  }
+}

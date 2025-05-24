@@ -29,7 +29,7 @@ export const Page = (props: PageProps) => {
   const wrapperRef = useRef() as MutableRefObject<HTMLElement>
   const dispatch = useAppDispatch()
   const { pathname } = useLocation()
-  console.log('triggerRef', triggerRef)
+
   const scrollPosition = useSelector((state: StateSchema) =>
     getUIScrollByPath(state, pathname)
   )

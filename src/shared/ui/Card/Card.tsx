@@ -2,7 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Card.module.scss'
 import type { HTMLAttributes, ReactNode } from 'react'
 
-export enum CapdTheme {
+export enum CardTheme {
   NORMAL = 'normal',
   OUTLINED = 'outlined',
 }
@@ -10,10 +10,10 @@ export enum CapdTheme {
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   className?: string
   children: ReactNode
-  cardTheme?: CapdTheme
+  cardTheme?: CardTheme
 }
 
-export const Card = ({ className, children, cardTheme = CapdTheme.NORMAL, ...otherProps }: CardProps) => {
+export const Card = ({ className, children, cardTheme = CardTheme.NORMAL, ...otherProps }: CardProps) => {
   return (
     <div className={classNames(cls.Card, {}, [className, cls[cardTheme]])} {...otherProps}>
       {children}

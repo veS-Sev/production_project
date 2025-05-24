@@ -9,5 +9,6 @@
     "prettier.vueIndentScriptAndStyle": true,
     "prettier.singleQuote": true,
     "eslint.codeActionsOnSave.rules": null,
-    "prettier.bracketSameLine": false
+    "prettier.bracketSameLine": false,
+    "npm-scripts.showStartNotification": false
 }
