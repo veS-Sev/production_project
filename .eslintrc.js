@@ -87,6 +87,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/unbound-method': 'warn',
     'quote-props': ['error', 'as-needed'],
+    '@typescript-eslint/promise-function-async': 'warn',
   },
   globals: {
     __IS_DEV__: true,

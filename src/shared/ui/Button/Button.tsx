@@ -36,7 +36,7 @@ export const Button = memo((props: ButtonProps) => {
     [cls.square]: square,
     [cls[size]]: true,
     [cls.disabled]: disabled,
-    [cls.fullWidth]: true
+    [cls.fullWidth]: fullWidth
 
   }
 

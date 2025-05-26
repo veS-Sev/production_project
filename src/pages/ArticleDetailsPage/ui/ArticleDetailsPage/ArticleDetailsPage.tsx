@@ -2,6 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleDetails } from '@/entities/Article'
 import { useParams } from 'react-router-dom'
+import { ArticleRating } from '@/features/articleRating'
 
 import {
   DynamicModuleLoader,
@@ -22,11 +23,15 @@ const reducers: ReducersList = {
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const { id } = useParams<{ id: string }>()
+  if (!id) {
+    return null
+  }
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
+        <ArticleRating articleId={id} />
         <ArticleRecomendationsList />
         <ArticleDetailsComments id={id}/>
       </Page>

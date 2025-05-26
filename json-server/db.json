@@ -1585,5 +1585,119 @@
       "userId": "3",
       "href": "http://localhost:3000"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": "4",
+      "feedback": "Это комментарий к статье 1 от пользователя 1",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "rate": "3",
+      "feedback": "Это комментарий к статье 2 от пользователя 1",
+      "articleId": "2",
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "rate": "4",
+      "feedback": "Это комментарий к статье 3 от пользователя 2",
+      "articleId": "3",
+      "userId": "2"
+    },
+    {
+      "id": "4",
+      "rate": "3",
+      "feedback": "Это комментарий к статье 3 от пользователя 3",
+      "articleId": "3",
+      "userId": "3"
+    },
+    {
+      "id": "5",
+      "rate": "2",
+      "feedback": "Это комментарий к статье 1 от пользователя 3",
+      "articleId": "1",
+      "userId": "3"
+    },
+    {
+      "id": "6",
+      "rate": "1",
+      "feedback": "Это комментарий к статье 3 от пользователя 3",
+      "articleId": "3",
+      "userId": "3"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 2,
+      "id": "TQN9Ax_"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 5,
+      "feedbackText": "Хорошая статья. 26.05.2025",
+      "id": "wj-kpaK"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 2,
+      "feedbackText": "ничего особенного",
+      "id": "cHBj1pr"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "tKoaspn"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": "4",
+      "feedback": "Это комментарий к профилю 1 от пользователя 2",
+      "profileId": "1",
+      "userId": "2"
+    },
+    {
+      "id": "2",
+      "rate": "3",
+      "feedback": "Это комментарий к профилю 1 от пользователя 3",
+      "profileId": "1",
+      "userId": "3"
+    },
+    {
+      "id": "3",
+      "rate": "4",
+      "feedback": "Это комментарий к профилю 2 от пользователя 3",
+      "profileId": "2",
+      "userId": "3"
+    },
+    {
+      "id": "4",
+      "rate": "3",
+      "feedback": "Это комментарий к профилю 2 от пользователя 1",
+      "profileId": "2",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "rate": "2",
+      "feedback": "Это комментарий к профилю 1 от пользователя 2",
+      "profileId": "1",
+      "userId": "2"
+    },
+    {
+      "id": "6",
+      "rate": "1",
+      "feedback": "Это комментарий к профилю 3 от пользователя 2",
+      "profileId": "3",
+      "userId": "2"
+    }
   ]
 }

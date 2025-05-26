@@ -8,7 +8,7 @@ const MainPage = memo(() => {
   return (
     <Page>
       {t('Главная страница')}
-      <RatingCard title={t('Как вам статья?')} hasFeedback={ true} feedbackTitle={t('Оставьте отзыв')} />
+
     </Page>
   )
 })
