@@ -1698,6 +1698,12 @@
       "feedback": "Это комментарий к профилю 3 от пользователя 2",
       "profileId": "3",
       "userId": "2"
+    },
+    {
+      "rate": 5,
+      "profileId": "2",
+      "userId": "2",
+      "id": "y5veCkI"
     }
   ]
 }

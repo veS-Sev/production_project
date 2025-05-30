@@ -12,6 +12,6 @@ export const Overlay = (props: OverlayProps) => {
     className, onClick
   } = props
 
-  const { t } = useTranslation()
+  useTranslation()
   return <div className={classNames(cls.Overlay, {}, [className])} onClick={onClick}/>
 }

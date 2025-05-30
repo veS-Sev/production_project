@@ -6,7 +6,7 @@ interface GetArticleRating {
   articleId: string
 }
 
-interface RateArticleArgs {
+export interface RateArticleArgs {
   userId: string
   articleId: string
   rate: number
@@ -23,7 +23,7 @@ export const articleRatigApi = rtkApi.injectEndpoints({
         }
       })
     }),
-    rateArticle: build.mutation<void, RateArticleArgs >({
+    rateArticle: build.mutation<void, RateArticleArgs>({
       query: (arg: RateArticleArgs) => ({
         url: '/article-ratings',
         method: 'POST',

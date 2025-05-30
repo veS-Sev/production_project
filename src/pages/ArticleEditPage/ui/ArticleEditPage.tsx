@@ -6,7 +6,7 @@ interface ArticleEditPageProps {
   className?: string
 }
 
-const ArticleEditPage = (props: ArticleEditPageProps) => {
+const ArticleEditPage = () => {
   const { id } = useParams<{ id: string }>()
   const isEdit = Boolean(id)
   const { t } = useTranslation()

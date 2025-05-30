@@ -14,7 +14,7 @@ export interface ArticleRatingProps {
 const ArticleRating = (props: ArticleRatingProps) => {
   const { articleId } = props
   const userId = useSelector(getUserAuthData)?.id
-  const { data, isLoading } = useArticleRatig({ articleId, userId: userId ?? '' })
+  const { data, isLoading, isError } = useArticleRatig({ articleId, userId: userId ?? '' })
 
   const { t } = useTranslation()
   const [rateArticleMutation] = useRateArticle()
@@ -39,8 +39,12 @@ const ArticleRating = (props: ArticleRatingProps) => {
   if (isLoading) {
     return <Skeleton height='150' width={'100%'}/>
   }
-
   const rating = data?.[0]
-  return (data ? <RatingCard onAccept={onAccept} onCancel={onCancel} title={rating?.rate ? t('Спасибо за оценку') : t('Как вам статья?') } hasFeedback={true} feedbackTitle={t('Оставьте отзыв')} rate={rating?.rate} /> : <div>{ 'Рейтинг не загружен'}</div>)
+  if (isError) {
+    console.log(isError)
+    return <div>{ 'Рейтинг не загружен'}</div>
+  }
+
+  return <RatingCard onAccept={onAccept} onCancel={onCancel} title={rating?.rate ? t('Спасибо за оценку') : t('Как вам статья?')} hasFeedback={true} feedbackTitle={t('Оставьте отзыв')} rate={rating?.rate} />
 }
 export default ArticleRating
