@@ -77,7 +77,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'sev-legacy-plugin/path-checker': 'error',
+    'sev-legacy-plugin/path-checker': ['error', {alias:'@'}],
     '@typescript-eslint/no-misused-promises': 'warn',
     '@typescript-eslint/no-invalid-void-type': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
