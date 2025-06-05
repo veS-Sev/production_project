@@ -8,11 +8,10 @@ import {
 } from 'react'
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { uiAction } from '@/features/UI'
+import { uiAction, getUIScrollByPath } from '@/features/UI'
 import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { useInitionalEffect } from '@/shared/lib/hooks/useInitionalEffect/useInitionalEffect'
-import { getUIScrollByPath } from '@/features/UI/model/selectors/ui'
 import { type StateSchema } from '@/app/providers/StoreProvider'
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle'
 interface PageProps {

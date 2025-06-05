@@ -77,7 +77,29 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'sev-legacy-plugin/path-checker': ['error', {alias:'@'}],
+    'sev-legacy-plugin/path-checker': [
+      'error',
+      {
+        alias: '@',
+      },
+    ],
+    'sev-legacy-plugin/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: [
+          '**/*.test.ts',
+          '**/*.stories.ts',
+          '**/StoreDecorator.tsx',
+        ],
+        checkingLayers: {
+          entities: 'entities',
+          features: 'features',
+          pages: 'pages',
+          widgets: 'widgets',
+        },
+      },
+    ],
     '@typescript-eslint/no-misused-promises': 'warn',
     '@typescript-eslint/no-invalid-void-type': 'warn',
     'react-hooks/exhaustive-deps': 'warn',

@@ -11,7 +11,7 @@ import {
   getArticlesPageSearch,
   getArticlesPageType
 } from '../../model/selectors/articlesPageSelectors'
-import { type ArticleSortField, ArticlesViewSelector, type ArticleType, type ArticleView } from '@/entities/Article/index'
+import { type ArticleSortField, ArticlesViewSelector, type ArticleType, type ArticleView } from '@/entities/Article'
 import { articlesPageActions } from '../../model/slice/articlesPageSlice'
 import { ArticleSortSelector, ArticleTypeTabs } from '@/entities/Article'
 import { Card } from '@/shared/ui/Card'

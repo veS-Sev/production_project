@@ -5,7 +5,7 @@ import { Avatar } from '@/shared/ui/Avatar'
 import { Text } from '@/shared/ui/Text'
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
 import { AppLink } from '@/shared/ui/AppLink/index'
-import { RouterPath } from '@/shared/config/routeConfig'
+import { RouterPath } from '@/shared/const/route'
 import { HStack, VStack } from '@/shared/ui/Stack'
 interface CommentCardProps {
   className?: string

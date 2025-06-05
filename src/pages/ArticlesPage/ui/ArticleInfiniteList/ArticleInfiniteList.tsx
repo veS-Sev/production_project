@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { ArticleList } from '@/entities/Article/ui/ArticleList/ArticleList'
+import { ArticleList } from '@/entities/Article'
 import {
   getArticlesPageIsLoading,
   getArticlesPageView,

@@ -2,10 +2,10 @@
 import '@/app/styles/index.scss'
 import type { StateSchema } from '@/app/providers/StoreProvider'
 import { StoreProvider } from '@/app/providers/StoreProvider'
-import { loginReducer } from '@/features/authByUsername/model/slice/loginSlice/loginSlice'
-import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice'
+import { loginReducer } from '@/features/authByUsername'
+import { profileReducer } from '@/features/editableProfileCard'
 import { type ReducersList } from '@/shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
-import { articleDetailsReducer } from '@/entities/Article/model/slices/articleDetailsSlice'
+import { articleDetailsReducer } from '@/entities/Article'
 
 const defaultAsyncReducer: ReducersList = {
   loginForm: loginReducer,

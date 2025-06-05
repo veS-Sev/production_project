@@ -1,6 +1,6 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { RouterPath } from '@/shared/config/routeConfig'
+import { RouterPath } from '@/shared/const/route'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User'

@@ -3,7 +3,7 @@ import cls from './ArticleRecomendationsList.module.scss'
 import { useTranslation } from 'react-i18next'
 import { useArticleRecomendatonsList } from '../../model/api/api'
 import { memo } from 'react'
-import { ArticleList } from '@/entities/Article/ui/ArticleList/ArticleList'
+import { ArticleList } from '@/entities/Article'
 import { Text, TextSize } from '@/shared/ui/Text'
 import { VStack } from '@/shared/ui/Stack'
 

@@ -21,7 +21,7 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 
-import { ProfileCard } from '@/entities/Profile/ui/ProfileCard/ProfileCard'
+import { ProfileCard } from '@/entities/Profile'
 import { profileReducer, profileActions } from '../../model/slice/profileSlice'
 import { ValidateProfileError } from '../../model/types/editableProfileCardSchema'
 import { VStack } from '@/shared/ui/Stack'
