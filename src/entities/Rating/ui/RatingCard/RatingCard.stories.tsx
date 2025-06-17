@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { RatingCard } from './RatingCard'
 import { ThemeDecorator } from '@/shared/config/storybook'
-import { Theme } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/lib/theme/ThemeContext'
 
 const meta: Meta<typeof RatingCard> = {
   title: 'entities/Rating/RatingCard',

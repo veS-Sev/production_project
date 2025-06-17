@@ -90,6 +90,7 @@ module.exports = {
         testFilesPatterns: [
           '**/*.test.ts',
           '**/*.stories.ts',
+          '**/*.stories.tsx',
           '**/StoreDecorator.tsx',
         ],
         checkingLayers: {
@@ -98,6 +99,21 @@ module.exports = {
           pages: 'pages',
           widgets: 'widgets',
         },
+      },
+    ],
+    'sev-legacy-plugin/layers-imports': [
+      'error',
+      {
+        alias: '@',
+        layersFromTopToBottom: [
+          'app',
+          'pages',
+          'widgets',
+          'features',
+          'entities',
+          'shared',
+        ],
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
       },
     ],
     '@typescript-eslint/no-misused-promises': 'warn',

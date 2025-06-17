@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { BugButton } from '@/app/providers/ErrorBoundary'
 import { memo } from 'react'
 import { Page } from '@/widgets/Page'

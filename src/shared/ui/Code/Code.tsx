@@ -1,4 +1,4 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
+import { classNames } from '../../lib/classNames/classNames'
 import cls from './Code.module.scss'
 import { Button } from '../Button'
 import CopyIcon from '../../assets/icons/copy-20-20.svg'

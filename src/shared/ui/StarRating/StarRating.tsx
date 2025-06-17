@@ -1,4 +1,4 @@
-import { classNames } from '@/shared/lib/classNames/classNames'
+import { classNames } from '../../lib/classNames/classNames'
 import cls from './StarRating.module.scss'
 import { Icon } from '../Icon'
 import StarIcon from '../../assets/icons/star-20-20.svg'

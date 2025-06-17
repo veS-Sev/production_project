@@ -1,4 +1,4 @@
-import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
+import { classNames, type Mods } from '../../lib/classNames/classNames'
 import cls from './Card.module.scss'
 import type { HTMLAttributes, ReactNode } from 'react'
 

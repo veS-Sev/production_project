@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Page } from './Page'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from '@/shared/config/storybook'
-import { Theme } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/lib/theme/ThemeContext'
 
 const meta: Meta<typeof Page> = {
   title: 'widgets/Page',

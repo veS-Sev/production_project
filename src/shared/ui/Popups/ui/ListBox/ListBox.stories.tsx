@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ListBox } from './ListBox'
-import { Country } from '@/entities/Country'
+import { Country } from '@/entities/Country/testing'
 
 const meta: Meta<typeof ListBox> = {
   title: 'shared/Popups/ListBox',

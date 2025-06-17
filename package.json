@@ -68,7 +68,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-sev-legacy-plugin": "^0.0.2",
+    "eslint-plugin-sev-legacy-plugin": "^0.0.5",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^9.1.0",
     "html-webpack-plugin": "^5.5.0",

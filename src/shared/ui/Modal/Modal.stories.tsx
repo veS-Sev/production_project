@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Modal } from './Modal'
-import { Theme } from '@/app/providers/ThemeProvider'
+import { Theme } from '../../lib/theme/ThemeContext'
 import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
 
 const meta: Meta<typeof Modal> = {

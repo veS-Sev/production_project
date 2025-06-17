@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import ArticleRating from './ArticleRating'
 import { StoreDecorator, ThemeDecorator } from '@/shared/config/storybook'
-import { Theme } from '@/app/providers/ThemeProvider'
+
 import { type RateArticleArgs } from '../../model/api/articleRatingApi'
+import { Theme } from '@/shared/lib/theme/ThemeContext'
 
 const rate: RateArticleArgs = {
   rate: 4,

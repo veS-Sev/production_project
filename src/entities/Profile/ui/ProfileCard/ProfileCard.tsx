@@ -6,8 +6,8 @@ import { Text, TextAlign, TextTheme } from '@/shared/ui/Text'
 import { type Profile } from '../../model/types/profile'
 import { Loader } from '@/shared/ui/Loader/Loader'
 import { Avatar } from '@/shared/ui/Avatar'
-import { type Currency, CurrencySelect } from '@/entities/Currency'
-import { type Country, CountrySelect } from '@/entities/Country'
+import { type Currency, CurrencySelect } from '../../../Currency'
+import { type Country, CountrySelect } from '../../../Country'
 import { HStack, VStack } from '@/shared/ui/Stack'
 interface ProfileCardProps {
   className?: string

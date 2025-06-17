@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import type { UserRole } from '@/entities/User'
 import type { RouteProps } from 'react-router-dom'
 

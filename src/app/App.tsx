@@ -6,7 +6,7 @@ import { Sidebar } from '@/widgets/Sidebar'
 import { Suspense, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { userActions, getUserInited } from '@/entities/User'
-import { useTheme } from '@/app/providers/ThemeProvider'
+import { useTheme } from '@/shared/lib/theme/useTheme'
 
 const App = () => {
   const { theme } = useTheme()

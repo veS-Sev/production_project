@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import ArticleDetailsPage from './ArticleDetailsPage'
 import { StoreDecorator, ThemeDecorator } from '../../../../shared/config/storybook'
 import { type Article, ArticleType, ArticleBlockType } from '@/entities/Article'
-import { Theme } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/lib/theme/ThemeContext'
 
 const article: Article = {
   id: '1',

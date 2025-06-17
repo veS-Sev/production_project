@@ -1,6 +1,7 @@
 // import { type StoryObj } from '@storybook/react'
-import type { Theme } from '@/app/providers/ThemeProvider'
+// eslint-disable-next-line
 import { ThemeProvider } from '@/app/providers/ThemeProvider'
+import { type Theme } from '../../../lib/theme/ThemeContext'
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: any) =>
   (
