@@ -1,8 +1,8 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Navbar.module.scss'
-import { Button } from '@/shared/ui/Button'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { useCallback, useState, memo } from 'react'
-import { ButtonTheme } from '@/shared/ui/Button/Button'
+
 import { LoginModal } from '@/features/authByUsername'
 import {
   getUserAuthData

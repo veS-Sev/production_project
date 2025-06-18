@@ -1,9 +1,11 @@
 import { Project } from 'ts-morph'
 
 const project = new Project({})
-
+ console.log ('@@@progect', project)
 project.addSourceFilesAtPaths('src/**/*.ts')
 project.addSourceFilesAtPaths('src/**/*.tsx')
+
+
 
 const layers = ['app', 'entities', 'features', 'pages', 'shared', 'widgets']
 

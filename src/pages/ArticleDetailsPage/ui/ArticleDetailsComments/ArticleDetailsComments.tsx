@@ -12,7 +12,7 @@ import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice'
 import { useSelector } from 'react-redux'
 import { VStack } from '@/shared/ui/Stack'
-import { Loader } from '@/shared/ui/Loader/Loader'
+import { Loader } from '@/shared/ui/Loader'
 
 interface ArticleDetailsPageCommentsProps {
   className?: string

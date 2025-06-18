@@ -1,9 +1,9 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './EditableProfileHeader.module.scss'
-import { Button } from '@/shared/ui/Button'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { Text } from '@/shared/ui/Text'
-import { ButtonTheme } from '@/shared/ui/Button/Button'
+
 import { useSelector } from 'react-redux'
 import { profileActions } from '../../model/slice/profileSlice'
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'

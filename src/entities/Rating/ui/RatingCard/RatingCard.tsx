@@ -5,11 +5,11 @@ import { Text } from '@/shared/ui/Text'
 import { Modal } from '@/shared/ui/Modal'
 import { Input } from '@/shared/ui/Input'
 import { useCallback, useState } from 'react'
-import { StarRating } from '@/shared/ui/StarRating/StarRating'
-import { Button } from '@/shared/ui/Button'
-import { ButtonTheme } from '@/shared/ui/Button/Button'
+import { StarRating } from '@/shared/ui/StarRating'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
+
 import { BrowserView, MobileView } from 'react-device-detect'
-import { DrawerAsync as Drawer } from '@/shared/ui/Drawer/Drawer'
+import { DrawerAsync as Drawer } from '@/shared/ui/Drawer'
 
 interface RatingCardProps {
   className?: string

@@ -4,9 +4,8 @@ import { Icon } from '@/shared/ui/Icon'
 import NotificationIcon from '@/shared/assets/icons/notification.svg'
 import { useState } from 'react'
 import { BrowserView, MobileView } from 'react-device-detect'
-import { DrawerAsync as Drawer } from '@/shared/ui/Drawer/Drawer'
-import { Button } from '@/shared/ui/Button'
-import { ButtonTheme } from '@/shared/ui/Button/Button'
+import { DrawerAsync as Drawer } from '@/shared/ui/Drawer'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
 
 interface NotificationButtonProps {
   className?: string

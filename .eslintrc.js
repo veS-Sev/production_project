@@ -139,6 +139,7 @@ module.exports = {
     'scripts/createSlice/*.js',
     'scripts/createSlice/*/*.js',
     'scripts/*.ts',
+    'scripts/**/*.ts'
   ],
 }
 

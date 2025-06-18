@@ -9,7 +9,7 @@ import {
 import { getArticles } from '../../model/slice/articlesPageSlice'
 import { useSelector } from 'react-redux'
 import { VStack } from '@/shared/ui/Stack'
-import { Text } from '@/shared/ui/Text/index'
+import { Text } from '@/shared/ui/Text'
 
 interface ArticleInfiniteListProps {
   className?: string

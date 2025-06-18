@@ -3,7 +3,7 @@ import { RatingCard } from '@/entities/Rating'
 import { useArticleRatig, useRateArticle } from '../../model/api/articleRatingApi'
 import { getUserAuthData } from '@/entities/User'
 import { useSelector } from 'react-redux'
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
+import { Skeleton } from '@/shared/ui/Skeleton'
 import { useCallback } from 'react'
 
 export interface ArticleRatingProps {
