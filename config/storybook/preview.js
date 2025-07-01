@@ -5,21 +5,32 @@ import {
   SuspenseDecorator
 } from '../../src/shared/config/storybook/index'
 import { Theme } from '../../src/shared/lib/theme/ThemeContext'
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/
-    }
-  }
-}
+import { withThemeByClassName } from '@storybook/addon-themes'
 
-export default {
+const preview = {
+  parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/
+      }
+    },
+    layout: 'foolscreen'
+  },
   decorators: [
     StyleDecorator,
     ThemeDecorator(Theme.LIGHT),
     RouterDecorator,
-    SuspenseDecorator
+    SuspenseDecorator,
+    withThemeByClassName({
+      themes: {
+        light: Theme.LIGHT,
+        dark: Theme.DARK,
+        peach: Theme.PEACH
+      },
+      defaultTheme: 'light'
+    })
   ]
 }
+export default preview

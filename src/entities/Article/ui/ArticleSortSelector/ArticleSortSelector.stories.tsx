@@ -13,4 +13,4 @@ export default meta
 
 type Story = StoryObj<typeof ArticleSortSelector>
 
-export const Primary: Story = {}
+export const Basic: Story = {}

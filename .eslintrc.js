@@ -55,6 +55,7 @@ module.exports = {
     'i18next',
     'react-hooks',
     'sev-legacy-plugin',
+    'eslint-plugin-unused-imports',
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
@@ -126,6 +127,8 @@ module.exports = {
     '@typescript-eslint/unbound-method': 'warn',
     'quote-props': ['error', 'as-needed'],
     '@typescript-eslint/promise-function-async': 'warn',
+    'no-unused-vars': 'off', // or "@typescript-eslint/no-unused-vars": "off",
+    'unused-imports/no-unused-imports': 'error',
   },
   globals: {
     __IS_DEV__: true,
@@ -139,7 +142,7 @@ module.exports = {
     'scripts/createSlice/*.js',
     'scripts/createSlice/*/*.js',
     'scripts/*.ts',
-    'scripts/**/*.ts'
+    'scripts/**/*.ts',
   ],
 }
 

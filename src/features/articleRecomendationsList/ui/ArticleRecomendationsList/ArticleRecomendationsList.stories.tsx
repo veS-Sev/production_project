@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 // import withMock from 'storybook-addon-mock'
 import { ArticleRecomendationsList } from './ArticleRecomendationsList'
-import { StoreDecorator, ThemeDecorator } from '@/shared/config/storybook'
-import { Theme } from '@/shared/lib/theme/ThemeContext'
+import { StoreDecorator } from '@/shared/config/storybook'
 import { type Article } from '@/entities/Article'
 
 const article: Article = {
@@ -20,7 +19,7 @@ const article: Article = {
 const meta: Meta<typeof ArticleRecomendationsList> = {
   title: 'features/ArticleRecomendationsList',
   component: ArticleRecomendationsList,
-  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({})],
+  decorators: [StoreDecorator({})],
   parameters: {
     mockData: [
       {
@@ -39,8 +38,4 @@ const meta: Meta<typeof ArticleRecomendationsList> = {
 export default meta
 
 type Story = StoryObj<typeof ArticleRecomendationsList>
-export const Light: Story = {}
-
-export const Dark: Story = { decorators: [ThemeDecorator(Theme.DARK)] }
-
-export const Peach: Story = { decorators: [ThemeDecorator(Theme.PEACH)] }
+export const Basic: Story = {}

@@ -1,14 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Sidebar } from './Sidebar'
-import { Theme } from '@/shared/lib/theme/ThemeContext'
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from '@/shared/config/storybook'
 
 const meta: Meta<typeof Sidebar> = {
   title: 'widgets/Sidebar',
   component: Sidebar,
   decorators: [
-    ThemeDecorator(Theme.LIGHT),
     StoreDecorator({ user: { authData: {} } })
   ],
   // render: () => <Sidebar prop="value" />,
@@ -34,8 +31,6 @@ type Story = StoryObj<typeof Sidebar>
 
 // const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />
 
-export const Light: Story = { decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({ user: { authData: {} } })] }
+export const Basic: Story = { decorators: [StoreDecorator({ user: { authData: {} } })] }
 
-export const Dark: Story = { decorators: [ThemeDecorator(Theme.DARK), StoreDecorator({ user: { authData: {} } })] }
-
-export const NoAuth: Story = { decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({ user: {} })] }
+export const NoAuth: Story = { decorators: [StoreDecorator({ user: {} })] }

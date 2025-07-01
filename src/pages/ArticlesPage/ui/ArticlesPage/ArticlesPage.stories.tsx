@@ -1,13 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import ArticlesPage from './ArticlesPage'
-import { Theme } from '@/shared/lib/theme/ThemeContext'
 import { StoreDecorator } from '@/shared/config/storybook'
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 
 const meta: Meta<typeof ArticlesPage> = {
   title: 'pages/ArticlesPage/ArticlesPage',
   component: ArticlesPage,
-  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({})],
+  decorators: [StoreDecorator({})],
   parameters: {
     /* ... */
   }

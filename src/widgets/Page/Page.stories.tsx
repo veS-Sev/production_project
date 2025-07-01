@@ -1,13 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Page } from './Page'
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from '@/shared/config/storybook'
-import { Theme } from '@/shared/lib/theme/ThemeContext'
 
 const meta: Meta<typeof Page> = {
   title: 'widgets/Page',
   component: Page,
-  decorators: [StoreDecorator({}), ThemeDecorator(Theme.PEACH)],
+  decorators: [StoreDecorator({})],
   parameters: {
     /* ... */
   }
@@ -16,7 +14,7 @@ export default meta
 
 type Story = StoryObj<typeof Page>
 
-export const Peach: Story = {}
+export const Primary: Story = {}
 
 // export default {
 //   title: 'shared/Page',

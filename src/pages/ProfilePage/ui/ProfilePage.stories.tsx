@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import ProfilePage from './ProfilePage'
-import { Theme } from '@/shared/lib/theme/ThemeContext'
-import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { StoreDecorator } from '../../../shared/config/storybook'
 import { Country } from '../../../entities/Country'
 import AvatarImage from '@/shared/assets/test/scale_1200.png'
@@ -22,7 +20,6 @@ const meta: Meta<typeof ProfilePage> = {
   title: 'pages/ProfilePage',
   component: ProfilePage,
   decorators: [
-    ThemeDecorator(Theme.LIGHT),
     StoreDecorator({
       profile: {
         form
@@ -37,18 +34,4 @@ export default meta
 
 type Story = StoryObj<typeof ProfilePage>
 
-export const Light: Story = {}
-
-export const Dark: Story = {
-  args: { id: '1' },
-  decorators: [
-    ThemeDecorator(Theme.DARK)
-  ]
-}
-
-export const Peach: Story = {
-  args: { id: '1' },
-  decorators: [
-    ThemeDecorator(Theme.PEACH)
-  ]
-}
+export const Basic: Story = {}

@@ -4,7 +4,6 @@ import {
   getArticlesPageIsLoading,
   getArticlesPageView,
   getArticlesPageError
-  , getArticlesPageLimit
 } from '../../model/selectors/articlesPageSelectors'
 import { getArticles } from '../../model/slice/articlesPageSlice'
 import { useSelector } from 'react-redux'
@@ -16,7 +15,6 @@ interface ArticleInfiniteListProps {
 }
 
 export const ArticleInfiniteList = (props: ArticleInfiniteListProps) => {
-  // const limit = useSelector(getArticlesPageLimit)
   const { t } = useTranslation()
   const articles = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlesPageIsLoading)
