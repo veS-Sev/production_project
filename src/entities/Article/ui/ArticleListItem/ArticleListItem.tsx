@@ -9,7 +9,7 @@ import { Avatar } from '@/shared/ui/Avatar'
 import { Button } from '@/shared/ui/Button'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { type HTMLAttributeAnchorTarget } from 'react'
-import { RouterPath } from '@/shared/const/route'
+import { getRouteArticleDetails } from '@/shared/const/route'
 import { useTranslation } from 'react-i18next'
 import { AppLink } from '@/shared/ui/AppLink'
 import { ArticleView, ArticleBlockType } from '../../model/consts/consts'
@@ -64,7 +64,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
           {textBlock && (<ArticleTextBlockComponent block={textBlock} className={classNames(cls.textBlock)}/>)}
           <div className={classNames(cls.footer)}>
             <AppLink to = {
-      `${RouterPath.article_details}${article.id}`
+      getRouteArticleDetails(article.id)
     } target={target}> <Button>{t('Читать далее')}</Button></AppLink>
             {views}
           </div>
@@ -74,7 +74,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
   }
   return (
     <AppLink to = {
-      `${RouterPath.article_details}${article.id}`
+      getRouteArticleDetails(article.id)
     } target= {target}
       {...bindHover}
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}

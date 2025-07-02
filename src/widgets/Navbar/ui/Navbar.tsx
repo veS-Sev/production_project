@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { Text, TextSize, TextTheme } from '@/shared/ui/Text'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
-import { RouterPath } from '@/shared/const/route'
+import { getRouteArticleCreate } from '@/shared/const/route'
 import { HStack } from '@/shared/ui/Stack'
 import { NotificationButton } from '@/features/notificationButton'
 import { AvatarDropdown } from '@/features/avatarDropdown'
@@ -45,7 +45,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <AppLink
           className={cls.createBtn}
           theme={AppLinkTheme.PRIMARY}
-          to={RouterPath.article_create}
+          to={getRouteArticleCreate()}
         >
           {t('Создать статью')}
         </AppLink>

@@ -1,6 +1,6 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { RouterPath } from '@/shared/const/route'
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/route'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User'
@@ -35,7 +35,7 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
                   {
                     disabled: false,
                     content: t('Админка'),
-                    href: RouterPath.admin
+                    href: getRouteAdminPanel()
                   }
                 ]
               : []),
@@ -43,7 +43,7 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
             {
               disabled: false,
               content: t('Профиль'),
-              href: RouterPath.profile + authData.id
+              href: getRouteProfile(authData.id)
             }
           ]}
           />

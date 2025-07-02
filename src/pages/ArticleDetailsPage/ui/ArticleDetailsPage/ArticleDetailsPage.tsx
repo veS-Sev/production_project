@@ -11,14 +11,14 @@ import {
 import { Page } from '@/widgets/Page'
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { ArticleRecomendationsList } from '@/features/articleRecomendationsList'
-import { articleDetailsPageReducers } from '../../model/slice/index'
+import { articleDetailsPageReducer } from '../../model/slice/index'
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
 export interface ArticleDetailsPageProps {
   className?: string
 }
 
 const reducers: ReducersList = {
-  articleDetailsPage: articleDetailsPageReducers
+  articleDetailsPage: articleDetailsPageReducer
 }
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
