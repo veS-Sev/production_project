@@ -3,10 +3,9 @@ import cls from './ArticlesViewSelector.module.scss'
 import ListIcon from '@/shared/assets/icons/list-24-24.svg'
 import TiledIcon from '@/shared/assets/icons/tiled-24-24.svg'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
-
 import { Icon } from '@/shared/ui/Icon'
-import { ArticleView } from '../../model/consts/consts'
 import { HStack } from '@/shared/ui/Stack'
+import { ArticleView } from '@/entities/Article'
 
 interface ArticlesViewSelectorProps {
   className?: string

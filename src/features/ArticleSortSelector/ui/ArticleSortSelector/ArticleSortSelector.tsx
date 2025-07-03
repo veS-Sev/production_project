@@ -4,8 +4,9 @@ import { useTranslation } from 'react-i18next'
 import { type SelectOption } from '@/shared/ui/Select'
 import { useMemo } from 'react'
 import { Select } from '@/shared/ui/Select'
-import { ArticleSortField } from '../../model/consts/consts'
+
 import { type SortOrder } from '@/shared/types'
+import { ArticleSortField } from '@/entities/Article'
 interface ArticleSortSelectorProps {
   className?: string
   order: SortOrder

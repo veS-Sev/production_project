@@ -11,9 +11,11 @@ import {
   getArticlesPageSearch,
   getArticlesPageType
 } from '../../model/selectors/articlesPageSelectors'
-import { type ArticleSortField, ArticlesViewSelector, type ArticleType, type ArticleView } from '@/entities/Article'
+import { type ArticleSortField, type ArticleType, type ArticleView } from '@/entities/Article'
+import { ArticlesViewSelector } from '@/features/ArticlesViewSelector'
 import { articlesPageActions } from '../../model/slice/articlesPageSlice'
-import { ArticleSortSelector, ArticleTypeTabs } from '@/entities/Article'
+import { ArticleSortSelector } from '@/features/ArticleSortSelector'
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs'
 import { Card } from '@/shared/ui/Card'
 import { Input } from '@/shared/ui/Input'
 import { type SortOrder } from '@/shared/types/SortOrder'
