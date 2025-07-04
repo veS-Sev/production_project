@@ -139,10 +139,9 @@ module.exports = {
     '.eslintrc.js',
     'generate-visual-json-report.js',
     'json-server/index.js',
-    'scripts/createSlice/*.js',
     'scripts/createSlice/*/*.js',
-    'scripts/*.ts',
-    'scripts/**/*.ts',
+    'scripts/*.{ts,js}',
+    'scripts/refactoring/*.ts',
   ],
 }
 
