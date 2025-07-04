@@ -1,11 +1,10 @@
 import { Button } from '@/shared/ui/Button'
 import { useCounterActions } from '../model/slice/counterSlice'
-import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue'
 
 export const Counter = () => {
-  const dispatch = useDispatch()
+ 
   const value = useCounterValue()
   const { t } = useTranslation()
   const { decrement, addSome, increment } = useCounterActions()

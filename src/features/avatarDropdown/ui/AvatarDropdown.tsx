@@ -28,7 +28,7 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
   return <Dropdown
           className={classNames('', {}, [className])}
           direction={'bottom-left'}
-          trigger={<Avatar size={30} src={authData.avatar} />}
+    trigger={<Avatar size={30} src={authData.avatar} fallbackInverted={true} />}
           items={[
             ...(isAdminPanelAvailable
               ? [

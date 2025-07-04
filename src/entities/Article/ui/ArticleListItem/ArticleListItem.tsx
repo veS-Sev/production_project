@@ -14,6 +14,8 @@ import { useTranslation } from 'react-i18next'
 import { AppLink } from '@/shared/ui/AppLink'
 import { ArticleView, ArticleBlockType } from '../../model/consts/consts'
 import { type Article } from '../../model/types/article'
+import { AppImage } from '@/shared/ui/AppImage'
+import { Skeleton } from '@/shared/ui/Skeleton'
 
 interface ArticleListItemProps {
   className?: string
@@ -60,7 +62,8 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
           </div>
           <Text title={article.subtitle} className={classNames(cls.title)} />
           {types}
-          <img src={article.img} className={classNames(cls.image)} />
+          <AppImage
+            fallback={<Skeleton width={'100%'} height={250}/>} src={article.img} className={classNames(cls.image)} />
           {textBlock && (<ArticleTextBlockComponent block={textBlock} className={classNames(cls.textBlock)}/>)}
           <div className={classNames(cls.footer)}>
             <AppLink to = {
@@ -81,7 +84,8 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
     >
       <Card className={classNames(cls.card)} >
         <div className={classNames(cls.imageWrapper)}>
-          <img
+          <AppImage
+            fallback={<Skeleton width={200} height={250}/>}
             src={article.img}
             alt={article.subtitle}
             className={classNames(cls.image)}
