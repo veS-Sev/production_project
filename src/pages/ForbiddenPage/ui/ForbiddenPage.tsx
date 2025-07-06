@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 const ForbiddenPage = memo(() => {
   const { t } = useTranslation('forbidden')
   return (
-    <Page>
+    <Page data-testid={'ForbiddenPage'}>
       {t('Доступ запрещен')}
     </Page>
   )

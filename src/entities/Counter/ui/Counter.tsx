@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue'
 
 export const Counter = () => {
- 
   const value = useCounterValue()
   const { t } = useTranslation()
   const { decrement, addSome, increment } = useCounterActions()

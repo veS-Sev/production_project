@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 const AdminPanelPage = memo(() => {
   const { t } = useTranslation('admin')
   return (
-    <Page>
+    <Page data-testid={'AdminPanelPage'}>
       <BugButton style ={{ marginRight: '30px' }} />
       {t('Админ страница')}
     </Page>
