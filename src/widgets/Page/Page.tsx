@@ -14,7 +14,7 @@ import { useLocation } from 'react-router-dom'
 import { useInitionalEffect } from '@/shared/lib/hooks/useInitionalEffect/useInitionalEffect'
 import { type StateSchema } from '@/app/providers/StoreProvider'
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle'
-import { TestProps, TypeProps } from '@/shared/types'
+import { type TestProps } from '@/shared/types'
 interface PageProps extends TestProps {
   className?: string
   children: ReactNode
@@ -24,7 +24,7 @@ interface PageProps extends TestProps {
 export const PAGE_ID = 'PAGE_ID'
 
 export const Page = (props: PageProps) => {
-  const { className, children, onScrollEnd, } = props
+  const { className, children, onScrollEnd } = props
   const triggerRef = useRef() as MutableRefObject<HTMLDivElement>
   const wrapperRef = useRef() as MutableRefObject<HTMLElement>
   const dispatch = useAppDispatch()
