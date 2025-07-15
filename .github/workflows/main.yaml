@@ -82,7 +82,7 @@ jobs:
         if: always()
       - name: move loki report
         if: always()
-        run: mv .loki reports/
+        run: move .loki reports/
       - name: unit testing
         if: always()
         run: npm run test:unit
@@ -93,7 +93,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         if: always()
         with:
-          path: 'report'
+          path: 'reports'
       - name: Deploy to GitHub Pages
         id: deployment
         if: always()
