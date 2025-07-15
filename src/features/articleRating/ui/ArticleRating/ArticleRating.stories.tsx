@@ -21,14 +21,13 @@ const meta: Meta<typeof ArticleRating> = {
     }
   })],
   parameters: {
-    userId: 1,
     mockData: [
       {
         url: `${__API__}/article-ratings?userId=1&articleId=1`,
         method: 'GET',
         status: 200,
         response: [
-          { rate: 4 }
+          { rate: 3 }
         ]
       }
     ]
@@ -42,22 +41,34 @@ const meta: Meta<typeof ArticleRating> = {
 export default meta
 
 type Story = StoryObj<typeof ArticleRating>
+export const Primary: Story = {
+}
 
 export const WithError: Story = {
   parameters: {
-    mockData: []
+    mockData: [
+      {
+        url: `${__API__}/article-ratings?userId=1&articleId=1`,
+        method: 'GET',
+        status: 200,
+        response: [
+        ]
+      }
+    ]
   }
 }
 
 export const WithoutRate: Story = {
   parameters: {
-    mockData: [{
-      url: `${__API__}/article-ratings?userId=1&articleId=1`,
-      method: 'GET',
-      status: 200,
-      response: [
-        { rate: 0 }
-      ]
-    }]
+    mockData: [
+      {
+        url: `${__API__}/article-ratings?userId=1&articleId=1`,
+        method: 'GET',
+        status: 200,
+        response: [
+          { rate: 0 }
+        ]
+      }
+    ]
   }
 }

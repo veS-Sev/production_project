@@ -6,7 +6,8 @@ const meta: Meta<typeof StarRating> = {
   component: StarRating,
   decorators: [],
   args: {
-    size: 30
+    size: 30,
+    selectedStars: 2
   },
   parameters: {
     /* ... */
@@ -24,6 +25,7 @@ export const Size15PX: Story = {
 }
 export const Size45PX: Story = {
   args: {
-    size: 45
+    size: 45,
+    selectedStars: 3
   }
 }

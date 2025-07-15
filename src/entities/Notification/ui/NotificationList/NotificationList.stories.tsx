@@ -7,13 +7,32 @@ const meta: Meta<typeof NotificationList> = {
   component: NotificationList,
   decorators: [StoreDecorator({})],
   parameters: {
+    mockData: [
+      {
+        url: `${__API__}/notifications`,
+        method: 'GET',
+        status: 200,
+        response: [{}
+
+        ]
+      }
+    ]
   }
 }
 export default meta
 
 type Story = StoryObj<typeof NotificationList>
 export const Primary: Story = {
-  args: {
+  parameters: {
+    mockData: [
+      {
+        url: `${__API__}/notifications`,
+        method: 'GET',
+        status: 200,
+        response: [{}
 
+        ]
+      }
+    ]
   }
 }
