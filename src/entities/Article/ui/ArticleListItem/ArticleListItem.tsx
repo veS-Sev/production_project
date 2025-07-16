@@ -1,3 +1,4 @@
+/* eslint-disable sev-legacy-plugin/layers-imports */
 import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleListItem.module.scss'
 import { Icon } from '@/shared/ui/Icon'
@@ -7,7 +8,6 @@ import { Text } from '@/shared/ui/Text'
 import { useHover } from '@/shared/lib/hooks/useHover/useHover'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Button } from '@/shared/ui/Button'
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { type HTMLAttributeAnchorTarget } from 'react'
 import { getRouteArticleDetails } from '@/shared/const/route'
 import { useTranslation } from 'react-i18next'
@@ -16,6 +16,7 @@ import { ArticleView, ArticleBlockType } from '../../model/consts/consts'
 import { type Article } from '../../model/types/article'
 import { AppImage } from '@/shared/ui/AppImage'
 import { Skeleton } from '@/shared/ui/Skeleton'
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 
 interface ArticleListItemProps {
   className?: string

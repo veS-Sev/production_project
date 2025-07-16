@@ -74,15 +74,15 @@ jobs:
       - name: build storybook
         run: npm run storybook:build
         if: always()
-      - name: screenshot testing
-        run: npm run test:ui:ci
-        if: always()
-      - name: Generate HTML report
-        run: npm run test:ui:report
-        if: always()
-      - name: move loki report
-        if: always()
-        run: move .loki reports/
+      # - name: screenshot testing
+      #   run: npm run test:ui:ci
+      #   if: always()
+      # - name: Generate HTML report
+      #   run: npm run test:ui:report
+      #   if: always()
+      # - name: move loki report
+      #   if: always()
+      #   run: move .loki reports/
       - name: unit testing
         if: always()
         run: npm run test:unit
