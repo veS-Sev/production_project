@@ -142,6 +142,8 @@ module.exports = {
     'scripts/createSlice/*/*.js',
     'scripts/*.{ts,js}',
     'scripts/refactoring/*.ts',
+    'cypress/**/*.ts',
+    'cypress/**/*.js'
   ],
 }
 

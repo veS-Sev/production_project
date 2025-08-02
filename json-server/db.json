@@ -38,7 +38,17 @@
       ],
       "password": "123",
       "avatar": "https://images.neventum.com/2012/201/1400/ib_17805_5bed49de.jpg"
-    }
+    },
+        {
+          "id": "4",
+          "username": "testUser",
+          "roles": [
+            "ADMIN"
+          ],
+          "password": "123",
+          "avatar": ""
+        }
+
   ],
   "profile": [
     {

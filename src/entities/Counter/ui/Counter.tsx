@@ -18,11 +18,11 @@ export const Counter = () => {
   }
   const num = 10
   return (
-<div data-testId={'counter'}>
-      <h1 data-testId={'value-title'}>{`value = ${value}`}</h1>
-      <Button data-testId={'addFive-btn'} onClick={() => addSomeHandler(num)}>{t(`add${num}`)}</Button>
-<Button data-testId={'increment-btn'} onClick={incrementHandler}>{t('increment')}</Button>
-<Button data-testId={'decrement-btn'} onClick={decrementHandler}>{t('decrement')}</Button>
+<div data-testid={'counter'}>
+      <h1 data-testid={'value-title'}>{`value = ${value}`}</h1>
+      <Button data-testid={'addFive-btn'} onClick={() => addSomeHandler(num)}>{t(`add${num}`)}</Button>
+<Button data-testid={'increment-btn'} onClick={incrementHandler}>{t('increment')}</Button>
+<Button data-testid={'decrement-btn'} onClick={decrementHandler}>{t('decrement')}</Button>
 </div>
   )
 }
