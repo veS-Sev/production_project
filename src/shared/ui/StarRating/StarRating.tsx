@@ -46,7 +46,9 @@ export const StarRating = (props: StarRatingProps) => {
         <Icon className={classNames(cls.starIcon, { [cls.isSelected]: isSelected }, [starNumber <= currentStarCount ? cls.hover : cls.normal])} Svg={StarIcon} key={starNumber} height={size} width={size}
           onMouseLeave={onLeave}
           onMouseEnter={onHover(starNumber)}
-          onClick={onClick(starNumber)} />
+          onClick={onClick(starNumber)}
+          data-testid={`StarRating.${starNumber}`}
+          data-selected={ starNumber <= currentStarCount} />
       ))
     }
   </div>

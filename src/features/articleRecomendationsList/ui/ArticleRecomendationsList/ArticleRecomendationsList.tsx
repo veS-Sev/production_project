@@ -19,9 +19,9 @@ export const ArticleRecomendationsList = memo(
     if (isLoading || error || !articles) {
       return null
     }
-    console.log('@data: articles', articles)
+
     return (
-      <VStack gap='8'
+      <VStack data-testid={'ArticleRecomendationsList'} gap='8'
         className={classNames('', {}, [className])}
       >
         <Text

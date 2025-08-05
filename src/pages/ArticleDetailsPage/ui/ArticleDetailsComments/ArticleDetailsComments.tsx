@@ -47,7 +47,7 @@ export const ArticleDetailsComments = (
         title={t('Комментарии')}
       />
       <Suspense fallback={<Loader/>}>
-        <AddCommentForm onSendComment={onSendComment} />
+        <AddCommentForm data-testid={'AddCommentForm'} onSendComment={onSendComment} />
       </Suspense>
       <CommentList isLoading={commentsIsLoading} comments={comments} />
     </VStack>

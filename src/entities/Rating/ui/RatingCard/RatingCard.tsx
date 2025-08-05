@@ -50,12 +50,12 @@ export const RatingCard = (props: RatingCardProps) => {
   }, [onCancel, onCloseModal, starCount])
 
   const modalContent = <>        <Text text={feedbackTitle}/>
-        <Input placeholder={ t('Ваш текст') } onChange={setFeedBack}/></>
+        <Input data-testid={'RatingCard.Input'} placeholder={ t('Ваш текст') } onChange={setFeedBack}/></>
 
-  return <Card>
+  return <Card data-testid={'RatingCard'}>
     <VStack max gap={'16'} align={'center'}>
       <Text title={title} />
-      <StarRating selectedStars={starCount} onSelect={onSelectStars}/>
+      <StarRating data-testid={'RatingCard.StarRating'}selectedStars={starCount} onSelect={onSelectStars}/>
     </VStack>
     <BrowserView>
     <Modal isOpen={isOpenModal} onClose={onCloseModal} lazy
@@ -64,8 +64,8 @@ export const RatingCard = (props: RatingCardProps) => {
 {modalContent}
       </VStack>
       <HStack gap={'16'} justify={'end'} max>
-        <Button onClick={acceptHandle} theme={ButtonTheme.OUTLINE_RED}>{t('Отправить')}</Button>
-        <Button onClick={cancelHandle}>{t('Отменить')}</Button>
+        <Button data-testid={'RatingCard.Send'} onClick={acceptHandle} theme={ButtonTheme.OUTLINE_RED}>{t('Отправить')}</Button>
+        <Button data-testid={'RatingCard.Cancel'}onClick={cancelHandle}>{t('Отменить')}</Button>
       </HStack>
       </Modal>
     </BrowserView>
@@ -74,7 +74,7 @@ export const RatingCard = (props: RatingCardProps) => {
       <Drawer isOpen={isOpenModal} onClose={cancelHandle} lazy>
       <VStack max gap={'32'}>
           {modalContent}
-        <Button onClick={acceptHandle} theme={ButtonTheme.BACKGROUND_INVERTED} fullWidth={true}>{t('Отправить')}</Button></VStack>
+        <Button data-testid={'RatingCard.Send'}onClick={acceptHandle} theme={ButtonTheme.BACKGROUND_INVERTED} fullWidth={true}>{t('Отправить')}</Button></VStack>
       </Drawer>
       </MobileView>
   </Card>

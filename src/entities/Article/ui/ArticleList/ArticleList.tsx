@@ -6,7 +6,6 @@ import { ArticleListItemSkeleton } from '../ArticleListItemSkeleton/ArticleListI
 import { Text, TextSize } from '@/shared/ui/Text'
 import { ArticleView } from '../../model/consts/consts'
 import { type Article } from '../../model/types/article'
-import { HStack } from '@/shared/ui/Stack'
 
 interface ArticleListProps {
   className?: string
@@ -38,13 +37,13 @@ export const ArticleList = memo((props: ArticleListProps) => {
   }
 
   return (
-        <HStack
+        <div data-testid={'ArticleList'}
           className={classNames(cls.ArticleList, {}, [cls[view], className])}
     >{
       articles.map((article) => <ArticleListItem
-      className={cls.card} article={article} view={view} target={target} key={article.id} />)}
+      className={cls.card} article={article} view={view} target={target} key={article.id}/>)}
 
           {isLoading && getSceletons(view)}
-        </HStack>
+        </div>
   )
 })

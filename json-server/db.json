@@ -39,16 +39,15 @@
       "password": "123",
       "avatar": "https://images.neventum.com/2012/201/1400/ib_17805_5bed49de.jpg"
     },
-        {
-          "id": "4",
-          "username": "testUser",
-          "roles": [
-            "ADMIN"
-          ],
-          "password": "123",
-          "avatar": ""
-        }
-
+    {
+      "id": "4",
+      "username": "testUser",
+      "roles": [
+        "ADMIN"
+      ],
+      "password": "123",
+      "avatar": ""
+    }
   ],
   "profile": [
     {
@@ -82,6 +81,17 @@
       "avatar": "https://i.pinimg.com/originals/d2/60/35/d260355157095d3552efa64fbd893a3d.jpg",
       "city": "Mars",
       "age": 2400,
+      "country": "Russia"
+    },
+    {
+      "id": "4",
+      "firstname": "testUserName",
+      "lastname": "testUserLastname",
+      "username": "testUser",
+      "currency": "RUB",
+      "avatar": "https://i.pinimg.com/originals/d2/60/35/d260355157095d3552efa64fbd893a3d.jpg",
+      "city": "Venera",
+      "age": 45,
       "country": "Russia"
     }
   ],
@@ -1465,6 +1475,1059 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "pQehCCK"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "hPa_1lW"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "7zVVrm6"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "Szvqz4z"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "HRHdtQU"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "030nvr2"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "pOxsqtL"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "EcCPwY5"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "dHrlZk3"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "QEwqksS"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "ZmvvnV0"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "U6XL_eF"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "XEZuMLp"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "E3DR6YK"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "ulDx6Aa"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "X67-3iG"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "Vrc--Hc"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "YBIef2v"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "jGUb3pt"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "p5Oaxij"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "-Ri8FL0"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "114twhr"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "4Sf1e4Z"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "Tx-GBte"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "TIkFjrF"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "C_gefbs"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "2i8hn6l"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "YSZVND5"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "JAcRj84"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "6jviJSG"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "CjCBM4D"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "auiJpzy"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "qLTV1hf"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "3h5ByAJ"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "JbGSiEh"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "9NSwyys"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "GOVkbC5"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "X5eJ4I_"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "CICR-rR"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "_AUgXQZ"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "a2bW3KS"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "wcykjUC"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "PpRRKfK"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "LGITj9H"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "QjajrHS"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "u55x593"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "zlUVyZ3"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "_qXsQvy"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "XfPDUf3"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "WW_PLKm"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "ylG6zL0"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "24eBxOD"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "tmL8Dkz"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "HYaEXT7"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "7lUqqbw"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "PwIAqyB"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "wvC7vWl"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "YLIex94"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "X0zOeGm"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "zt_rtLb"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "3Zu-mNo"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "D-LCwX3"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "dNfsG-V"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "REv3NNf"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "IQB1ruY"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "F9HD9vA"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "8iPk34_"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "P5RjgU4"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "jlP61JM"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "6OWBo5V"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "xdtLyBr"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "G6aVR9Y"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "tM7UWYA"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "4WYtUoJ"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "YaxRZtf"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "76nCMaT"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "IYzN2iX"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "4HJazIb"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "kEfla9m"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "pGGacqI"
+    },
+    {
+      "title": "Javascript news",
+      "subtitle": "Что нового в E2E тестах в 2025 году?",
+      "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+      "views": 1022,
+      "createdAt": "04.08.2025",
+      "userId": "1",
+      "type": [
+        "IT"
+      ],
+      "blocks": [],
+      "id": "QMwzZ1j"
     }
   ],
   "comments": [
@@ -1557,6 +2620,30 @@
       "articleId": "1",
       "userId": "1",
       "id": "KG0kgU_"
+    },
+    {
+      "text": "text",
+      "articleId": "24eBxOD",
+      "userId": "4",
+      "id": "7r7FHcH"
+    },
+    {
+      "text": "text",
+      "articleId": "7lUqqbw",
+      "userId": "4",
+      "id": "_s0OKEE"
+    },
+    {
+      "text": "text",
+      "articleId": "wvC7vWl",
+      "userId": "4",
+      "id": "MNz8vOj"
+    },
+    {
+      "text": "text",
+      "articleId": "YLIex94",
+      "userId": "4",
+      "id": "6NlLlP5"
     }
   ],
   "notifications": [

@@ -44,7 +44,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
 
   if (view === ArticleView.BIG) {
     return (
-      <div
+      <div data-testid={'ArticleListItem'}
         {...bindHover}
         className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
       >
@@ -79,7 +79,8 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
   return (
     <AppLink to = {
       getRouteArticleDetails(article.id)
-    } target= {target}
+    } target={target}
+     data-testid={'ArticleListItem'}
       {...bindHover}
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
