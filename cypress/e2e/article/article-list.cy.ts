@@ -7,4 +7,10 @@ describe('Пользователь заходит на страницу со с�
     cy.getByTestId('ArticleList').should('exist')
     cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 3)
   })
+
+  it('список успешно подгружается. Пример со стабом на фикстурах', () => {
+      cy.intercept('GET','**/atricles?*', {fixture:'articles.json'})
+      cy.getByTestId('ArticleList').should('exist')
+      cy.getByTestId('ArticleListItem').should('have.length.greaterThan', 3)
+    })
 })

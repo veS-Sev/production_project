@@ -25,14 +25,25 @@ describe('Пользователь посещает страницу стать�
       cy.getByTestId('ArticleDetails.Info')
       cy.getByTestId('AddCommentForm').scrollIntoView()
       cy.addComment('text')
-      cy.getByTestId('CommentCard.Content').should('have.length',1)
+      cy.getByTestId('CommentCard.Content').should('have.length', 1)
     })
   
       it('оценивает статью', () => {
         cy.getByTestId('ArticleDetails.Info')
         cy.getByTestId('RatingCard').scrollIntoView()
-        cy.setRate(4,'feedback')
+        cy.setRate(4, 'feedback')
         cy.get('[data-selected=true]').should('have.length', 4)
       })
+   it('оценивает статью.Пример с стабом на фикстурах', () => {
+     cy.intercept('GET', '**/articles/*',{fixture:'article-details.json'})
+     cy.getByTestId('ArticleDetails.Info')
+        cy.getByTestId('RatingCard').scrollIntoView()
+        cy.setRate(4, 'feedback')
+        cy.get('[data-selected=true]').should('have.length', 4)
+      })
+    
+      it.skip('и видит содержание статьи(заскипан падающий тест)', () => {
+    cy.getByTestId('asdfsda').should('exist')
+  })
 })
 
