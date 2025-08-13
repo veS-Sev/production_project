@@ -25,10 +25,9 @@ export const Avatar = memo(({ className, src, size = 50, alt, fallbackInverted =
     [size]
   )
   const fallback = <Skeleton border={'50%'} width={size} height={size}/>
-  const errorFallback = <Icon inverted={fallbackInverted} Svg={UserFilledIcon} width={size} height={size}/>
+  const errorFallback = <Icon inverted={fallbackInverted} Svg={UserFilledIcon} width={size} height={size} />
   return (
-    <AppImage
-      className={classNames(cls.Avatar, mods, [className])}
+    <AppImage className={classNames(cls.AppImage)}
       src={src}
       style={styles}
       alt={alt}

@@ -1,0 +1,12 @@
+{
+  "id": "1",
+  "firstname": "testUserName",
+  "lastname": "testUserLastname",
+  "username": "testUser",
+  "currency": "RUB",
+  "avatar":
+        "https: //i.pinimg.com/originals/d2/60/35/d260355157095d3552efa64fbd893a3d.jpg",
+  "city": "Venera",
+  "age": 45,
+  "country": "Russia"
+}

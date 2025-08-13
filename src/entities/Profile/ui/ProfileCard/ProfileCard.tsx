@@ -81,8 +81,9 @@ export const ProfileCard = (props: ProfileCardProps) => {
           {data?.avatar && (
             <Avatar
               src={data?.avatar}
-              size={150}
-              alt={'Тут должен быть аватар'}
+              size={50}
+            alt={'Тут должен быть аватар'}
+            className={'Avatar-test'}
             />
           )}
         </HStack>

@@ -143,7 +143,9 @@ module.exports = {
     'scripts/*.{ts,js}',
     'scripts/refactoring/*.ts',
     'cypress/**/*.ts',
-    'cypress/**/*.js'
+    'cypress/**/*.tsx',
+    'cypress/**/*.js',
+    'cypress.config.ts'
   ],
 }
 
